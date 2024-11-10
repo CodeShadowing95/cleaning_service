@@ -1,3 +1,4 @@
+import AboutUs from "./components/AboutUs";
 import Banner from "./components/Banner";
 import Navbar from "./components/Navbar";
 
@@ -8,6 +9,8 @@ export default function App() {
       <Navbar />
       
       <Banner />
+
+      <AboutUs />
     </div>
   )
 }
