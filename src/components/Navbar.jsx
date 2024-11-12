@@ -1,7 +1,32 @@
+import { useEffect, useState } from "react";
 
-const Navbar = () => {
+
+  const Navbar = () => {
+    const [scrolled, setScrolled] = useState(false);
+    const [contactInfo, setContactInfo] = useState(0);
+
+    useEffect(() => {
+      const handleScroll = () => {
+        const isScrolled = window.scrollY > 0;
+        if (isScrolled !== scrolled) {
+          setScrolled(isScrolled);
+        }
+      };
+      document.addEventListener("scroll", handleScroll);
+      return () => {
+        document.removeEventListener("scroll", handleScroll);
+      };
+    }, [scrolled]);
+
+    useEffect(() => {
+      const intervalId = setInterval(() => {
+        contactInfo === 0 ? setContactInfo(1) : setContactInfo(0);
+      }, 10000);
+      return () => clearInterval(intervalId);
+    }, [contactInfo]);
+
   return (
-    <nav className="flex items-center justify-between w-full h-20 bg-white px-[130px]">
+    <nav className={`flex items-center justify-between w-full h-20 bg-white px-[130px] sticky top-0 z-50 transition-shadow duration-500 ${scrolled ? "shadow-md" : ""}`}>
       <div className="flex items-center">
         <a href="#">
           <img src="/rehonet_logo.png" alt="Logo" className="h-14" />
@@ -24,16 +49,18 @@ const Navbar = () => {
           Contact
         </a>
       </div>
-      {/* <button className="group group-hover:before:duration-500 group-hover:after:duration-1000 after:duration-500 hover:border-sky-300  duration-500 before:duration-500 hover:duration-500 underline-offset-2    hover:after:-right-2 hover:before:top-8 hover:before:right-16 hover:after:scale-150 hover:after:blur-none hover:before:-bottom-8 hover:before:blur-none hover:bg-sky-300 hover:underline hover:underline-offset-4  origin-left hover:decoration-2 hover:text-sky-900 relative bg-sky-800 w-64 border text-left p-3 text-gray-50 text-base font-semibold rounded-lg  overflow-hidden  before:absolute before:w-12 before:h-12 before:content[''] before:right-1 before:top-1 before:z-10 before:bg-sky-400 before:rounded-full before:blur-lg  after:absolute after:z-10 after:w-20 after:h-20 after:content['']  after:bg-cyan-600 after:right-8 after:top-3 after:rounded-full after:blur">
-        Contactez-nous
-      </button> */}
-      <button className="relative group cursor-pointer text-sky-50  overflow-hidden h-10 w-52 rounded-md bg-sky-800 p-2 flex justify-center items-center font-extrabold">
 
-        <div className="absolute top-3 right-20 group-hover:top-12 group-hover:-right-12 z-10 w-40 h-40 rounded-full group-hover:scale-150 group-hover:opacity-50 duration-500 bg-sky-900"></div>
-        <div className="absolute top-3 right-20 group-hover:top-12 group-hover:-right-12 z-10 w-32 h-32 rounded-full group-hover:scale-150 group-hover:opacity-50 duration-500 bg-sky-800"></div>
-        <div className="absolute top-3 right-20 group-hover:top-12 group-hover:-right-12 z-10 w-24 h-24 rounded-full group-hover:scale-150 group-hover:opacity-50 duration-500 bg-sky-700"></div>
-        <div className="absolute top-3 right-20 group-hover:top-12 group-hover:-right-12 z-10 w-14 h-14 rounded-full group-hover:scale-150 group-hover:opacity-50 duration-500 bg-sky-600"></div>
-        <p className="z-10">Contactez-nous</p>
+      <button className="p-[3px] relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+        <div className="w-[200px] h-8 flex flex-col justify-center items-center bg-black rounded-[6px]  relative group transition duration-200 text-xs font-semibold text-white hover:bg-transparent overflow-hidden">
+          <div className={`flex items-center gap-2 transition-transform duration-500 ${contactInfo == 0 ? 'translate-y-1/2' : '-translate-y-[130%]'}`}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M20 15.5c-1.2 0-2.5-.2-3.6-.6h-.3c-.3 0-.5.1-.7.3l-2.2 2.2c-2.8-1.5-5.2-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1c-.3-1.1-.5-2.4-.5-3.6c0-.5-.5-1-1-1H4c-.5 0-1 .5-1 1c0 9.4 7.6 17 17 17c.5 0 1-.5 1-1v-3.5c0-.5-.5-1-1-1M5 5h1.5c.1.9.3 1.8.5 2.6L5.8 8.8C5.4 7.6 5.1 6.3 5 5m14 14c-1.3-.1-2.6-.4-3.8-.8l1.2-1.2c.8.2 1.7.4 2.6.4z"/></svg>
+            +33 7 24 89 62 47
+          </div>
+          <div className={`flex items-center gap-2 transition-transform duration-500 ${contactInfo == 0 ? 'translate-y-[130%]' : '-translate-y-1/2'}`}>
+            rehonettoyage@yahoo.com
+          </div>
+        </div>
       </button>
 
 

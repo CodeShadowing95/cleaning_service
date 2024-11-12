@@ -44,3 +44,33 @@ body {
   top: 50%;
   transform-origin: 0 0;
 }
+
+#sparkle {
+  animation: sparkle 1s infinite alternate;
+}
+
+#sparkle1 {
+  animation: sparkle 0.8s infinite alternate;
+}
+
+#sparkle2 {
+  animation: sparkle 1.2s infinite alternate;
+}
+
+#sparkle3 {
+  animation: sparkle 1.5s infinite alternate;
+}
+
+#sparkle4 {
+  animation: sparkle 0.5s infinite alternate;
+}
+
+@keyframes sparkle {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1.2);
+  }
+
+}

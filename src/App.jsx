@@ -1,6 +1,5 @@
-import AboutUs from "./components/AboutUs";
-import Banner from "./components/Banner";
-import Navbar from "./components/Navbar";
+import { AboutUs, Banner, Navbar, Services, WhyChooseUs } from "./components";
+
 
 export default function App() {
 
@@ -11,6 +10,11 @@ export default function App() {
       <Banner />
 
       <AboutUs />
+
+      <WhyChooseUs />
+
+      <Services />
+
     </div>
   )
 }
