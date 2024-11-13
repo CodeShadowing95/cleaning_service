@@ -3,7 +3,7 @@ const AboutUs = () => {
   return (
     <div className="w-full flex justify-center items-center gap-8 px-[130px] py-32 bg-blue-50">
       {/* Left side */}
-      <div className="relative flex justify-center w-full h-full items-center rounded-full overflow-hidden" style={{ background: 'url(/public/blob-haikei.svg) center center / cover no-repeat' }}>
+      <div className="relative flex justify-center w-full h-full items-center rounded-full overflow-hidden" style={{ background: 'url(/blob-haikei.svg) center center / cover no-repeat' }}>
         <img src="/index-left-img.png" className="h-[600px] z-10" alt="left-img" />
         <div className="absolute bottom-12 left-24 z-20 w-[150px] h-[150px] bg-blue-900 border-8 border-white rounded-full overflow-hidden">
           <div className="w-full h-full flex flex-col justify-center items-center rounded-full text-white font-semibold">
