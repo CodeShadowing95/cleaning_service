@@ -19,7 +19,7 @@ const AboutUs = () => {
           <p className="text-lg font-semibold">À Propos de nous</p>
         </div>
         <h1 className="text-4xl font-semibold">Une qualité de nettoyage à découvrir, bienvenue chez <span className="text-blue-900 font-bold">REHOBOTH Nettoyage</span> !</h1>
-        <p className="text-md mt-8 text-gray-700 text-justify">Nous sommes une jeune entreprise qui mettons notre expertise et notre passion pour la propreté au service de votre bien-être. Que ce soit pour votre domicile ou vos espaces professionnels, nous proposons des solutions de nettoyage personnalisées, réalisées avec soin et attention aux moindres détails. Avec des produits respectueux de l’environnement et des techniques efficaces, nous vous offrons un espace sain, frais et accueillant, où il fait bon vivre et travailler. Faites confiance à notre équipe de professionnels pour un service impeccable, à la hauteur de vos exigences.</p>
+        <p className="text-md mt-8 text-gray-700 text-justify">Nous sommes une entreprise qui mettons notre expertise et notre passion pour la propreté au service de votre bien-être. Que ce soit pour votre domicile ou vos espaces professionnels, nous proposons des solutions de nettoyage personnalisées, réalisées avec soin et attention aux moindres détails. Avec des produits respectueux de l’environnement et des techniques efficaces, nous vous offrons un espace sain, frais et accueillant, où il fait bon vivre et travailler. Faites confiance à notre équipe de professionnels pour un service impeccable, à la hauteur de vos exigences.</p>
         <div className="w-full flex space-x-10 mt-8">
           <div className="flex flex-col space-y-4">
             {/* Bubble 1 left */}

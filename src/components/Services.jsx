@@ -18,7 +18,7 @@ const Services = () => {
       <div className="flex flex-wrap justify-center gap-8">
 
         {/* More Cards */}
-        <div className="flex justify-center items-center relative w-[295px] h-[400px] rounded-lg overflow-hidden">
+        <div className="flex justify-center items-center relative w-[320px] h-[400px] rounded-lg overflow-hidden">
           <img src="/services/showcase.jpg" alt="general" className="w-full h-full object-cover" />
           <div className="absolute w-full h-full flex flex-col justify-center items-center bg-blue-950/80 overflow-hidden rounded-lg px-8">
             <div className="w-14 h-14 flex justify-center items-center bg-white text-blue-800 rounded-full mb-4">
@@ -36,7 +36,7 @@ const Services = () => {
         </div>
 
         {/* Card */}
-        <div id="flip-card" className="flex justify-center items-center relative w-[295px] h-[400px] rounded-lg cursor-pointer">
+        <div id="flip-card" className="flex justify-center items-center relative w-[320px] h-[400px] rounded-lg cursor-pointer">
           <div id="flip-card-inner" className="relative w-full h-full text-center transition-transform duration-500 shadow-md rounded-lg">
             {/* Card Front */}
             <div id="flip-card-front" className="absolute w-full h-full overflow-hidden rounded-lg">
@@ -59,7 +59,7 @@ const Services = () => {
         </div>
 
         {/* Card */}
-        <div id="flip-card" className="flex justify-center items-center relative w-[295px] h-[400px] rounded-lg cursor-pointer">
+        <div id="flip-card" className="flex justify-center items-center relative w-[320px] h-[400px] rounded-lg cursor-pointer">
           <div id="flip-card-inner" className="relative w-full h-full text-center transition-transform duration-500 shadow-md rounded-lg">
             {/* Card Front */}
             <div id="flip-card-front" className="absolute w-full h-full overflow-hidden rounded-lg">
@@ -82,7 +82,7 @@ const Services = () => {
         </div>
 
         {/* Card */}
-        <div id="flip-card" className="flex justify-center items-center relative w-[295px] h-[400px] rounded-lg cursor-pointer">
+        <div id="flip-card" className="flex justify-center items-center relative w-[320px] h-[400px] rounded-lg cursor-pointer">
           <div id="flip-card-inner" className="relative w-full h-full text-center transition-transform duration-500 shadow-md rounded-lg">
             {/* Card Front */}
             <div id="flip-card-front" className="absolute w-full h-full overflow-hidden rounded-lg">
@@ -105,7 +105,7 @@ const Services = () => {
         </div>
 
         {/* Card */}
-        <div id="flip-card" className="flex justify-center items-center relative w-[295px] h-[400px] rounded-lg cursor-pointer">
+        <div id="flip-card" className="flex justify-center items-center relative w-[320px] h-[400px] rounded-lg cursor-pointer">
           <div id="flip-card-inner" className="relative w-full h-full text-center transition-transform duration-500 shadow-md rounded-lg">
             {/* Card Front */}
             <div id="flip-card-front" className="absolute w-full h-full overflow-hidden rounded-lg">
@@ -128,7 +128,53 @@ const Services = () => {
         </div>
 
         {/* Card */}
-        <div id="flip-card" className="flex justify-center items-center relative w-[295px] h-[400px] rounded-lg cursor-pointer">
+        <div id="flip-card" className="flex justify-center items-center relative w-[320px] h-[400px] rounded-lg cursor-pointer">
+          <div id="flip-card-inner" className="relative w-full h-full text-center transition-transform duration-500 shadow-md rounded-lg">
+            {/* Card Front */}
+            <div id="flip-card-front" className="absolute w-full h-full overflow-hidden rounded-lg">
+              <img src="/services/service.jpg" alt="service" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50">
+                <div className="w-full h-full flex flex-col justify-end items-start p-4">
+                  <p className="text-2xl text-white font-bold">Nettoyage de vitres</p>
+                  <div className="w-[20%] h-1 bg-cyan-400 mt-2" />
+                </div>
+              </div>
+            </div>
+            {/* Card Back */}
+            <div id="flip-card-back" className="absolute w-full h-full rounded-lg overflow-hidden">
+              <div className="w-full h-full flex flex-col items-center gap-4 bg-white px-4 py-10">
+                <p className="text-lg font-bold max-w-[250px]">Nettoyage de vitres</p>
+                <p className="text-sm text-gray-500 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti iste a fuga veniam voluptatibus, rem ullam labore ea totam dignissimos explicabo officiis quaerat facilis quasi placeat dolorum sapiente, veritatis quisquam.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Card */}
+        <div id="flip-card" className="flex justify-center items-center relative w-[320px] h-[400px] rounded-lg cursor-pointer">
+          <div id="flip-card-inner" className="relative w-full h-full text-center transition-transform duration-500 shadow-md rounded-lg">
+            {/* Card Front */}
+            <div id="flip-card-front" className="absolute w-full h-full overflow-hidden rounded-lg">
+              <img src="/services/service.jpg" alt="service" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50">
+                <div className="w-full h-full flex flex-col justify-end items-start p-4">
+                  <p className="text-2xl text-white font-bold">Nettoyage de vitres</p>
+                  <div className="w-[20%] h-1 bg-cyan-400 mt-2" />
+                </div>
+              </div>
+            </div>
+            {/* Card Back */}
+            <div id="flip-card-back" className="absolute w-full h-full rounded-lg overflow-hidden">
+              <div className="w-full h-full flex flex-col items-center gap-4 bg-white px-4 py-10">
+                <p className="text-lg font-bold max-w-[250px]">Nettoyage de vitres</p>
+                <p className="text-sm text-gray-500 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti iste a fuga veniam voluptatibus, rem ullam labore ea totam dignissimos explicabo officiis quaerat facilis quasi placeat dolorum sapiente, veritatis quisquam.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Card */}
+        <div id="flip-card" className="flex justify-center items-center relative w-[320px] h-[400px] rounded-lg cursor-pointer">
           <div id="flip-card-inner" className="relative w-full h-full text-center transition-transform duration-500 shadow-md rounded-lg">
             {/* Card Front */}
             <div id="flip-card-front" className="absolute w-full h-full overflow-hidden rounded-lg">
