@@ -16,9 +16,9 @@ const ServiceCard = ({ title, backtitle, description, image, hbarColor, link }) 
         </div>
         {/* Card Back */}
         <div id="flip-card-back" className="absolute w-full h-full rounded-lg overflow-hidden">
-          <div className="w-full h-full flex flex-col items-center gap-4 bg-white px-8 py-10">
+          <div className="w-full h-full flex flex-col items-center gap-4 bg-white px-4 py-10">
             <p className="text-lg font-bold max-w-[250px]">{backtitle}</p>
-            <p className="text-sm text-gray-500 text-justify">{description}</p>
+            <p className="text-sm text-gray-500 text-pretty">{description}</p>
           </div>
         </div>
       </div>
