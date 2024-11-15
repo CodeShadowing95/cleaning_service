@@ -10,7 +10,7 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-8">
+      <div className="flex flex-wrap justify-center px-20 gap-8">
 
         {/* More Cards */}
         <div className="flex justify-center items-center relative w-[290px] h-[350px] rounded-lg overflow-hidden">

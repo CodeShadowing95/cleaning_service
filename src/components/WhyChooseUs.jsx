@@ -2,9 +2,11 @@
 const WhyChooseUs = () => {
   return (
     <div className="relative w-full px-[130px] py-32 flex flex-col justify-center items-center">
-      <h1 className="text-4xl font-bold">Pourquoi nous choisir ?</h1>
-      <div className="absolute top-14 left-3/4">
-        <img src="/img-wcu.png" alt="aspirateur-rouge" className="w-32 h-32" />
+      <div className="relative w-full flex flex-col justify-center items-center">
+        <h1 className="text-4xl font-bold">Pourquoi nous choisir ?</h1>
+        <div className="absolute bottom-0 right-1/4">
+          <img src="/img-wcu.png" alt="aspirateur-rouge" className="w-32 h-32" />
+        </div>
       </div>
       <p className="text-gray-600 text-[14px] leading-6 mt-8 text-center max-w-5xl relative">
         Nous apportons un souffle nouveau au monde du nettoyage. Motivés par l’excellence et l’attention aux détails, nous mettons un point d’honneur à offrir des services modernes, efficaces et respectueux de l’environnement. Avec une équipe dynamique et passionnée, nous répondons aux besoins de nos clients en leur garantissant des espaces impeccables et un service personnalisé.
