@@ -4,7 +4,7 @@ const WhyChooseUs = () => {
     <div className="relative w-full px-[130px] py-32 flex flex-col justify-center items-center">
       <div className="relative w-full flex flex-col justify-center items-center">
         <h1 className="text-4xl font-bold">Pourquoi nous choisir ?</h1>
-        <div className="absolute bottom-0 right-1/4">
+        <div className="absolute bottom-0 right-10">
           <img src="/img-wcu.png" alt="aspirateur-rouge" className="w-32 h-32" />
         </div>
       </div>
