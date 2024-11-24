@@ -10,9 +10,9 @@ const servicesDesc = [
   },
 ];
 
-// For Marquee starts
 const generalCleaningServices = [
   {
+    id: 1,
     label: "Outils de nettoyage general",
     items: [
       { id: 1, name: "Serpillière (avec seau et presse)" },
@@ -23,10 +23,11 @@ const generalCleaningServices = [
       { id: 6, name: "Brosses de nettoyage (de différentes tailles pour les taches tenaces)" },
       { id: 7, name: "Éponges et tampons à récurer" },
       { id: 8, name: "Raclette (pour les vitres et surfaces vitrées)" },
+      { id: 9, name: "Fournitures d'outils de nettoyage" },
     ],
-    className: "flex justify-center items-center w-[200px] h-[150px] bg-rose-800 rounded-xl shadow-lg overflow-hidden m-2",
   },
   {
+    id: 2,
     label: "Produits de nettoyage",
     items: [
       { id: 1, name: "Nettoyant multi-usage" },
@@ -35,37 +36,40 @@ const generalCleaningServices = [
       { id: 4, name: "Nettoyant pour sols (carrelages, bois, ou surfaces spécifiques)" },
       { id: 5, name: "Nettoyant pour salle de bains (lavabos, baignoires et toilettes)" },
       { id: 6, name: "Produits écologiques ou biodégradables" },
+      { id: 7, name: "Fournitures de produits de nettoyage" },
     ],
-    className: "flex justify-center items-center w-[200px] h-[150px] bg-cyan-800 rounded-xl shadow-lg overflow-hidden m-2",
   },
   {
+    id: 3,
     label: "Gestion des déchets",
     items: [
       { id: 1, name: "Vidage et changement de poubelles (de différentes tailles)" },
       { id: 2, name: "Fournitures de sacs de poubelle" },
     ],
-    className: "flex justify-center items-center w-[200px] h-[150px] bg-amber-800 rounded-xl shadow-lg overflow-hidden m-2",
   },
   {
-    label: "Fournitures de désinfection",
+    id: 4,
+    label: "Produits de désinfection",
     items: [
       { id: 1, name: "Gel désinfectant pour les mains" },
       { id: 2, name: "Lingettes désinfectantes" },
       { id: 3, name: "Pulvérisateurs (pour solutions personnalisées)" },
+      { id: 4, name: "Fournitures de désinfectants" },
     ],
-    className: "flex justify-center items-center w-[200px] h-[150px] bg-green-800 rounded-xl shadow-lg overflow-hidden m-2",
   },
   {
+    id: 5,
     label: "Équipements de sécurité",
     items: [
       { id: 1, name: "Gants (jetables et réutilisables)" },
       { id: 2, name: "Masques" },
       { id: 3, name: "Lunettes de protection" },
       { id: 4, name: "Tablier ou uniforme" },
+      { id: 7, name: "Fournitures d'équipements de protection" },
     ],
-    className: "flex justify-center items-center w-[200px] h-[150px] bg-orange-800 rounded-xl shadow-lg overflow-hidden m-2",
   },
   {
+    id: 6,
     label: "Autres essentiels",
     items: [
       { id: 1, name: "Brosses pour toilettes" },
@@ -74,12 +78,10 @@ const generalCleaningServices = [
       { id: 4, name: "Tapis de sol (pour,eviter de salir pendant le nettoyage)" },
       { id: 5, name: "Shampouineuse pour tapis" },
       { id: 6, name: "Escabeau (pour atteindre les endroits en hauteur)" },
+      { id: 7, name: "Et bien d'autres ..." },
     ],
-    className: "flex justify-center items-center w-[200px] h-[150px] bg-indigo-800 rounded-xl shadow-lg overflow-hidden m-2",
   },
 ];
-
-// For Marquee ends
 
 export {
   servicesDesc,
