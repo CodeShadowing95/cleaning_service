@@ -13,8 +13,8 @@ const Banner = () => {
         {/* Banner content */}
         <div className="relative w-full h-full flex justify-between items-center px-[130px] text-white bg-gradient-to-b from-transparent to-black/80">
 
-          <div className="flex flex-col gap-8">
-            <h1 className="text-[45px] font-semibold capitalize leading-[1.4] w-[600px]">Améliorez votre activité grâce à nos services de nettoyage professionnels</h1>
+          <div className="flex flex-col gap-8 w-full">
+            <h1 className="text-[45px] font-semibold capitalize leading-[1.4] max-w-[600px]">Améliorez votre activité grâce à nos services de nettoyage professionnels</h1>
             <p className="text-lg leading-7 w-[600px]">Des prestations de nettoyage de haute qualité, adaptées à vos besoins. Offrez-vous un environnement éclatant sans lever le petit doigt.</p>
             <div className="flex gap-x-4">
               <button className="px-8 py-3 bg-white text-gray-900 hover:text-sky-900 font-semibold transition-all duration-500 rounded-full">En savoir plus</button>
@@ -30,7 +30,9 @@ const Banner = () => {
             </div>
           </div>
 
-          <img src="/index-right-img.png" className="h-full object-cover" alt="img-right" />
+          <div className="w-full h-[100%] flex justify-end items-end">
+            <img src="/index-right-img.png" className="h-[calc(100%-5rem)] object-cover" alt="img-right" />
+          </div>
 
           {/* Absolutes elements starts */}
           <div className="absolute top-1/4 left-[55%] w-56 h-11 py-0.5 bg-blue-600 rounded-full flex justify-center items-center">
