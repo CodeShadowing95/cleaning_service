@@ -1,4 +1,4 @@
-import { AboutUs, Banner, Equipments, Navbar, Services, WhyChooseUs } from "./components";
+import { AboutUs, Banner, Equipments, HowItWorks, Navbar, Services, WhyChooseUs } from "./components";
 
 
 export default function App() {
@@ -16,6 +16,8 @@ export default function App() {
       <Services />
 
       <Equipments />
+
+      <HowItWorks />
 
     </div>
   )

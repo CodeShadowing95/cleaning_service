@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import WhyChooseUs from "./WhyChooseUs";
 import Services from "./Services";
 import Equipments from "./Equipments";
+import HowItWorks from "./HowItWorks";
 
 export {
   Banner,
@@ -12,4 +13,5 @@ export {
   WhyChooseUs,
   Services,
   Equipments,
+  HowItWorks,
 }
