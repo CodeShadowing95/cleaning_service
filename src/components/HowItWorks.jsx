@@ -11,7 +11,7 @@ const HowItWorks = () => {
         </div>
       </div>
       
-      <div className="w-full flex flex-col justify-center items-center mt-8 z-20">
+      <div className="w-full flex flex-col justify-center items-center mt-8">
         <h1 className="text-3xl font-bold capitalize max-w-lg text-center">Notre approche méthodique, simple et efficace</h1>
         <div className="w-full flex flex-col items-center gap-6 mt-10 relative">
 
@@ -87,7 +87,7 @@ const HowItWorks = () => {
           </div>
           <div className="pl-4">
             <button className="flex justify-center items-center gap-2 bg-white text-teal-900 px-4 py-2 font-semibold rounded-lg hover:bg-teal-900 hover:text-white hover:shadow-md hover:shadow-white transition-colors duration-300">
-              Obtenir un devis gratuit
+              Je me lance !
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
             </button>
           </div>

@@ -29,7 +29,7 @@ const Equipments = () => {
       <div className="px-[130px] py-2 mt-8 grid grid-cols-3 gap-4 overflow-hidden">
         {generalCleaningServices.map((service, index) => (
           <div key={index} className="relative flex flex-col px-4 py-6 border rounded-xl bg-zinc-800 text-white border-none hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_#0d9488] hover:border-none transition-all duration-300">
-            <div className="flex flex-col z-10">
+            <div className="flex flex-col">
               {/* Title */}
               <div className="flex justify-between items-center">
                 <p className="text-base font-semibold">{service.label}</p>
