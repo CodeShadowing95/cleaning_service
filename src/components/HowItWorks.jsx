@@ -11,7 +11,7 @@ const HowItWorks = () => {
         </div>
       </div>
       
-      <div className="w-full flex flex-col justify-center items-center mt-8">
+      <div className="w-full flex flex-col justify-center items-center mt-8 z-20">
         <h1 className="text-3xl font-bold capitalize max-w-lg text-center">Notre approche méthodique, simple et efficace</h1>
         <div className="w-full flex flex-col items-center gap-6 mt-10 relative">
 
@@ -92,8 +92,8 @@ const HowItWorks = () => {
             </button>
           </div>
         </div>
-        <img src="/how-it-works/extra2.png" alt="extra" className="absolute bottom-0 right-8 h-[400px]" />
-        <div className="absolute inset-0 text-white/10 z-0 overflow-hidden">
+        <img src="/how-it-works/extra2.png" alt="extra" className="absolute bottom-0 right-8 h-[400px] z-10" />
+        <div className="absolute inset-0 text-white/10 -z-1 overflow-hidden">
           <svg xmlns="http://www.w3.org/2000/svg" className="absolute -top-32 left-1/2 -rotate-45 w-72 h-72" viewBox="0 0 24 24"><path fill="currentColor" d="M4 13h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1m0 8h6c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1m10 0h6c.55 0 1-.45 1-1v-8c0-.55-.45-1-1-1h-6c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1M13 4v4c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1h-6c-.55 0-1 .45-1 1"/></svg>
         </div>
       </div>
