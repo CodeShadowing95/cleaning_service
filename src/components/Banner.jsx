@@ -2,7 +2,7 @@ import Navbar from "./Navbar"
 
 const Banner = () => {
   return (
-    <div className="w-full h-[calc(100dvh-10rem)] border-2 relative">
+    <div className="w-full h-screen border-2 relative">
       <img src="/banner_bg.jpg" alt="banner" className="w-full h-full object-cover z-0" />
 
       <div className="absolute inset-0 z-50 bg-blue-900/85">
@@ -31,7 +31,7 @@ const Banner = () => {
           </div>
 
           <div className="w-full h-[100%] flex justify-end items-end">
-            <img src="/index-right-img.png" className="h-[calc(100%-5rem)] object-cover" alt="img-right" />
+            <img src="/index-right-img.png" className="h-[calc(100%-3rem)] object-cover" alt="img-right" />
           </div>
 
           {/* Absolutes elements starts */}

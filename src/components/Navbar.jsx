@@ -30,24 +30,27 @@ import { useEffect, useState } from "react";
     <nav className={`fixed inset-0 flex items-center justify-between w-full h-[90px] px-[130px] z-50 transition-all duration-300 ${scrolled ? "bg-white shadow" : ""}`}>
 
       <div className="flex items-center p-4 gap-8 font-semibold">
-        <div className="flex items-center mr-20">
-          <a href="/accueil">
+        <div className="flex items-center mr-10">
+          {/* <a href="/accueil">
             <img src="/rehonet_logo.png" alt="Logo" className="h-14" />
+          </a> */}
+          <a href="/accueil" className={`${scrolled ? "text-black" : "text-white"} uppercase font-bold text-lg max-w-[250px]`}>
+            rehoboth nettoyage
           </a>
         </div>
-        <a href="/accueil" className={`py-1 text-white ${scrolled ? "text-slate-700" : ""} hover:text-sky-100 text-base transition-colors ${selected === 1 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(1)}>
+        <a href="/accueil" className={`py-1 text-white ${scrolled ? "text-black hover:text-sky-800" : ""} hover:text-sky-100 text-base transition-colors ${selected === 1 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(1)}>
           Accueil
         </a>
-        <a href="#" className={`py-1 text-white ${scrolled ? "text-slate-700" : ""} hover:text-sky-100 text-base transition-colors ${selected === 2 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(2)}>
+        <a href="#" className={`py-1 text-white ${scrolled ? "text-black hover:text-sky-800" : ""} hover:text-sky-100 text-base transition-colors ${selected === 2 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(2)}>
           Qui sommes-nous ?
         </a>
-        <a href="#" className={`py-1 text-white ${scrolled ? "text-slate-700" : ""} hover:text-sky-100 text-base transition-colors ${selected === 3 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(3)}>
+        <a href="#" className={`py-1 text-white ${scrolled ? "text-black hover:text-sky-800" : ""} hover:text-sky-100 text-base transition-colors ${selected === 3 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(3)}>
           Services
         </a>
-        <a href="#" className={`py-1 text-white ${scrolled ? "text-slate-700" : ""} hover:text-sky-100 text-base transition-colors ${selected === 4 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(4)}>
+        <a href="#" className={`py-1 text-white ${scrolled ? "text-black hover:text-sky-800" : ""} hover:text-sky-100 text-base transition-colors ${selected === 4 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(4)}>
           Équipements
         </a>
-        <a href="/contact" className={`py-1 text-white ${scrolled ? "text-slate-700" : ""} hover:text-sky-100 text-base transition-colors ${selected === 5 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(5)}>
+        <a href="/contact" className={`py-1 text-white ${scrolled ? "text-black hover:text-sky-800" : ""} hover:text-sky-100 text-base transition-colors ${selected === 5 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(5)}>
           Contact
         </a>
       </div>
