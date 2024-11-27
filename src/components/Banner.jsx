@@ -13,7 +13,7 @@ const Banner = () => {
         {/* Banner content */}
         <div className="relative w-full h-full flex justify-between items-center px-[130px] text-white bg-gradient-to-b from-transparent to-black/80">
 
-          <div className="flex flex-col gap-8 w-full">
+          <div className="flex flex-col gap-8">
             <h1 className="text-[45px] font-semibold capitalize leading-[1.4] max-w-[600px]">Améliorez votre activité grâce à nos services de nettoyage professionnels</h1>
             <p className="text-lg leading-7 w-[600px]">Des prestations de nettoyage de haute qualité, adaptées à vos besoins. Offrez-vous un environnement éclatant sans lever le petit doigt.</p>
             <div className="flex gap-x-4">
@@ -30,7 +30,7 @@ const Banner = () => {
             </div>
           </div>
 
-          <div className="w-full h-[100%] flex justify-end items-end">
+          <div className="h-[100%] flex justify-end items-end">
             <img src="/index-right-img.png" className="h-[calc(100%-3rem)] object-cover" alt="img-right" />
           </div>
 

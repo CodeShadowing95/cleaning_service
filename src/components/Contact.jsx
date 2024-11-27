@@ -1,7 +1,7 @@
 
 const Contact = () => {
   return (
-    <div className="w-full h-[calc(100vh-10rem)] -mt-20 mb-20 relative">
+    <div className="w-full h-[calc(100vh-25rem)] -mt-20 mb-20 relative">
       <img src="/contact/line.jpg" alt="grid" className="w-full h-full object-center" />
       <div className="absolute inset-0 flex justify-center items-center pt-32 px-[130px]">
         {/* Left side */}
@@ -9,7 +9,7 @@ const Contact = () => {
           <div className="w-[100px] h-5 flex justify-center items-center text-xs font-semibold text-amber-700 bg-amber-200 rounded-full mb-2">Contact</div>
           <h1 className="text-3xl font-bold max-w-md">Des questions ?</h1>
           <h1 className="text-3xl font-bold max-w-md">Écrivez- ou appelez-nous.</h1>
-          <h1 className="text-3xl font-bold max-w-md">Nous vous répondrons dans les 12 heures</h1>
+          <h1 className="text-3xl font-bold max-w-md">Nous vous répondrons dans les 12 heures qui suivent.</h1>
           <div className="w-full mt-10 flex items-center gap-8">
             <div className="px-4 py-2 flex justify-center items-center text-xs font-semibold text-gray-700 bg-gray-200/50 rounded-lg">
               <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 vertical-middle flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
