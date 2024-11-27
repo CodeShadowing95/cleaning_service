@@ -85,12 +85,12 @@ const Banner = () => {
           </div>
 
           {/* Scroll mouse */}
-          <div className="absolute bottom-32 cursor-pointer">
-            <div className="flex justify-center items-start py-2 w-[28px] h-14 border-[2px] border-white/50 rounded-full gap-2">
+          <div className="absolute bottom-16 cursor-pointer">
+            <div className="flex justify-center items-start py-2 w-[28px] h-14 border-[3px] border-white/50 rounded-full gap-2">
               <div id="mouse" className="w-2 h-4 bg-white/50 rounded-full"></div>
             </div>
           </div>
-          
+
           {/* Absolutes elements ends */}
         </div>
       </div>
