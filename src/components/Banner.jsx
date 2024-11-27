@@ -28,6 +28,7 @@ const Banner = () => {
                 </div>
               </button>
             </div>
+            
             {/* Scroll mouse */}
             <div className="absolute bottom-32 left-0 cursor-pointer">
               <div className="flex justify-center items-start py-2 w-[28px] h-14 border-[2px] border-white/50 rounded-full gap-2">
