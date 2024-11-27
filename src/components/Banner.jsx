@@ -47,7 +47,7 @@ const Banner = () => {
             </div>
           </div>
 
-          <div className="absolute bottom-12 left-[40%] w-56 h-11 py-0.5 bg-blue-900 rounded-full flex justify-center items-center z-10">
+          <div className="absolute bottom-12 right-10 w-56 h-11 py-0.5 bg-blue-900 rounded-full flex justify-center items-center z-10">
             <div className="relative w-full h-full bg-blue-950 rounded-full flex justify-center items-center gap-2 text-xs font-semibold capitalize">
               {/* Icons */}
               {/* <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M18 21H8V8l7-7l1.25 1.25q.175.175.288.475t.112.575v.35L15.55 8H21q.8 0 1.4.6T23 10v2q0 .175-.037.375t-.113.375l-3 7.05q-.225.5-.75.85T18 21M6 8v13H2V8z"/></svg> */}
@@ -85,7 +85,7 @@ const Banner = () => {
           </div>
 
           {/* Scroll mouse */}
-          <div className="absolute bottom-16 cursor-pointer">
+          <div className="absolute left-1/2 bottom-16 cursor-pointer">
             <div className="flex justify-center items-start py-2 w-[28px] h-14 border-[3px] border-white/50 rounded-full gap-2">
               <div id="mouse" className="w-2 h-4 bg-white/50 rounded-full"></div>
             </div>
