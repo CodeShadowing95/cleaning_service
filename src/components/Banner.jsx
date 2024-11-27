@@ -28,13 +28,6 @@ const Banner = () => {
                 </div>
               </button>
             </div>
-            
-            {/* Scroll mouse */}
-            <div className="absolute bottom-32 left-0 cursor-pointer">
-              <div className="flex justify-center items-start py-2 w-[28px] h-14 border-[2px] border-white/50 rounded-full gap-2">
-                <div id="mouse" className="w-2 h-4 bg-white/50 rounded-full"></div>
-              </div>
-            </div>
           </div>
 
           <div className="h-[100%] flex justify-end items-end">
@@ -90,6 +83,14 @@ const Banner = () => {
           <div id="sparkle4" className={`absolute bottom-44 right-5`}>
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1L9 9l-8 3l8 3l3 8l3-8l8-3l-8-3z"/></svg>
           </div>
+
+          {/* Scroll mouse */}
+          <div className="absolute bottom-32 cursor-pointer">
+            <div className="flex justify-center items-start py-2 w-[28px] h-14 border-[2px] border-white/50 rounded-full gap-2">
+              <div id="mouse" className="w-2 h-4 bg-white/50 rounded-full"></div>
+            </div>
+          </div>
+          
           {/* Absolutes elements ends */}
         </div>
       </div>
