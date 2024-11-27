@@ -1,4 +1,4 @@
-import { AboutUs, Banner, Contact, Equipments, HowItWorks, ScrollingMessage, Services, WhyChooseUs } from '../components'
+import { AboutUs, Banner, Contact, Equipments, Footer, HowItWorks, ScrollingMessage, Services, WhyChooseUs } from '../components'
 
 const Home = () => {
   return (
@@ -19,6 +19,8 @@ const Home = () => {
       <ScrollingMessage />
 
       <Contact />
+
+      <Footer />
       
     </div>
   )

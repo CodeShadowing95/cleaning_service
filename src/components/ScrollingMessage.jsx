@@ -1,7 +1,7 @@
 import Marquee from "react-fast-marquee"
 
 const services = [
-  "Nettoyage de bureau",
+  "Nettoyage de bureaux",
   "Nettoyage de sols et entretiens des murs",
   "Ménage et époussetage",
   "Vidage de poubelles",

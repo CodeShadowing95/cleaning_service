@@ -5,8 +5,9 @@ import WhyChooseUs from "./WhyChooseUs";
 import Services from "./Services";
 import Equipments from "./Equipments";
 import HowItWorks from "./HowItWorks";
-import Contact from "./Contact";
 import ScrollingMessage from "./ScrollingMessage";
+import Contact from "./Contact";
+import Footer from "./Footer";
 
 export {
   Banner,
@@ -16,6 +17,7 @@ export {
   Services,
   Equipments,
   HowItWorks,
-  Contact,
   ScrollingMessage,
+  Contact,
+  Footer,
 }

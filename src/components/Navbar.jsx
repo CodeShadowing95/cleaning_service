@@ -27,9 +27,9 @@ import { useEffect, useState } from "react";
     }, [contactInfo]);
 
   return (
-    <nav className={`fixed inset-0 flex items-center justify-between w-full h-[90px] px-[130px] z-50 transition-all duration-300 ${scrolled ? "bg-white shadow" : ""}`}>
+    <nav className={`fixed inset-0 flex items-center justify-between w-full h-[90px] px-[130px] z-50 transition-all duration-300 ${scrolled ? "bg-white shadow" : "bg-blue-950/60"}`}>
 
-      <div className="flex items-center p-4 gap-8 font-semibold">
+      <div className="flex items-center p-4 gap-8">
         <div className="flex items-center mr-10">
           {/* <a href="/accueil">
             <img src="/rehonet_logo.png" alt="Logo" className="h-14" />
