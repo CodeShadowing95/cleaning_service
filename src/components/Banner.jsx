@@ -13,7 +13,7 @@ const Banner = () => {
         {/* Banner content */}
         <div className="relative w-full h-full flex justify-between items-center px-[130px] text-white bg-gradient-to-b from-transparent to-black/80">
 
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col justify-center h-full gap-8 relative">
             <h1 className="text-[45px] font-semibold capitalize leading-[1.4] max-w-[600px]">Améliorez votre activité grâce à nos services de nettoyage professionnels</h1>
             <p className="text-lg leading-7 w-[600px]">Des prestations de nettoyage de haute qualité, adaptées à vos besoins. Offrez-vous un environnement éclatant sans lever le petit doigt.</p>
             <div className="flex gap-x-4">
@@ -27,6 +27,12 @@ const Banner = () => {
                   <div className="relative h-full w-10 bg-white/30"></div>
                 </div>
               </button>
+            </div>
+            {/* Scroll mouse */}
+            <div className="absolute bottom-32 left-0 cursor-pointer">
+              <div className="flex justify-center items-start py-2 w-[28px] h-14 border-[2px] border-white/50 rounded-full gap-2">
+                <div id="mouse" className="w-2 h-4 bg-white/50 rounded-full"></div>
+              </div>
             </div>
           </div>
 

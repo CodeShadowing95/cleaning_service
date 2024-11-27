@@ -95,3 +95,16 @@ body {
 #flip-card-back {
   transform: rotateY(-180deg);
 }
+
+#mouse {
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
