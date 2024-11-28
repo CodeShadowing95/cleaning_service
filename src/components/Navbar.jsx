@@ -93,7 +93,7 @@ import { useEffect, useState } from "react";
         </div>
       </div>
 
-      <div className={`fixed ${toggleMenu ? "translate-y-full" : "-translate-y-full"} max-[1300px]:block hidden absolute bottom-0 left-0 transform translate-y-full w-full h-[300px] p-4 bg-white/90 transition-all duration-300`}>
+      <div className={`fixed ${toggleMenu ? "translate-y-full" : "-translate-y-full"} max-[1300px]:block hidden absolute bottom-0 left-0 transform translate-y-full w-full h-[300px] p-4 bg-white transition-all duration-300`}>
         <div className="w-full p-2 flex items-center text-base font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer">L{"'"}entreprise</div>
         <div className="w-full p-2 flex items-center text-base font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer">Engagements</div>
         <div className="w-full p-2 flex items-center text-base font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer">Services</div>

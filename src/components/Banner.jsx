@@ -23,10 +23,10 @@ const Banner = () => {
         <Navbar />
 
         {/* Banner content */}
-        {/* <div className="relative w-full h-full flex justify-between items-center px-[130px] text-white bg-gradient-to-b from-transparent to-black/80">
+        <div className="relative w-full h-full flex justify-between items-center px-[130px] text-white bg-gradient-to-b from-transparent to-black/80">
 
-          <div className="flex flex-col justify-center h-full gap-8 relative">
-            <h1 className="text-[45px] font-semibold capitalize leading-[1.4] max-w-[600px]">Améliorez votre activité grâce à nos services de nettoyage professionnels</h1>
+          <div className="w-1/2 max-[1410px]:w-full flex flex-col justify-center max-[1410px]:items-center h-full gap-8 relative">
+            <h1 className="lg:text-[45px] sm:text-[40px] text-3xl leading-[1.4] font-semibold capitalize max-w-[600px]">Améliorez votre activité grâce à nos services de nettoyage professionnels</h1>
             <p className="text-lg leading-7 w-[600px]">Des prestations de nettoyage de haute qualité, adaptées à vos besoins. Offrez-vous un environnement éclatant sans lever le petit doigt.</p>
             <div className="flex gap-x-4">
               <button className="px-8 py-3 bg-white text-gray-900 hover:text-sky-900 font-semibold transition-all duration-500 rounded-full">En savoir plus</button>
@@ -42,11 +42,11 @@ const Banner = () => {
             </div>
           </div>
 
-          <div className="h-[100%] flex justify-end items-end">
-            <img src="/index-right-img.png" className="h-[calc(100%-4rem)] object-cover" alt="img-right" />
+          <div className="max-[1410px]:hidden min-w-1/2 h-[100%] flex justify-end items-end">
+            <img src="/index-right-img.png" className="w-full h-[85%] object-cover" alt="img-right" />
           </div>
 
-          <div className="absolute top-1/4 left-[55%] w-56 h-11 py-0.5 bg-blue-600 rounded-full flex justify-center items-center">
+          <div className="max-[1410px]:hidden absolute top-1/4 left-[55%] w-56 h-11 py-0.5 bg-blue-600 rounded-full flex justify-center items-center">
             <div className="w-full h-full bg-blue-800 rounded-full flex justify-center items-center gap-2 text-xs font-semibold">
               <div className="flex items-center text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" className="-mr-1.5" viewBox="0 0 24 24"><path fill="currentColor" d="M3 23v-7q0-2.075 1.463-3.537T8 11h1V3q0-.825.588-1.412T11 1h2q.825 0 1.413.588T15 3v8h1q2.075 0 3.538 1.463T21 16v7zm2-2h2v-3q0-.425.288-.712T8 17t.713.288T9 18v3h2v-3q0-.425.288-.712T12 17t.713.288T13 18v3h2v-3q0-.425.288-.712T16 17t.713.288T17 18v3h2v-5q0-1.25-.875-2.125T16 13H8q-1.25 0-2.125.875T5 16z"/></svg>
@@ -57,14 +57,14 @@ const Banner = () => {
             </div>
           </div>
 
-          <div className="absolute bottom-12 right-10 w-56 h-11 py-0.5 bg-blue-900 rounded-full flex justify-center items-center z-10">
+          <div className="max-[1410px]:hidden absolute bottom-12 right-10 w-56 h-11 py-0.5 bg-blue-900 rounded-full flex justify-center items-center z-10">
             <div className="relative w-full h-full bg-blue-950 rounded-full flex justify-center items-center gap-2 text-xs font-semibold capitalize">
               <img src="/positive-review.png" alt="positive review" className="w-5 h-5" />
               Satisfaction cliente
             </div>
           </div>
 
-          <div className="absolute top-24 right-16">
+          <div className="max-[1410px]:hidden absolute top-24 right-16">
             <div className="relative flex items-center justify-center border border-sky-700 bg-sky-800 rounded-full w-28 h-28">
               <img src="/side_img.png" alt="sideImg" />
             </div>
@@ -72,7 +72,7 @@ const Banner = () => {
 
           
 
-          <div id="sparkle" className={`absolute top-40 left-1/4`}>
+          <div id="sparkle" className={`absolute top-36 left-1/4`}>
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1L9 9l-8 3l8 3l3 8l3-8l8-3l-8-3z"/></svg>
           </div>
           <div id="sparkle1" className={`absolute top-24 right-[35%]`}>
@@ -81,7 +81,7 @@ const Banner = () => {
           <div id="sparkle2" className={`absolute bottom-10 left-5`}>
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1L9 9l-8 3l8 3l3 8l3-8l8-3l-8-3z"/></svg>
           </div>
-          <div id="sparkle3" className={`absolute top-1/4 right-20`}>
+          <div id="sparkle3" className={`absolute top-1/3 right-20`}>
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1L9 9l-8 3l8 3l3 8l3-8l8-3l-8-3z"/></svg>
           </div>
           <div id="sparkle4" className={`absolute bottom-44 right-5`}>
@@ -97,7 +97,7 @@ const Banner = () => {
             </div>
           </div>
 
-        </div> */}
+        </div>
       </div>
     </div>
   )
