@@ -40,7 +40,7 @@ const Footer = () => {
           <p className="text-xl font-bold mb-4">Entreprise</p>
           <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Accueil</a>
           <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Qui sommes-nous ?</a>
-          <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Nos qualités</a>
+          <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Notre engagement</a>
           <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Prestations</a>
           <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Équipements</a>
           <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Démonstration</a>

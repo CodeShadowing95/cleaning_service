@@ -6,7 +6,7 @@ const Home = () => {
       
       <Banner />
 
-      <AboutUs />
+      {/* <AboutUs />
 
       <WhyChooseUs />
 
@@ -20,7 +20,7 @@ const Home = () => {
 
       <Contact />
 
-      <Footer />
+      <Footer /> */}
       
     </div>
   )
