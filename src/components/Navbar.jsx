@@ -93,12 +93,12 @@ import { useEffect, useState } from "react";
         </div>
       </div>
 
-      <div className={`fixed ${toggleMenu ? "translate-y-full" : "-translate-y-full"} max-[1300px]:block hidden absolute bottom-0 left-0 transform translate-y-full w-full h-[300px] p-4 bg-white transition-all duration-300`}>
-        <div className="w-full p-2 flex items-center text-base font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer">L{"'"}entreprise</div>
-        <div className="w-full p-2 flex items-center text-base font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer">Engagements</div>
-        <div className="w-full p-2 flex items-center text-base font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer">Services</div>
-        <div className="w-full p-2 flex items-center text-base font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer">Catalogue</div>
-        <div className="w-full p-2 flex items-center text-base font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer">Contact</div>
+      <div className={`fixed ${toggleMenu ? "translate-y-full" : "-translate-y-full"} max-[1300px]:flex hidden absolute bottom-0 left-0 transform w-full flex-col justify-center items-start h-[350px] px-10 py-4 bg-white transition-all duration-300`}>
+        <div className="w-full p-2 flex items-center text-lg font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer">L{"'"}entreprise</div>
+        <div className="w-full p-2 flex items-center text-lg font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer">Engagements</div>
+        <div className="w-full p-2 flex items-center text-lg font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer">Services</div>
+        <div className="w-full p-2 flex items-center text-lg font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer">Catalogue</div>
+        <div className="w-full p-2 flex items-center text-lg font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer">Contact</div>
         <button className="p-[3px] mt-4 relative">
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
           <div className="w-[200px] h-8 flex flex-col justify-center items-center bg-black rounded-[6px]  relative group transition duration-200 text-xs font-semibold text-white hover:bg-transparent overflow-hidden">
