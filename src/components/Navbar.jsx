@@ -42,7 +42,7 @@ import { useEffect, useState } from "react";
 
   return (
     // <nav className={`fixed inset-0 flex items-center justify-between w-full h-[90px] px-[20px] sm:px-[30px] md:px-[50px] lg:px-[100px] xl:px-[130px] z-50 transition-all duration-300 ${scrolled ? "bg-white shadow" : "bg-white bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10"}`}>
-    <nav className={`fixed inset-0 flex items-center justify-between w-full h-[90px] px-20 z-50 transition-all duration-300 ${scrolled ? "bg-white shadow" : "bg-white bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10"}`}>
+    <nav className={`fixed inset-0 flex items-center justify-between w-full h-[90px] px-10 2xl:px-[250px] xl:px-[150px] lg:px-[100px] md:px-[80px] sm:px-[40px] z-50 transition-all duration-300 ${scrolled ? "bg-white shadow" : "bg-white bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10"}`}>
 
       <div className="flex items-center p-4 gap-8">
         <div className="flex items-center mr-10">
