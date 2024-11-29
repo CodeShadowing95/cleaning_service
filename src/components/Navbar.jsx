@@ -6,6 +6,19 @@ import { useEffect, useState } from "react";
     const [scrolled, setScrolled] = useState(false);
     const [contactInfo, setContactInfo] = useState(0);
     const [toggleMenu, setToggleMenu] = useState(false);
+    const [toggleContent, setToggleContent] = useState(false);
+
+    useEffect(() => {
+      setTimeout(() => {
+        toggleMenu ? setToggleContent(true) : setToggleContent(false);
+      }, 200);
+    }, [toggleMenu]);
+
+    useEffect(() => {
+      if (window.innerWidth <= 1300) {
+        setToggleMenu(false);
+      }
+    }, []);
 
     useEffect(() => {
       const handleScroll = () => {
@@ -30,7 +43,7 @@ import { useEffect, useState } from "react";
     // Hide the menu when the user clicks outside of it
     useEffect(() => {
       const handleClickOutside = (event) => {
-        if (toggleMenu && !event.target.closest(".hamburger_menu")) {
+        if (toggleMenu && !event.target.closest(".hamburger_menu") && !event.target.closest(".dropdown_menu")) {
           setToggleMenu(false);
         }
       };
@@ -42,6 +55,7 @@ import { useEffect, useState } from "react";
 
   return (
     // <nav className={`fixed inset-0 flex items-center justify-between w-full h-[90px] px-[20px] sm:px-[30px] md:px-[50px] lg:px-[100px] xl:px-[130px] z-50 transition-all duration-300 ${scrolled ? "bg-white shadow" : "bg-white bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10"}`}>
+    <>
     <nav className={`fixed inset-0 flex items-center justify-between w-full h-[90px] px-10 2xl:px-[250px] xl:px-[150px] lg:px-[100px] md:px-[80px] sm:px-[40px] z-50 transition-all duration-300 ${scrolled ? "bg-white shadow" : "bg-white bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10"}`}>
 
       <div className="flex items-center p-4 gap-8">
@@ -94,7 +108,8 @@ import { useEffect, useState } from "react";
         </div>
       </div>
 
-      <div className={`fixed ${toggleMenu ? "translate-y-full" : "-translate-y-full"} max-[1300px]:flex hidden absolute bottom-0 left-0 transform w-full flex-col justify-center items-start h-[350px] px-10 py-4 bg-white transition-all duration-300`}>
+
+      {/* <div className={`fixed ${toggleMenu ? "translate-y-full" : "-translate-y-full"} max-[1300px]:flex hidden absolute bottom-0 left-0 transform w-full flex-col justify-center items-start h-[350px] px-10 py-4 bg-white transition-all duration-300`}>
         <div className="w-full p-2 flex items-center text-lg font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer">L{"'"}entreprise</div>
         <div className="w-full p-2 flex items-center text-lg font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer">Engagements</div>
         <div className="w-full p-2 flex items-center text-lg font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer">Services</div>
@@ -112,8 +127,33 @@ import { useEffect, useState } from "react";
             </div>
           </div>
         </button>
-      </div>
+      </div> */}
     </nav>
+
+    {/* Mobile menu */}
+    <div className={`dropdown_menu fixed ${toggleMenu ? "opacity-100" : "opacity-0 pointer-events-none"} max-[1300px]:flex hidden top-[90px] left-0 w-full h-full bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 transition-all duration-300 ease-in-out z-50 overflow-hidden`}>
+      {/* <div className={`fixed ${toggleMenu ? "translate-y-full" : "-translate-y-full"} max-[1300px]:flex hidden absolute bottom-0 left-0 transform w-full flex-col justify-center items-start h-[350px] px-10 py-4 bg-white transition-all duration-300`}> */}
+      <div className={`fixed ${toggleContent ? "translate-y-0" : "-translate-y-full"} absolute top-0 inset-x-0 transform w-full flex-col justify-center items-start h-[350px] px-10 py-4 bg-white transition-all duration-300`}>
+          <div className="w-full p-2 flex items-center text-lg font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer">L{"'"}entreprise</div>
+          <div className="w-full p-2 flex items-center text-lg font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer">Engagements</div>
+          <div className="w-full p-2 flex items-center text-lg font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer">Services</div>
+          <div className="w-full p-2 flex items-center text-lg font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer">Catalogue</div>
+          <div className="w-full p-2 flex items-center text-lg font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer">Contact</div>
+          <button className="p-[3px] mt-4 relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+            <div className="w-[200px] h-8 flex flex-col justify-center items-center bg-black rounded-[6px]  relative group transition duration-200 text-xs font-semibold text-white hover:bg-transparent overflow-hidden">
+              <div className={`flex items-center gap-2 transition-transform duration-500 ${contactInfo == 0 ? 'translate-y-[40%]' : '-translate-y-[130%]'}`}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M20 15.5c-1.2 0-2.5-.2-3.6-.6h-.3c-.3 0-.5.1-.7.3l-2.2 2.2c-2.8-1.5-5.2-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1c-.3-1.1-.5-2.4-.5-3.6c0-.5-.5-1-1-1H4c-.5 0-1 .5-1 1c0 9.4 7.6 17 17 17c.5 0 1-.5 1-1v-3.5c0-.5-.5-1-1-1M5 5h1.5c.1.9.3 1.8.5 2.6L5.8 8.8C5.4 7.6 5.1 6.3 5 5m14 14c-1.3-.1-2.6-.4-3.8-.8l1.2-1.2c.8.2 1.7.4 2.6.4z"/></svg>
+                +33 7 24 89 62 47
+              </div>
+              <div className={`flex items-center gap-2 transition-transform duration-500 ${contactInfo == 0 ? 'translate-y-[130%]' : '-translate-y-[65%]'}`}>
+                rehonettoyage@yahoo.com
+              </div>
+            </div>
+          </button>
+        </div>
+    </div>
+    </>
   )
 }
 
