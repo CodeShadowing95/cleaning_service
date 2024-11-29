@@ -27,7 +27,7 @@ const Banner = () => {
 
           <div className="w-full lg:w-1/2 flex h-full flex-col justify-center gap-8 relative pt-20">
             {/* <h1 className="lg:text-[45px] sm:text-[40px] md:text-[35px] text-3xl leading-[1.4] font-semibold capitalize max-w-[600px] md:max-w-full">Améliorez votre activité grâce à nos services de nettoyage professionnels</h1> */}
-            <h1 className="font-semibold capitalize text-3xl leading-[1.4] sm:text-4xl 2xl:text-5xl 2xl:leading-[1.3] max-w-[600px] text-balance">Améliorez votre activité grâce à nos services de nettoyage professionnels</h1>
+            <h1 className="font-semibold capitalize text-3xl leading-[1.4] sm:text-4xl sm:leading-[1.3] 2xl:text-5xl 2xl:leading-[1.3] max-w-[600px] text-balance">Améliorez votre activité grâce à nos services de nettoyage professionnels</h1>
             <p className="text-base sm:text-xl max-w-[600px]">Des prestations de nettoyage de haute qualité, adaptées à vos besoins. Offrez-vous un environnement éclatant sans lever le petit doigt.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button className="min-w-fit px-6 py-2 text-base bg-white text-gray-900 hover:text-sky-900 font-semibold transition-all duration-500 rounded-full">En savoir plus</button>
