@@ -8,7 +8,9 @@ const Home = () => {
 
       <AboutUs />
 
-      {/* <WhyChooseUs />
+      <WhyChooseUs />
+      
+      {/*
 
       <Services />
 
