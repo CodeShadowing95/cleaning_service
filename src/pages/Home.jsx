@@ -10,9 +10,10 @@ const Home = () => {
 
       <WhyChooseUs />
       
-      {/*
-
       <Services />
+
+
+      {/*
 
       <Equipments />
 

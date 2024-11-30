@@ -1,20 +1,20 @@
 
 const Services = () => {
   return (
-    <div className="w-full flex flex-col justify-center items-center px-[130px] py-10 bg-gradient-to-b from-transparent to-blue-900/50">
+    <div className="w-full flex flex-col justify-center items-center px-10 sm:px-[40px] md:px-[80px] lg:px-[100px] xl:px-[130px] 2xl:px-[250px] py-10 bg-gradient-to-b from-transparent to-blue-900/50">
       <div className="px-4 py-1 flex justify-center items-center text-xs font-semibold text-teal-700 bg-teal-200 rounded-full">Services</div>
       <div className="w-full flex justify-between items-center mt-4 mb-10">
         <div className="w-full flex flex-col justify-center items-center gap-2">
-          <h1 className="text-3xl font-bold capitalize">Nos Prestations, Pensées pour Vous</h1>
-          <p className="text-gray-700 text-sm max-w-2xl text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, facilis dolore nobis repellendus ratione mollitia perspiciatis delectus quibusdam consequuntur.</p>
+          <h1 className="text-3xl font-bold text-center capitalize">Nos Prestations, Pensées pour Vous</h1>
+          <p className="text-gray-700 text-base lg:text-sm max-w-2xl text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, facilis dolore nobis repellendus ratione mollitia perspiciatis delectus quibusdam consequuntur.</p>
         </div>
       </div>
 
       {/* <div className="flex flex-wrap justify-center px-20 gap-8"> */}
-      <div className="grid grid-cols-4 gap-8">
+      <div className="flex flex-wrap justify-center items-center gap-4">
 
         {/* More Cards */}
-        <div className="flex justify-center items-center relative w-[290px] h-[350px] rounded-lg overflow-hidden">
+        <div className="flex justify-center items-center relative w-[280px] h-[350px] rounded-lg overflow-hidden">
           <img src="/services/showcase.jpg" alt="general" className="w-full h-full object-cover" />
           <div className="absolute w-full h-full flex flex-col justify-center items-center bg-blue-950/80 overflow-hidden rounded-lg px-8">
             <div className="w-14 h-14 flex justify-center items-center bg-white text-blue-800 rounded-full mb-4">
@@ -32,7 +32,7 @@ const Services = () => {
         </div>
 
         {/* Card */}
-        <div id="flip-card" className="flex justify-center items-center relative w-[290px] h-[350px] rounded-lg cursor-pointer">
+        <div id="flip-card" className="flex justify-center items-center relative w-[280px] h-[350px] rounded-lg cursor-pointer">
           <div id="flip-card-inner" className="relative w-full h-full text-center transition-transform duration-500 shadow-md rounded-lg">
             {/* Card Front */}
             <div id="flip-card-front" className="absolute w-full h-full overflow-hidden rounded-lg">
@@ -55,7 +55,7 @@ const Services = () => {
         </div>
 
         {/* Card */}
-        <div id="flip-card" className="flex justify-center items-center relative w-[290px] h-[350px] rounded-lg cursor-pointer">
+        <div id="flip-card" className="flex justify-center items-center relative w-[280px] h-[350px] rounded-lg cursor-pointer">
           <div id="flip-card-inner" className="relative w-full h-full text-center transition-transform duration-500 shadow-md rounded-lg">
             {/* Card Front */}
             <div id="flip-card-front" className="absolute w-full h-full overflow-hidden rounded-lg">
@@ -78,7 +78,7 @@ const Services = () => {
         </div>
 
         {/* Card */}
-        <div id="flip-card" className="flex justify-center items-center relative w-[290px] h-[350px] rounded-lg cursor-pointer">
+        <div id="flip-card" className="flex justify-center items-center relative w-[280px] h-[350px] rounded-lg cursor-pointer">
           <div id="flip-card-inner" className="relative w-full h-full text-center transition-transform duration-500 shadow-md rounded-lg">
             {/* Card Front */}
             <div id="flip-card-front" className="absolute w-full h-full overflow-hidden rounded-lg">
@@ -101,7 +101,7 @@ const Services = () => {
         </div>
 
         {/* Card */}
-        <div id="flip-card" className="flex justify-center items-center relative w-[290px] h-[350px] rounded-lg cursor-pointer">
+        <div id="flip-card" className="flex justify-center items-center relative w-[280px] h-[350px] rounded-lg cursor-pointer">
           <div id="flip-card-inner" className="relative w-full h-full text-center transition-transform duration-500 shadow-md rounded-lg">
             {/* Card Front */}
             <div id="flip-card-front" className="absolute w-full h-full overflow-hidden rounded-lg">
@@ -124,7 +124,7 @@ const Services = () => {
         </div>
 
         {/* Card */}
-        <div id="flip-card" className="flex justify-center items-center relative w-[290px] h-[350px] rounded-lg cursor-pointer">
+        <div id="flip-card" className="flex justify-center items-center relative w-[280px] h-[350px] rounded-lg cursor-pointer">
           <div id="flip-card-inner" className="relative w-full h-full text-center transition-transform duration-500 shadow-md rounded-lg">
             {/* Card Front */}
             <div id="flip-card-front" className="absolute w-full h-full overflow-hidden rounded-lg">
@@ -147,7 +147,7 @@ const Services = () => {
         </div>
 
         {/* Card */}
-        <div id="flip-card" className="flex justify-center items-center relative w-[290px] h-[350px] rounded-lg cursor-pointer">
+        <div id="flip-card" className="flex justify-center items-center relative w-[280px] h-[350px] rounded-lg cursor-pointer">
           <div id="flip-card-inner" className="relative w-full h-full text-center transition-transform duration-500 shadow-md rounded-lg">
 
             <div id="flip-card-front" className="absolute w-full h-full overflow-hidden rounded-lg">
@@ -170,7 +170,7 @@ const Services = () => {
         </div>
 
         {/* Card */}
-        <div id="flip-card" className="flex justify-center items-center relative w-[290px] h-[350px] rounded-lg cursor-pointer">
+        <div id="flip-card" className="flex justify-center items-center relative w-[280px] h-[350px] rounded-lg cursor-pointer">
           <div id="flip-card-inner" className="relative w-full h-full text-center transition-transform duration-500 shadow-md rounded-lg">
 
             <div id="flip-card-front" className="absolute w-full h-full overflow-hidden rounded-lg">
@@ -193,7 +193,7 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="w-full flex justify-between items-center gap-4 mt-10">
+      <div className="w-full flex lg:flex-row flex-col justify-between items-center gap-4 mt-10">
         <div className="w-1/2 flex flex-col justify-center items-start gap-8">
           <p className="text-3xl text-gray-900 font-bold capitalize">Notre équipe rendra vos locaux propres et soignés</p>
           <p className="text-sm text-gray-800 font-medium text-pretty">Que ce soit pour des bureaux, des espaces communs, ou des zones spécifiques, nous veillons à ce que chaque recoin soit soigné, chaque surface éclatante et chaque environnement sain. Faites confiance à notre équipe dynamique et fiable pour un service de nettoyage irréprochable, adapté à vos besoins et respectueux de votre espace.</p>
