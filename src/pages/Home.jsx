@@ -6,9 +6,9 @@ const Home = () => {
       
       <Banner />
 
-      {/* <AboutUs />
+      <AboutUs />
 
-      <WhyChooseUs />
+      {/* <WhyChooseUs />
 
       <Services />
 

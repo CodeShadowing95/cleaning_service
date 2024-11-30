@@ -14,7 +14,7 @@ const Banner = () => {
 
 
   return (
-    <div className="w-full h-[calc(100vh-150px)] relative">
+    <div className="w-full h-[calc(100vh-50px)] relative">
       <img src="/banner_bg.jpg" alt="banner" className="w-full h-full object-cover z-0" />
 
       <div className="absolute inset-0 z-50 bg-slate-400/85">
@@ -23,7 +23,7 @@ const Banner = () => {
         <Navbar />
 
         {/* Banner content */}
-        <div className="relative w-full h-full flex justify-between items-center px-10 2xl:px-[250px] xl:px-[150px] lg:px-[100px] md:px-[80px] sm:px-[40px] gap-10 text-white bg-gradient-to-b from-transparent to-black/80">
+        <div className="relative w-full h-full flex justify-between items-center px-10 2xl:px-[250px] xl:px-[130px] lg:px-[100px] md:px-[80px] sm:px-[40px] gap-10 text-white bg-gradient-to-b from-transparent to-black/80">
 
           <div className="w-full lg:w-1/2 flex h-full flex-col justify-center gap-8 relative pt-20">
             {/* <h1 className="lg:text-[45px] sm:text-[40px] md:text-[35px] text-3xl leading-[1.4] font-semibold capitalize max-w-[600px] md:max-w-full">Améliorez votre activité grâce à nos services de nettoyage professionnels</h1> */}

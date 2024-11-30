@@ -19,7 +19,7 @@ const Equipments = () => {
     <div className="w-full my-20 bg-white py-4 relative">
       {/* Banner wallpaper */}
       <Marquee className="absolute w-full h-full top-0 left-0 z-0" pauseOnHover={false} speed={40} gradient={false}>
-          <img src="/equipments/wallpaper2.png" alt="wallpaper" className="w-full h-full object-cover" />
+          <img src="/equipments/wallpaper3.jpg" alt="wallpaper" className="w-full h-full object-cover" />
       </Marquee>
 
       <div className="absolute w-full h-full bottom-0 left-0 bg-gradient-to-t from-transparent to-white z-0"></div>
