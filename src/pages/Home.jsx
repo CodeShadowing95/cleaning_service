@@ -12,12 +12,13 @@ const Home = () => {
       
       <Services />
 
-
-      {/*
-
       <Equipments />
 
       <HowItWorks />
+
+
+
+      {/*
 
       <ScrollingMessage />
 

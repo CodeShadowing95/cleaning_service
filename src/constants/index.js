@@ -1,13 +1,47 @@
+
 const servicesDesc = [
   {
     id: 1,
-    title: "Nettoyage professionnel",
-    backtitle: "",
-    description: "Des prestations de nettoyage de haute qualité, adaptées à vos besoins. Offrez-vous un environnement éclatant sans lever le petit doigt.",
-    image: "",
-    hbarColor: "bg-sky-200",
-    link: "#"
+    title: "Nettoyage de vos bureaux",
+    description: "Nous assurons un nettoyage complet et rigoureux de vos bureaux, pour offrir à vos collaborateurs un espace de travail sain propice à la productivité.",
+    badge: "Général",
   },
+  {
+    id: 2,
+    title: "Nettoyage de sol et entretien des murs",
+    description: "Qu’il s’agisse de moquettes, carrelages ou parquets, nous veillons à ce que vos surfaces soient impeccables, sans taches ni traces.",
+    badge: "Général",
+  },
+  {
+    id: 3,
+    title: "Ménage et époussetage",
+    description: "Nous assurons un dépoussiérage minutieux et un ménage en profondeur de chaque recoin, en apportant une attention particulière aux zones souvent négligées.",
+    badge: "Général",
+  },
+  {
+    id: 4,
+    title: "Gestion des déchets",
+    description: "Nous nous occupons de la collecte et du remplacement des sacs poubelles dans vos espaces de travail.",
+    badge: "Général",
+  },
+  {
+    id: 5,
+    title: "Nettoyage de surfaces vitrées",
+    description: "Nous vous assurons des surfaces vitrées éclatantes, sans traces ni résidus. Des techniques et produits adaptés pour chaque type de surface.",
+    badge: "Général",
+  },
+  {
+    id: 6,
+    title: "Nettoyage de fin de chantier",
+    description: "Nous intervenons après les travaux pour une remise en état complète de vos espaces. Dépoussiérage, élimination des résidus et des traces de chantier.",
+    badge: "Général",
+  },
+  {
+    id: 7,
+    title: "Fourniture de matériels sanitaires",
+    description: "Nous assurons l’approvisionnement régulier de matériels sanitaires essentiels : papier hygiénique, savon, serviettes et autres produits indispensables.",
+    badge: "Approvisionnement",
+  }
 ];
 
 const generalCleaningServices = [

@@ -1,11 +1,11 @@
 
 const WhyChooseUs = () => {
   return (
-    <div className="relative w-full px-10 sm:px-[40px] md:px-[80px] lg:px-[100px] xl:px-[130px] 2xl:px-[250px] py-32 flex flex-col justify-center items-center">
+    <div className="relative w-full px-10 sm:px-[40px] md:px-[80px] lg:px-[100px] xl:px-[130px] 2xl:px-[160px] py-32 flex flex-col justify-center items-center">
       <div className="relative w-full flex flex-col justify-center items-center">
-        <h1 className="text-4xl font-bold">Pourquoi nous choisir ?</h1>
-        <div className="absolute sm:block hidden bottom-0 right-10">
-          <img src="/img-wcu.png" alt="aspirateur-rouge" className="w-32 h-32" />
+        <h1 className="text-4xl font-bold text-center">Pourquoi nous choisir ?</h1>
+        <div className="absolute sm:block hidden bottom-0 lg:right-10 right-0">
+          <img src="/img-wcu.png" alt="aspirateur-rouge" className="w-20 h-20 lg:w-32 lg:h-32" />
         </div>
       </div>
       <p className="text-gray-600 text-[14px] leading-6 mt-8 text-center max-w-5xl relative">
@@ -17,7 +17,7 @@ const WhyChooseUs = () => {
       <div className="mt-16 relative grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
         
         {/* 1st panel */}
-        <div className="flex flex-col gap-3 p-2 border border-gray-200 rounded-xl relative overflow-hidden hover:scale-105 transition-all duration-500 group">
+        <div className="flex flex-col gap-3 p-3 border border-gray-200 rounded-xl relative overflow-hidden hover:scale-105 transition-all duration-500 group">
           <div className="absolute -top-6 -left-6 w-[90px] h-[90px] bg-gradient-to-t from-gray-900 to-gray-600 rounded-full -z-10 group-hover:scale-[1500%] transition-all duration-500"></div>
           <img src="/service.png" alt="service" className="w-12 h-12" />
           <p className="text-lg md:text-sm font-semibold m-0 p-0 capitalize group-hover:text-gray-200 transition-all duration-500">Service sur mesure</p>
@@ -26,8 +26,8 @@ const WhyChooseUs = () => {
         </div>
         
         {/* 2nd panel */}
-        <div className="flex flex-col gap-3 p-2 border border-gray-200 rounded-xl relative overflow-hidden hover:scale-105 transition-all duration-500 group">
-          <div className="absolute bottom-52 -left-10 w-[90px] h-[90px] bg-gradient-to-t from-gray-900 to-gray-600 rounded-full -z-10 group-hover:scale-[1500%] transition-all duration-500"></div>
+        <div className="flex flex-col gap-3 p-3 border border-gray-200 rounded-xl relative overflow-hidden hover:scale-105 transition-all duration-500 group">
+          <div className="absolute bottom-52 -left-14 w-[90px] h-[90px] bg-gradient-to-t from-gray-900 to-gray-600 rounded-full -z-10 group-hover:scale-[1500%] transition-all duration-500"></div>
           <img src="/team.jpg" alt="desc1" className="rounded-xl mb-6 w-full h-full object-cover" />
           <img src="/team-building.png" alt="service" className="w-12 h-12" />
           <p className="text-lg md:text-sm font-semibold m-0 p-0 capitalize group-hover:text-gray-200 transition-all duration-500">Équipe de confiance</p>
@@ -35,7 +35,7 @@ const WhyChooseUs = () => {
         </div>
         
         {/* 3rd panel */}
-        <div className="flex flex-col gap-3 p-2 border border-gray-200 rounded-xl relative overflow-hidden hover:scale-105 transition-all duration-500 group">
+        <div className="flex flex-col gap-3 p-3 border border-gray-200 rounded-xl relative overflow-hidden hover:scale-105 transition-all duration-500 group">
           <div className="absolute -top-6 -left-6 w-[90px] h-[90px] bg-gradient-to-t from-gray-900 to-gray-600 rounded-full -z-10 group-hover:scale-[1500%] transition-all duration-500"></div>
           <img src="/cleaning.png" alt="service" className="w-12 h-12" />
           <p className="text-lg md:text-sm font-semibold m-0 p-0 capitalize group-hover:text-gray-200 transition-all duration-500">Produits écologiques et parfumés</p>
@@ -44,8 +44,8 @@ const WhyChooseUs = () => {
         </div>
         
         {/* 4th panel */}
-        <div className="flex flex-col gap-3 p-2 border border-gray-200 rounded-xl relative overflow-hidden hover:scale-105 transition-all duration-500 group">
-          <div className="absolute bottom-52 -left-10 w-[90px] h-[90px] bg-gradient-to-t from-gray-900 to-gray-600 rounded-full -z-10 group-hover:scale-[1500%] transition-all duration-500"></div>
+        <div className="flex flex-col gap-3 p-3 border border-gray-200 rounded-xl relative overflow-hidden hover:scale-105 transition-all duration-500 group">
+          <div className="absolute bottom-52 -left-14 w-[90px] h-[90px] bg-gradient-to-t from-gray-900 to-gray-600 rounded-full -z-10 group-hover:scale-[1500%] transition-all duration-500"></div>
           <img src="/flexibilite.jpg" alt="desc1" className="rounded-xl mb-6 w-full h-full object-cover" />
           <img src="/flexible.png" alt="service" className="w-12 h-12" />
           <p className="text-lg md:text-sm font-semibold m-0 p-0 capitalize group-hover:text-gray-200 transition-all duration-500">Flexibilité et réactivité</p>

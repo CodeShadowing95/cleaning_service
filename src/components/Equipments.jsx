@@ -16,7 +16,7 @@ const Equipments = () => {
   };
 
   return (
-    <div className="w-full my-20 bg-white py-4 relative">
+    <div className="w-full my-32 bg-white py-4 relative">
       {/* Banner wallpaper */}
       <Marquee className="absolute w-full h-full top-0 left-0 z-0" pauseOnHover={false} speed={40} gradient={false}>
           <img src="/equipments/wallpaper3.jpg" alt="wallpaper" className="w-full h-full object-cover" />
@@ -25,8 +25,8 @@ const Equipments = () => {
       <div className="absolute w-full h-full bottom-0 left-0 bg-gradient-to-t from-transparent to-white z-0"></div>
       <div className="absolute w-full h-full top-0 left-0 bg-gradient-to-b from-transparent to-white z-0"></div>
 
-      <p className="text-xl font-bold px-[130px] mb-8 relative">Découvrez les secrets de notre efficacité</p>
-      <div className="px-[130px] py-2 mt-8 grid grid-cols-3 gap-4 overflow-hidden">
+      <p className="text-xl font-bold px-10 sm:px-[40px] md:px-[80px] lg:px-[100px] xl:px-[130px] 2xl:px-[160px] mb-8 relative">Découvrez les secrets de notre efficacité</p>
+      <div className="px-10 sm:px-[40px] md:px-[80px] lg:px-[100px] xl:px-[130px] 2xl:px-[160px] py-2 mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 overflow-hidden">
         {generalCleaningServices.map((service, index) => (
           <div key={index} className="relative flex flex-col px-4 py-6 border rounded-xl bg-zinc-800 text-white border-none hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_#0d9488] hover:border-none transition-all duration-300">
             <div className="flex flex-col">

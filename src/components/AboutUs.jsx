@@ -1,10 +1,10 @@
 
 const AboutUs = () => {
   return (
-    <div className="w-full flex lg:flex-row flex-col justify-center items-center px-10 2xl:px-[250px] xl:px-[130px] lg:px-[100px] md:px-[80px] sm:px-[40px] gap-8 py-16 bg-blue-50">
+    <div className="w-full flex lg:flex-row flex-col justify-center items-center px-10 sm:px-[40px] md:px-[80px] lg:px-[100px] xl:px-[130px] gap-8 py-16 bg-blue-50">
       {/* Left side */}
       <div className="relative flex justify-center w-full items-center">
-          <img src="/pic.png" className="w-full h-full object-cover" alt="left-img" />
+          <img src="/pic.png" className="w-full h-full object-cover flex-shrink-0 align-middle" alt="left-img" />
       </div>
       {/* Right side */}
       <div className="flex flex-col w-full h-full">
