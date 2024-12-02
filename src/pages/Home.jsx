@@ -20,11 +20,7 @@ const Home = () => {
 
       <Contact />
 
-
-
-      {/*
-
-      <Footer /> */}
+      <Footer /> 
       
     </div>
   )

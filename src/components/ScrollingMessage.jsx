@@ -12,7 +12,7 @@ const services = [
 
 const ScrollingMessage = () => {
   return (
-    <div className="w-full h-[100px] flex justify-center items-center my-20 bg-blue-600 overflow-hidden relative -rotate-2 z-10">
+    <div className="w-full h-[100px] flex justify-center items-center mt-20 mb-10 bg-blue-600 overflow-hidden relative -rotate-2 z-10">
         <Marquee className="h-full border-none outline-none" pauseOnHover={true} speed={100} gradient={false}>
           <div className="flex justify-center items-center gap-16 border-none outline-none">
             {services.map((service, index) => (

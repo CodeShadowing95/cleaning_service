@@ -1,48 +1,35 @@
+import Envelope from "./sub-components/Envelope"
 
 const Contact = () => {
   return (
-    <div className="w-full h-[calc(100vh-25rem)] my-20 relative">
-      <img src="/contact/line.jpg" alt="grid" className="w-full h-full object-center" />
-      <div className="absolute inset-0 flex justify-center items-center pt-32 px-[130px]">
-        {/* Left side */}
-        <div className="w-1/2 h-full">
-          <div className="w-[100px] h-5 flex justify-center items-center text-xs font-semibold text-amber-700 bg-amber-200 rounded-full mb-2">Contact</div>
-          <h1 className="text-3xl font-bold max-w-md">Des questions ?</h1>
-          <h1 className="text-3xl font-bold max-w-md">Écrivez- ou appelez-nous.</h1>
-          <h1 className="text-3xl font-bold max-w-md">Nous vous répondrons dans les 12 heures qui suivent.</h1>
-          {/* <div className="w-full mt-10 flex items-center gap-8">
-            <div className="px-4 py-2 flex justify-center items-center text-xs font-semibold text-gray-700 bg-gray-200/50 rounded-lg">
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 vertical-middle flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <span className="ml-2">+33 7 24 89 62 47</span>
-            </div>
-            <div className="px-4 py-2 flex justify-center items-center text-xs font-semibold text-gray-700 bg-gray-200/50 rounded-lg">
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 vertical-middle flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/></svg>
-              <span className="ml-2">rehonettoyage@yahoo.com</span>
-            </div>
-          </div> */}
-        </div>
-        {/* Right side */}
-        <div className="w-1/2 h-full">
-          <form className="max-w-sm mx-auto">
-            <div className="mb-5">
-              <input type="email" id="email" className="bg-gray-50 border border-gray-300 backdrop-blur-md shadow-md text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Adresse mail" required />
-            </div>
-            <div className="mb-5">
-              <input type="phone" id="phone" className="bg-gray-50 border border-gray-300 backdrop-blur-md shadow-md text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Numéro de téléphone (Optionnel)" aria-describedby="phone" />
-            </div>
-            <div className="mb-5">
-              <input type="visitor_name" id="visitor_name" className="bg-gray-50 border border-gray-300 backdrop-blur-md shadow-md text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Votre nom (Optionnel)" aria-describedby="phone" />
-            </div>
-            <div className="mb-5">
-              <textarea id="message" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 backdrop-blur-md shadow-md focus:ring-blue-500 focus:border-blue-500 resize-none" placeholder="Laissez un message..."></textarea>
-            </div>
+    <div className="w-full h-[calc(100vh-25rem)] relative my-20">
+      {/* <img src="/contact/line.jpg" alt="grid" className="w-full h-full object-center" /> */}
+      <div className="absolute inset-0 flex justify-center gap-20 pt-32 px-10 sm:px-[40px] md:px-[80px] lg:px-[100px] xl:px-[130px]">
 
-            <button type="submit" className="flex items-center justify-center gap-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 py-2.5">
-              Envoyer
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg>
-            </button>
-          </form>
+        <Envelope />
+
+        <div className="flex flex-col items-start">
+          <h1 className="text-3xl font-bold capitalize max-w-lg text-center">Contactez-nous</h1>
+          <p className="text-[13px] font-medium text-gray-500 mt-2 max-w-lg">Nous sommes présents pour vous aider, laissez-nous un message et nous vous contacterons dans les plus brefs delais.</p>
+          <div className="flex flex-col gap-2 mt-4">
+            <a href="/" className="flex gap-2 text-[13px] font-medium text-gray-700 mb-2 hover:text-gray-900 transition-all duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+              +33 7 24 89 62 47
+            </a>
+            <a href="/" className="flex gap-2 text-[13px] font-medium text-gray-700 mb-2 hover:text-gray-900 transition-all duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m3 7l9 6l9-6"/></g></svg>
+              rehonettoyage@yahoo.com
+            </a>
+            {/* <a href="/" className="flex gap-2 text-[13px] text-gray-700 hover:text-white transition-all duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0-6 0"/><path d="M17.657 16.657L13.414 20.9a2 2 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0"/></g></svg>
+              1 Rue Albert Schweitzer,<br/>69600 Oullins
+            </a> */}
+            <div className="w-full">
+              <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2786.1172136714795!2d4.811204276750525!3d45.70868531709217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4e9733ebaf505%3A0x993a21a5c0748a08!2s1%20Rue%20Albert%20Schweitzer%2C%2069600%20Oullins-Pierre-B%C3%A9nite!5e0!3m2!1sfr!2sfr!4v1733155087851!5m2!1sfr!2sfr" width="600" height="230" style={{border:0}} allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
   )
