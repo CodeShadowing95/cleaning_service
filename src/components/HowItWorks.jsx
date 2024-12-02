@@ -73,7 +73,7 @@ const HowItWorks = () => {
         </div>
       </div>
 
-      <div className="relative w-full rounded-xl border flex justify-between mt-20 px-8 py-12 text-white bg-gradient-to-b from-teal-800 to-black">
+      <div className="relative w-full rounded-xl border flex justify-between mt-20 max-w-[1200px] px-8 py-12 text-white bg-gradient-to-b from-teal-800 to-black">
         <div className="flex flex-col justify-center gap-8 z-10">
           <div className="border-l-4 border-white pl-4">
             <h1 className="text-xl font-bold md:max-w-[700px] lg:max-w-[400px] xl:max-w-[600px] 2xl:max-w-[700px]">Découvrez la Différence qu{'\''}un espace propre peut faire - Obtenez un Devis Gratuit maintenant</h1>

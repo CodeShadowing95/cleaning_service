@@ -18,7 +18,7 @@ const WhyChooseUs = () => {
         
         {/* 1st panel */}
         <div className="flex flex-col gap-3 p-3 border border-gray-200 rounded-xl relative overflow-hidden hover:scale-105 transition-all duration-500 group">
-          <div className="absolute -top-6 -left-6 w-[90px] h-[90px] bg-gradient-to-t from-gray-900 to-gray-600 rounded-full -z-10 group-hover:scale-[1500%] transition-all duration-500"></div>
+          <div className="absolute -top-9 -left-6 w-[100px] h-[100px] bg-gradient-to-t from-gray-900 to-gray-600 rounded-full -z-10 group-hover:scale-[1500%] transition-all duration-500" />
           <img src="/service.png" alt="service" className="w-12 h-12" />
           <p className="text-lg md:text-sm font-semibold m-0 p-0 capitalize group-hover:text-gray-200 transition-all duration-500">Service sur mesure</p>
           <p className="text-base md:text-[13px] font-normal m-0 p-0 group-hover:text-gray-200 transition-all duration-500">Nous comprenons que chaque espace et chaque client est unique. C’est pourquoi nous adaptons nos services de nettoyage à vos besoins spécifiques, pour un résultat qui vous satisfait pleinement.</p>
@@ -27,7 +27,7 @@ const WhyChooseUs = () => {
         
         {/* 2nd panel */}
         <div className="flex flex-col gap-3 p-3 border border-gray-200 rounded-xl relative overflow-hidden hover:scale-105 transition-all duration-500 group">
-          <div className="absolute bottom-52 -left-14 w-[90px] h-[90px] bg-gradient-to-t from-gray-900 to-gray-600 rounded-full -z-10 group-hover:scale-[1500%] transition-all duration-500"></div>
+          <div className="absolute bottom-52 -left-14 w-[90px] h-[90px] bg-gradient-to-t from-gray-900 to-gray-600 rounded-full -z-10 group-hover:scale-[1500%] transition-all duration-500" />
           <img src="/team.jpg" alt="desc1" className="rounded-xl mb-6 w-full h-full object-cover" />
           <img src="/team-building.png" alt="service" className="w-12 h-12" />
           <p className="text-lg md:text-sm font-semibold m-0 p-0 capitalize group-hover:text-gray-200 transition-all duration-500">Équipe de confiance</p>
@@ -36,7 +36,7 @@ const WhyChooseUs = () => {
         
         {/* 3rd panel */}
         <div className="flex flex-col gap-3 p-3 border border-gray-200 rounded-xl relative overflow-hidden hover:scale-105 transition-all duration-500 group">
-          <div className="absolute -top-6 -left-6 w-[90px] h-[90px] bg-gradient-to-t from-gray-900 to-gray-600 rounded-full -z-10 group-hover:scale-[1500%] transition-all duration-500"></div>
+          <div className="absolute -top-9 -left-6 w-[100px] h-[100px] bg-gradient-to-t from-gray-900 to-gray-600 rounded-full -z-10 group-hover:scale-[1500%] transition-all duration-500" />
           <img src="/cleaning.png" alt="service" className="w-12 h-12" />
           <p className="text-lg md:text-sm font-semibold m-0 p-0 capitalize group-hover:text-gray-200 transition-all duration-500">Produits écologiques et parfumés</p>
           <p className="text-base md:text-[13px] font-normal m-0 p-0 group-hover:text-gray-200 transition-all duration-500">Nous utilisons des produits de nettoyage respectueux de l’environnement, combinant efficacité et parfums agréables pour un espace non seulement propre, mais aussi rafraîchi par des senteurs subtiles et durables.</p>
@@ -45,7 +45,7 @@ const WhyChooseUs = () => {
         
         {/* 4th panel */}
         <div className="flex flex-col gap-3 p-3 border border-gray-200 rounded-xl relative overflow-hidden hover:scale-105 transition-all duration-500 group">
-          <div className="absolute bottom-52 -left-14 w-[90px] h-[90px] bg-gradient-to-t from-gray-900 to-gray-600 rounded-full -z-10 group-hover:scale-[1500%] transition-all duration-500"></div>
+          <div className="absolute bottom-52 -left-14 w-[90px] h-[90px] bg-gradient-to-t from-gray-900 to-gray-600 rounded-full -z-10 group-hover:scale-[1500%] transition-all duration-500" />
           <img src="/flexibilite.jpg" alt="desc1" className="rounded-xl mb-6 w-full h-full object-cover" />
           <img src="/flexible.png" alt="service" className="w-12 h-12" />
           <p className="text-lg md:text-sm font-semibold m-0 p-0 capitalize group-hover:text-gray-200 transition-all duration-500">Flexibilité et réactivité</p>
