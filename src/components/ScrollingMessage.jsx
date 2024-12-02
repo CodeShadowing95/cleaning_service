@@ -13,7 +13,7 @@ const services = [
 const ScrollingMessage = () => {
   return (
     <div className="w-full h-[100px] flex justify-center items-center my-20 bg-blue-600 overflow-hidden relative -rotate-2 z-10">
-        <Marquee className="h-full border-none outline-none" pauseOnHover={true} speed={100} gradient={true}>
+        <Marquee className="h-full border-none outline-none" pauseOnHover={true} speed={100} gradient={false}>
           <div className="flex justify-center items-center gap-16 border-none outline-none">
             {services.map((service, index) => (
               <div key={index} className={`flex items-center gap-2 text-white text-xl font-semibold ${index === 0 ? 'ml-16' : ''}`}>

@@ -16,13 +16,13 @@ const Home = () => {
 
       <HowItWorks />
 
-
-
-      {/*
-
       <ScrollingMessage />
 
       <Contact />
+
+
+
+      {/*
 
       <Footer /> */}
       

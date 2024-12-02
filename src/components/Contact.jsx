@@ -1,7 +1,7 @@
 
 const Contact = () => {
   return (
-    <div className="w-full h-[calc(100vh-25rem)] -mt-20 mb-20 relative">
+    <div className="w-full h-[calc(100vh-25rem)] my-20 relative">
       <img src="/contact/line.jpg" alt="grid" className="w-full h-full object-center" />
       <div className="absolute inset-0 flex justify-center items-center pt-32 px-[130px]">
         {/* Left side */}
