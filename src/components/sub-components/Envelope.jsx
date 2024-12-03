@@ -1,11 +1,11 @@
 
 const Envelope = () => {
   return (
-    <div className="relative bg-black w-[350px] sm:w-[550px] h-[400px] group transition-all duration-700 aspect-video flex items-center justify-center cursor-pointer hover:translate-y-20">
+    <div className="relative bg-black xl:flex hidden w-[550px] h-[350px] group transition-all duration-700 aspect-video items-center justify-center cursor-pointer hover:translate-y-36">
       {/* Hint besides the envelope */}
-      <div className="absolute top-0 -left-32 transform rotate-[-20deg] text-base font-medium text-gray-500">Survolez-moi</div>
+      {/* <div className="absolute top-0 -left-32 transform rotate-[-20deg] text-base font-medium text-gray-500">Survolez-moi</div> */}
 
-      <div className="transition-all flex flex-col p-5 duration-300 group-hover:duration-1000 bg-gray-100 w-full h-full absolute group-hover:-translate-y-52">
+      <div className="transition-all flex flex-col p-5 duration-300 group-hover:duration-1000 bg-gray-100 w-full h-full absolute group-hover:-translate-y-56">
         <p className="px-10 text-[12px] font-medium text-gray-800">Cher visiteur,</p>
         <p className="px-10 text-[12px] leading-4 font-medium text-gray-700 mt-2">Nous espérons que vous avez apprécié la visite et que nous vous avons convaincu de votre choix de service de nettoyage. Laissez-nous un message.</p>
         <form className="flex flex-col gap-2 mt-5 px-10">

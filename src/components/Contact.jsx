@@ -2,13 +2,18 @@ import Envelope from "./sub-components/Envelope"
 
 const Contact = () => {
   return (
-    <div className="w-full h-[calc(100vh-25rem)] relative my-20">
+    <div className="w-full h-[calc(100vh-25rem)] relative mt-48 mb-44">
       {/* <img src="/contact/line.jpg" alt="grid" className="w-full h-full object-center" /> */}
-      <div className="absolute inset-0 flex justify-center gap-20 pt-32 px-10 sm:px-[40px] md:px-[80px] lg:px-[100px] xl:px-[130px]">
+      <div className="absolute inset-0 flex lg:flex-row flex-col justify-center gap-20 px-10 sm:px-[40px] md:px-[80px] lg:px-[100px] xl:px-[130px]">
 
         <Envelope />
 
-        <div className="flex flex-col items-start">
+        <div className="flex flex-col items-start relative">
+          <div className="absolute -top-20 -left-20">
+            <img src="/arrow-down.png" alt="arrow" className="w-20 h-20" />
+            <div className="absolute top-0 -right-8 text-sm font-semibold text-gray-500">Survolez moi</div>
+          </div>
+
           <h1 className="text-3xl font-bold capitalize max-w-lg text-center">Contactez-nous</h1>
           <p className="text-[13px] font-medium text-gray-500 mt-2 max-w-lg">Nous sommes présents pour vous aider, laissez-nous un message et nous vous contacterons dans les plus brefs delais.</p>
           <div className="flex flex-col gap-2 mt-4">
