@@ -36,23 +36,23 @@ const Footer = () => {
           <div className="flex flex-col gap-2">
             <p className="text-xl font-bold mb-2">Entreprise</p>
             <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Accueil</a>
-            <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Qui sommes-nous ?</a>
-            <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Notre engagement</a>
-            <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Prestations</a>
-            <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Équipements</a>
-            <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Démonstration</a>
-            <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Contact</a>
+            <a href="#about-us" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Qui sommes-nous ?</a>
+            <a href="#why-choose-us" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Notre engagement</a>
+            <a href="#services" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Prestations</a>
+            <a href="#equipments" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Équipements</a>
+            <a href="#demonstration" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Démonstration</a>
+            <a href="#contact" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Contact</a>
           </div>
 
           {/* Entreprise */}
           <div className="flex flex-col gap-2">
             <p className="text-xl font-bold mb-2">Nos Services</p>
-            <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Nettoyage de bureaux</a>
-            <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Nettoyage après travaux de chantier</a>
-            <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Entretien de vitreries</a>
-            <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Désinfection complète</a>
-            <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Entretien spécialisé</a>
-            <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Fournitures de matériels de nettoyage</a>
+            <a href="#services" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Nettoyage de bureaux</a>
+            <a href="#services" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Nettoyage après travaux de chantier</a>
+            <a href="#services" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Entretien de vitreries</a>
+            <a href="#services" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Désinfection complète</a>
+            <a href="#services" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Entretien spécialisé</a>
+            <a href="#services" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Fournitures de matériels de nettoyage</a>
           </div>
 
           {/* Contact Entreprise */}

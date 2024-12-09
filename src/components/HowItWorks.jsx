@@ -1,7 +1,7 @@
 
 const HowItWorks = () => {
   return (
-    <div className="flex flex-col justify-center items-center mt-8 mb-4 px-10 sm:px-[40px] md:px-[80px] lg:px-[100px] xl:px-[130px] py-8 bg-blue-50">
+    <div id="demonstration" className="flex flex-col justify-center items-center mt-8 mb-4 px-10 sm:px-[40px] md:px-[80px] lg:px-[100px] xl:px-[130px] py-8 bg-blue-50">
       <div className="flex items-center p-1 border gap-2 border-blue-600 rounded-xl bg-white">
         <div className="flex justify-center items-center gap-2 px-4 py-2 text-xs font-semibold text-white bg-blue-600 rounded-xl transition-all cursor-pointer capitalize">
           comment ça marche ?
