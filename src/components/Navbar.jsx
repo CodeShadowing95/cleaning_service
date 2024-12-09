@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 
   const Navbar = () => {
-    const [selected, setSelected] = useState(2);
+    const [selected, setSelected] = useState(0);
     const [scrolled, setScrolled] = useState(false);
     const [contactInfo, setContactInfo] = useState(0);
     const [toggleMenu, setToggleMenu] = useState(false);
@@ -85,6 +85,11 @@ import { useEffect, useState } from "react";
     }
   }, []);
 
+  const goToSection = (index) => {
+    setSelected(index);
+    setToggleMenu(false);
+  };
+
   return (
     // <nav className={`fixed inset-0 flex items-center justify-between w-full h-[90px] px-[20px] sm:px-[30px] md:px-[50px] lg:px-[100px] xl:px-[130px] z-50 transition-all duration-300 ${scrolled ? "bg-white shadow" : "bg-white bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10"}`}>
     <>
@@ -145,11 +150,11 @@ import { useEffect, useState } from "react";
     <div className={`dropdown_menu fixed ${toggleMenu ? "opacity-100" : "opacity-0 pointer-events-none"} max-[1300px]:flex hidden top-[90px] left-0 w-full h-full bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 transition-all duration-300 ease-in-out z-50 overflow-hidden`}>
       {/* <div className={`fixed ${toggleMenu ? "translate-y-full" : "-translate-y-full"} max-[1300px]:flex hidden absolute bottom-0 left-0 transform w-full flex-col justify-center items-start h-[350px] px-10 py-4 bg-white transition-all duration-300`}> */}
       <div className={`fixed ${toggleContent ? "translate-y-0" : "-translate-y-full"} absolute top-0 inset-x-0 transform w-full flex-col justify-center items-start h-[350px] px-10 py-4 bg-white transition-all duration-300`}>
-          <div className="w-full p-2 flex items-center text-lg font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer">L{"'"}entreprise</div>
-          <div className="w-full p-2 flex items-center text-lg font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer">Engagements</div>
-          <div className="w-full p-2 flex items-center text-lg font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer">Services</div>
-          <div className="w-full p-2 flex items-center text-lg font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer">Catalogue</div>
-          <div className="w-full p-2 flex items-center text-lg font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer">Contact</div>
+          <a href="#about-us" className="w-full p-2 flex items-center text-lg font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer" onClick={() => goToSection(2)}>L{"'"}entreprise</a>
+          <a href="#why-choose-us" className="w-full p-2 flex items-center text-lg font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer" onClick={() => goToSection(3)}>Engagements</a>
+          <a href="#services" className="w-full p-2 flex items-center text-lg font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer" onClick={() => goToSection(4)}>Services</a>
+          <a href="#equipments" className="w-full p-2 flex items-center text-lg font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer" onClick={() => goToSection(5)}>Catalogue</a>
+          <a href="#contact" className="w-full p-2 flex items-center text-lg font-semibold text-gray-600 rounded-lg hover:text-sky-700 cursor-pointer" onClick={() => goToSection(6)}>Contact</a>
           <button className="p-[3px] mt-4 relative">
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
             <div className="w-[200px] h-8 flex flex-col justify-center items-center bg-black rounded-[6px]  relative group transition duration-200 text-xs font-semibold text-white hover:bg-transparent overflow-hidden">

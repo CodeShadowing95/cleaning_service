@@ -1,10 +1,11 @@
 import Envelope from "./sub-components/Envelope"
 
 const Contact = () => {
+
   return (
-    <div id="contact" className="w-full relative pt-44 mb-36">
+    <div id="contact" className="w-full relative mb-40">
       {/* <img src="/contact/line.jpg" alt="grid" className="w-full h-full object-center" /> */}
-      <div className="flex xl:flex-row flex-col justify-center gap-20 px-10 sm:px-[40px] md:px-[80px] lg:px-[100px] xl:px-[130px]">
+      <div className="flex xl:flex-row flex-col justify-center xl:gap-10 pt-20 md:pt-16 px-10 sm:px-[40px] md:px-[80px] lg:px-[100px] xl:px-[130px]">
 
         <div className="flex flex-col items-start relative">
           {/* <div className="absolute -top-20 -left-20">
@@ -27,8 +28,8 @@ const Contact = () => {
               <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0-6 0"/><path d="M17.657 16.657L13.414 20.9a2 2 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0"/></g></svg>
               1 Rue Albert Schweitzer,<br/>69600 Oullins
             </a> */}
-            <div className="w-full sm:w-[600px] max-sm:w-[320px]">
-              <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2786.1172136714795!2d4.811204276750525!3d45.70868531709217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4e9733ebaf505%3A0x993a21a5c0748a08!2s1%20Rue%20Albert%20Schweitzer%2C%2069600%20Oullins-Pierre-B%C3%A9nite!5e0!3m2!1sfr!2sfr!4v1733155087851!5m2!1sfr!2sfr" width="100%" height="300" style={{border:0}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+            <div className="sm:w-[600px] max-sm:w-[320px]">
+              <iframe title="REHOBOTH NETTOYAGE Localisation" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2786.1172136714795!2d4.811204276750525!3d45.70868531709217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4e9733ebaf505%3A0x993a21a5c0748a08!2s1%20Rue%20Albert%20Schweitzer%2C%2069600%20Oullins-Pierre-B%C3%A9nite!5e0!3m2!1sfr!2sfr!4v1733155087851!5m2!1sfr!2sfr" width="100%" height="300" style={{border:0}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
         </div>

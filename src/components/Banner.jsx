@@ -14,7 +14,7 @@ const Banner = () => {
 
 
   return (
-    <div className="w-full h-[calc(100vh-50px)] relative">
+    <div className="w-full h-screen relative">
       <img src="/banner_bg.jpg" alt="banner" className="w-full h-full object-cover z-0" />
 
       <div className="absolute inset-0 z-50 bg-slate-400/85">
