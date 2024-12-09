@@ -96,11 +96,12 @@ const Banner = () => {
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1L9 9l-8 3l8 3l3 8l3-8l8-3l-8-3z"/></svg>
           </div>
 
-          <div className="sm:flex hidden absolute left-1/2 bottom-8 cursor-pointer">
+          {/* Mouse scroll */}
+          <a href="#about-us" className="sm:flex hidden absolute left-1/2 bottom-8 cursor-pointer">
             <div className="flex justify-center items-start py-2 w-[28px] h-14 border-[3px] border-white/50 rounded-full gap-2">
               <div id="mouse" className="w-2 h-4 bg-white/50 rounded-full"></div>
             </div>
-          </div>
+          </a>
 
         </div>
       </div>

@@ -16,7 +16,7 @@ const Equipments = () => {
   };
 
   return (
-    <div className="w-full my-32 bg-white py-4 relative">
+    <div id="equipments" className="w-full my-10 bg-white py-24 relative">
       {/* Banner wallpaper */}
       <Marquee className="absolute w-full h-full top-0 left-0 z-0" pauseOnHover={false} speed={40} gradient={false}>
           <img src="/equipments/wallpaper3.jpg" alt="wallpaper" className="w-full h-full object-cover" />

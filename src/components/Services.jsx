@@ -3,7 +3,7 @@ import Card from "./sub-components/Card"
 
 const Services = () => {
   return (
-    <div className="w-full flex flex-col justify-center items-center px-10 sm:px-[40px] md:px-[80px] lg:px-[100px] xl:px-[130px] 2xl:px-[160px] py-10 bg-gradient-to-b from-transparent to-blue-900/50">
+    <div id="services" className="w-full flex flex-col justify-center items-center px-10 sm:px-[40px] md:px-[80px] lg:px-[100px] xl:px-[130px] 2xl:px-[160px] pt-32 pb-10 bg-gradient-to-b from-transparent to-blue-900/50">
       <div className="px-4 py-1 flex justify-center items-center text-xs font-semibold text-teal-700 bg-teal-200 rounded-full">Services</div>
       <div className="w-full flex justify-between items-center mt-4 mb-10">
         <div className="w-full flex flex-col justify-center items-center gap-2">

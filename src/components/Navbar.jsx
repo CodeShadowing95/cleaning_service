@@ -53,6 +53,38 @@ import { useEffect, useState } from "react";
       };
     }, [toggleMenu]);
 
+  useEffect(() => {
+    const currentLocation = window.location.href;
+
+    if (currentLocation.includes("#about-us")) {
+      setSelected(2);
+    } else if (currentLocation.includes("#why-choose-us")) {
+      setSelected(3);
+    } else if (currentLocation.includes("#services")) {
+      setSelected(4);
+    } else if (currentLocation.includes("#equipments")) {
+      setSelected(5);
+    } else if (currentLocation.includes("#contact")) {
+      setSelected(6);
+    }
+
+    if (selected === 2) {
+      window.location.href = "#about-us";
+    }
+    if (selected === 3) {
+      window.location.href = "#why-choose-us";
+    }
+    if (selected === 4) {
+      window.location.href = "#services";
+    }
+    if (selected === 5) {
+      window.location.href = "#equipments";
+    }
+    if (selected === 6) {
+      window.location.href = "#contact";
+    }
+  }, []);
+
   return (
     // <nav className={`fixed inset-0 flex items-center justify-between w-full h-[90px] px-[20px] sm:px-[30px] md:px-[50px] lg:px-[100px] xl:px-[130px] z-50 transition-all duration-300 ${scrolled ? "bg-white shadow" : "bg-white bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10"}`}>
     <>
@@ -66,19 +98,19 @@ import { useEffect, useState } from "react";
         </div>
 
         <div className="max-[1300px]:hidden flex items-center gap-8">
-          <a href="#" className={`py-1 ${scrolled ? "text-black hover:text-sky-800" : "text-white"} hover:text-sky-100 text-sm transition-colors ${selected === 2 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(2)}>
+          <a href="#about-us" className={`py-1 ${scrolled ? "text-black hover:text-sky-800" : "text-white"} hover:text-sky-100 text-sm transition-colors ${selected === 2 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(2)}>
             L{"'"}entreprise
           </a>
-          <a href="#" className={`py-1 ${scrolled ? "text-black hover:text-sky-800" : "text-white"} hover:text-sky-100 text-sm transition-colors ${selected === 3 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(2)}>
+          <a href="#why-choose-us" className={`py-1 ${scrolled ? "text-black hover:text-sky-800" : "text-white"} hover:text-sky-100 text-sm transition-colors ${selected === 3 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(3)}>
             Engagements
           </a>
-          <a href="#" className={`py-1 ${scrolled ? "text-black hover:text-sky-800" : "text-white"} hover:text-sky-100 text-sm transition-colors ${selected === 4 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(3)}>
+          <a href="#services" className={`py-1 ${scrolled ? "text-black hover:text-sky-800" : "text-white"} hover:text-sky-100 text-sm transition-colors ${selected === 4 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(4)}>
             Services
           </a>
-          <a href="#" className={`py-1 ${scrolled ? "text-black hover:text-sky-800" : "text-white"} hover:text-sky-100 text-sm transition-colors ${selected === 5 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(3)}>
+          <a href="#equipments" className={`py-1 ${scrolled ? "text-black hover:text-sky-800" : "text-white"} hover:text-sky-100 text-sm transition-colors ${selected === 5 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(5)}>
             Catalogue
           </a>
-          <a href="/contact" className={`py-1 ${scrolled ? "text-black hover:text-sky-800" : "text-white"} hover:text-sky-100 text-sm transition-colors ${selected === 6 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(5)}>
+          <a href="#contact" className={`py-1 ${scrolled ? "text-black hover:text-sky-800" : "text-white"} hover:text-sky-100 text-sm transition-colors ${selected === 6 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(6)}>
             Contact
           </a>
         </div>

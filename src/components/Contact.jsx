@@ -2,7 +2,7 @@ import Envelope from "./sub-components/Envelope"
 
 const Contact = () => {
   return (
-    <div className="w-full relative mt-44 mb-36">
+    <div id="contact" className="w-full relative pt-44 mb-36">
       {/* <img src="/contact/line.jpg" alt="grid" className="w-full h-full object-center" /> */}
       <div className="flex xl:flex-row flex-col justify-center gap-20 px-10 sm:px-[40px] md:px-[80px] lg:px-[100px] xl:px-[130px]">
 

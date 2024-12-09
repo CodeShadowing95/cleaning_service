@@ -1,7 +1,7 @@
 
 const WhyChooseUs = () => {
   return (
-    <div className="relative w-full px-10 sm:px-[40px] md:px-[80px] lg:px-[100px] xl:px-[130px] 2xl:px-[160px] py-32 flex flex-col justify-center items-center">
+    <div id="why-choose-us" className="relative w-full px-10 sm:px-[40px] md:px-[80px] lg:px-[100px] xl:px-[130px] 2xl:px-[160px] pt-32 flex flex-col justify-center items-center">
       <div className="relative w-full flex flex-col justify-center items-center">
         <h1 className="text-4xl font-bold text-center">Pourquoi nous choisir ?</h1>
         <div className="absolute sm:block hidden bottom-0 lg:right-10 right-0">
