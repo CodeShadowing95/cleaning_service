@@ -24,7 +24,7 @@ const Services = () => {
           <Card key={service.id} {...service} />
         ))}
         
-        <div className="flex justify-center items-center relative w-[250px] h-[314px] rounded-lg overflow-hidden">
+        <div className="flex justify-center items-center relative max-sm:w-[300px] max-sm:h-[400px] w-[250px] h-[314px] rounded-lg overflow-hidden">
           <img src="/services/showcase.jpg" alt="general" className="w-full h-full object-cover" />
           <div className="absolute w-full h-full flex flex-col justify-center items-center bg-blue-950/80 overflow-hidden rounded-lg px-8">
             <p className="text-base font-semibold text-white mb-4">La fenêtre est claire</p>

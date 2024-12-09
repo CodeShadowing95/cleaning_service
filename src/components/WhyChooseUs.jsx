@@ -9,9 +9,9 @@ const WhyChooseUs = () => {
         </div>
       </div>
       <p className="text-gray-600 text-[14px] leading-6 mt-8 text-center max-w-5xl relative">
-        Nous apportons un souffle nouveau au monde du nettoyage. Motivés par l’excellence et l’attention aux détails, nous mettons un point d’honneur à offrir des services modernes, efficaces et respectueux de l’environnement. Avec une équipe dynamique et passionnée, nous répondons aux besoins de nos clients en leur garantissant des espaces impeccables et un service personnalisé.
-        <img src="/sparkles.png" alt="sparkles" className="absolute -top-12 -left-10 -rotate-[20deg] w-14 h-14 animate-spin" />
-        <img src="/sparkles.png" alt="sparkles" className="absolute -bottom-4 right-0 -rotate-[20deg] w-8 h-8 animate-spin" />
+        Motivés par l’excellence et l’attention aux détails, nous mettons un point d’honneur à offrir des services modernes, efficaces et respectueux de l’environnement. Avec une équipe dynamique et passionnée, nous répondons aux besoins de nos clients en leur garantissant des espaces impeccables et un service personnalisé.
+        {/* <img src="/sparkles.png" alt="sparkles" className="absolute -top-12 -left-10 -rotate-[20deg] w-14 h-14 animate-spin" />
+        <img src="/sparkles.png" alt="sparkles" className="absolute -bottom-4 right-0 -rotate-[20deg] w-8 h-8 animate-spin" /> */}
       </p>
 
       <div className="mt-16 relative grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
@@ -52,8 +52,8 @@ const WhyChooseUs = () => {
           <p className="text-base md:text-[13px] font-normal m-0 p-0 group-hover:text-gray-200 transition-all duration-500">Nous savons nous adapter rapidement à vos besoins, vos budgets et à vos contraintes de temps. Disponibles et réactifs, nous faisons de votre satisfaction notre priorité.</p>
         </div>
 
-        <img src="/sparkles.png" alt="sparkles" className="absolute bottom-[30%] -right-14 -rotate-[20deg] w-14 h-14 animate-spin " />
-        <img src="/sparkles.png" alt="sparkles" className="absolute bottom-2 -left-16 -rotate-[20deg] w-10 h-10 animate-spin " />
+        {/* <img src="/sparkles.png" alt="sparkles" className="absolute bottom-[30%] -right-14 -rotate-[20deg] w-14 h-14 animate-spin " />
+        <img src="/sparkles.png" alt="sparkles" className="absolute bottom-2 -left-16 -rotate-[20deg] w-10 h-10 animate-spin " /> */}
       </div>
     </div>
   )

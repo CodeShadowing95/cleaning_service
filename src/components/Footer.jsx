@@ -1,16 +1,12 @@
 
 const Footer = () => {
   return (
-    <div className="w-full bg-zinc-950 px-[130px] pt-16 pb-8 text-white">
-      <div className="w-full flex justify-between">
+    <div className="w-full bg-zinc-950 px-10 sm:px-[40px] md:px-[80px] lg:px-[100px] xl:px-[130px] 2xl:px-[160px] pt-16 pb-8 text-white">
+      <div className="w-full flex md:flex-row flex-col justify-between">
         <div className="flex flex-col">
           {/* Logo, name, description */}
           <div className="flex items-center gap-2">
-            <div className="w-16 h-16 bg-white rounded-full" />
-            <div className="flex flex-col">
-              <p className="text-xl font-bold">REHOBOTH NETTOYAGE</p>
-              <p className="text-sm font-medium text-gray-400">Service de nettoyage professionnel</p>
-            </div>
+            <img src="/logo.png" alt="logo-footer" className="h-20" />
           </div>
 
           {/* Description */}
@@ -35,54 +31,56 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Entreprise */}
-        <div className="flex flex-col gap-2">
-          <p className="text-xl font-bold mb-4">Entreprise</p>
-          <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Accueil</a>
-          <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Qui sommes-nous ?</a>
-          <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Notre engagement</a>
-          <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Prestations</a>
-          <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Équipements</a>
-          <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Démonstration</a>
-          <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Contact</a>
-        </div>
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-4 ml-0 md:ml-8 mt-8 lg:mt-0">
+          {/* Entreprise */}
+          <div className="flex flex-col gap-2">
+            <p className="text-xl font-bold mb-2">Entreprise</p>
+            <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Accueil</a>
+            <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Qui sommes-nous ?</a>
+            <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Notre engagement</a>
+            <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Prestations</a>
+            <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Équipements</a>
+            <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Démonstration</a>
+            <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Contact</a>
+          </div>
 
-        {/* Entreprise */}
-        <div className="flex flex-col gap-2">
-          <p className="text-xl font-bold mb-4">Nos Services</p>
-          <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Nettoyage de bureaux</a>
-          <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Nettoyage après travaux de chantier</a>
-          <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Entretien de vitreries</a>
-          <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Désinfection complète</a>
-          <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Entretien spécialisé</a>
-          <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Fournitures de matériels de nettoyage</a>
-        </div>
+          {/* Entreprise */}
+          <div className="flex flex-col gap-2">
+            <p className="text-xl font-bold mb-2">Nos Services</p>
+            <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Nettoyage de bureaux</a>
+            <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Nettoyage après travaux de chantier</a>
+            <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Entretien de vitreries</a>
+            <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Désinfection complète</a>
+            <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Entretien spécialisé</a>
+            <a href="/" className="text-[14px] leading-6 text-gray-400 hover:text-white transition-all duration-300">Fournitures de matériels de nettoyage</a>
+          </div>
 
-        {/* Entreprise */}
-        <div className="flex flex-col gap-2">
-          <p className="text-xl font-bold mb-4">Contact.</p>
-          <a href="/" className="flex gap-2 text-sm text-gray-400 mb-2 hover:text-white transition-all duration-300">
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
-            +33 7 24 89 62 47
-          </a>
-          <a href="/" className="flex gap-2 text-sm text-gray-400 mb-2 hover:text-white transition-all duration-300">
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m3 7l9 6l9-6"/></g></svg>
-            rehonettoyage@yahoo.com
-          </a>
-          <a href="/" className="flex gap-2 text-sm text-gray-400 hover:text-white transition-all duration-300">
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0-6 0"/><path d="M17.657 16.657L13.414 20.9a2 2 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0"/></g></svg>
-            1 Rue Albert Schweitzer,<br/>69600 Oullins
-          </a>
+          {/* Contact Entreprise */}
+          <div className="flex flex-col gap-2">
+            <p className="text-xl font-bold mb-2">Contact.</p>
+            <a href="/" className="flex gap-2 text-sm text-gray-400 mb-2 hover:text-white transition-all duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+              +33 7 24 89 62 47
+            </a>
+            <a href="/" className="flex gap-2 text-sm text-gray-400 mb-2 hover:text-white transition-all duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m3 7l9 6l9-6"/></g></svg>
+              rehonettoyage@yahoo.com
+            </a>
+            <a href="/" className="flex gap-2 text-sm text-gray-400 hover:text-white transition-all duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0-6 0"/><path d="M17.657 16.657L13.414 20.9a2 2 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0"/></g></svg>
+              1 Rue Albert Schweitzer,<br/>69600 Oullins
+            </a>
+          </div>
         </div>
       </div>
       
-      <div className="w-full h-[70px] flex justify-between items-center bg-zinc-900/70 mt-10 px-8">
+      <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4 bg-zinc-900/70 mt-10 p-8">
         <p className="text-[14px] text-gray-400 font-semibold">© 2024 Rehonettoyage. Tous droits reservés.</p>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center flex-col md:flex-row gap-4">
           <a href="/" className="text-[14px] text-gray-400 hover:underline underline-offset-4 transition-all duration-300">Mentions Légales</a>
-          <span className="text-[14px] text-gray-400 hover:text-white transition-all duration-300">&#8226;</span>          
+          <span className="hidden md:block text-[14px] text-gray-400 hover:text-white transition-all duration-300">&#8226;</span>          
           <a href="/" className="text-[14px] text-gray-400 hover:underline underline-offset-4 transition-all duration-300">Politique de Confidentialité</a>
-          <span className="text-[14px] text-gray-400 hover:text-white transition-all duration-300">&#8226;</span>          
+          <span className="hidden md:block text-[14px] text-gray-400 hover:text-white transition-all duration-300">&#8226;</span>          
           <a href="/" className="text-[14px] text-gray-400 hover:underline underline-offset-4 transition-all duration-300">Cookies</a>
         </div>
       </div>

@@ -66,19 +66,19 @@ import { useEffect, useState } from "react";
         </div>
 
         <div className="max-[1300px]:hidden flex items-center gap-8">
-          <a href="#" className={`py-1 ${scrolled ? "text-black hover:text-sky-800" : "text-white"} hover:text-sky-100 text-base transition-colors ${selected === 2 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(2)}>
+          <a href="#" className={`py-1 ${scrolled ? "text-black hover:text-sky-800" : "text-white"} hover:text-sky-100 text-sm transition-colors ${selected === 2 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(2)}>
             L{"'"}entreprise
           </a>
-          <a href="#" className={`py-1 ${scrolled ? "text-black hover:text-sky-800" : "text-white"} hover:text-sky-100 text-base transition-colors ${selected === 3 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(2)}>
+          <a href="#" className={`py-1 ${scrolled ? "text-black hover:text-sky-800" : "text-white"} hover:text-sky-100 text-sm transition-colors ${selected === 3 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(2)}>
             Engagements
           </a>
-          <a href="#" className={`py-1 ${scrolled ? "text-black hover:text-sky-800" : "text-white"} hover:text-sky-100 text-base transition-colors ${selected === 4 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(3)}>
+          <a href="#" className={`py-1 ${scrolled ? "text-black hover:text-sky-800" : "text-white"} hover:text-sky-100 text-sm transition-colors ${selected === 4 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(3)}>
             Services
           </a>
-          <a href="#" className={`py-1 ${scrolled ? "text-black hover:text-sky-800" : "text-white"} hover:text-sky-100 text-base transition-colors ${selected === 5 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(3)}>
+          <a href="#" className={`py-1 ${scrolled ? "text-black hover:text-sky-800" : "text-white"} hover:text-sky-100 text-sm transition-colors ${selected === 5 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(3)}>
             Catalogue
           </a>
-          <a href="/contact" className={`py-1 ${scrolled ? "text-black hover:text-sky-800" : "text-white"} hover:text-sky-100 text-base transition-colors ${selected === 6 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(5)}>
+          <a href="/contact" className={`py-1 ${scrolled ? "text-black hover:text-sky-800" : "text-white"} hover:text-sky-100 text-sm transition-colors ${selected === 6 ? "font-bold border-b-2 border-sky-500" : ""}`} onClick={() => setSelected(5)}>
             Contact
           </a>
         </div>

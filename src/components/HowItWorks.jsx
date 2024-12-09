@@ -19,52 +19,52 @@ const HowItWorks = () => {
           <div className="lg:block hidden absolute top-0 left-1/2 h-full transform -translate-x-1/2 border-t-transparent border-b-transparent border-l-transparent border-r-2 border-gray-400 border-dashed z-0" />
           
           <div className="w-full flex md:flex-row flex-col justify-center items-center lg:gap-16 gap-2 z-10">
-            <div className="flex flex-col justify-center gap-2 w-[400px] h-[200px] px-4 py-6 rounded-lg bg-white">
+            <div className="flex flex-col justify-center gap-2 w-[350px] sm:w-[400px] h-[200px] px-4 py-6 rounded-lg bg-white">
               <p className="text-lg font-semibold">Contactez notre service</p>
               <p className="text-[13px] text-gray-600">Facile et rapide, contactez-nous dès maintenant pour une estimation personnalisée. Votre satisfaction est notre priorité, et nous sommes prêts à vous répondre en un instant.</p>
             </div>
             <div className="lg:block hidden p-2 h-fit bg-blue-50 rounded-full">
               <p className="text-2xl font-extrabold text-teal-700">01</p>
             </div>
-            <div className="flex justify-center items-center w-[400px] h-[200px] rounded-lg overflow-hidden">
+            <div className="flex justify-center items-center w-[350px] sm:w-[400px] h-[200px] rounded-lg overflow-hidden">
               <img src="/how-it-works/01.jpg" alt="general" className="w-full h-full object-cover" />
             </div>
           </div>
           
           <div className="w-full flex md:flex-row flex-col justify-center items-center lg:gap-16 gap-2 z-10">
-            <div className="flex justify-center items-center w-[400px] h-[200px] rounded-lg overflow-hidden">
+            <div className="flex justify-center items-center w-[350px] sm:w-[400px] h-[200px] rounded-lg overflow-hidden">
               <img src="/how-it-works/02.jpg" alt="general" className="w-full h-full object-cover" />
             </div>
             <div className="lg:block hidden p-2 h-fit bg-blue-50 rounded-full">
               <p className="text-2xl font-extrabold text-teal-700">02</p>
             </div>
-            <div className="flex flex-col justify-center gap-2 w-[400px] h-[200px] px-4 py-6 rounded-lg bg-white">
+            <div className="flex flex-col justify-center gap-2 w-[350px] sm:w-[400px] h-[200px] px-4 py-6 rounded-lg bg-white">
               <p className="text-lg font-semibold">L{'\''}équipe arrive</p>
               <p className="text-[13px] text-gray-600">Une fois votre demande validée, notre équipe se rend rapidement sur place. Ponctuels, professionnels et équipés, nous sommes prêts à répondre à toutes vos attentes. Chaque intervention est soigneusement planifiée pour un service irréprochable.</p>
             </div>
           </div>
           
           <div className="w-full flex md:flex-row flex-col justify-center items-center lg:gap-16 gap-2 z-10">
-            <div className="flex flex-col justify-center gap-2 w-[400px] h-[200px] px-4 py-6 rounded-lg bg-white">
-              <p className="text-lg font-semibold">Processus de nettoyage</p>
+            <div className="flex flex-col justify-center gap-2 w-[350px] sm:w-[400px] h-[200px] px-4 py-6 rounded-lg bg-white">
+              <p className="text-lg font-semibold">Le travail commence</p>
               <p className="text-[13px] text-gray-600">Un nettoyage minutieux et organisé pour chaque espace. Nous utilisons des méthodes modernes et des produits adaptés pour un résultat optimal. Notre priorité est de combiner efficacité et respect de vos locaux. Chaque détail compte pour nous !</p>
             </div>
             <div className="lg:block hidden p-2 h-fit bg-blue-50 rounded-full">
               <p className="text-2xl font-extrabold text-teal-700">03</p>
             </div>
-            <div className="flex justify-center items-center w-[400px] h-[200px] rounded-lg overflow-hidden">
+            <div className="flex justify-center items-center w-[350px] sm:w-[400px] h-[200px] rounded-lg overflow-hidden">
               <img src="/how-it-works/03.jpg" alt="general" className="w-full h-full object-cover" />
             </div>
           </div>
           
           <div className="w-full flex md:flex-row flex-col justify-center items-center lg:gap-16 gap-2 z-10">
-            <div className="flex justify-center items-center w-[400px] h-[200px] rounded-lg overflow-hidden">
+            <div className="flex justify-center items-center w-[350px] sm:w-[400px] h-[200px] rounded-lg overflow-hidden">
               <img src="/how-it-works/04.jpg" alt="general" className="w-full h-full object-cover" />
             </div>
             <div className="lg:block hidden p-2 h-fit bg-blue-50 rounded-full">
               <p className="text-2xl font-extrabold text-teal-700">04</p>
             </div>
-            <div className="flex flex-col justify-center gap-2 w-[400px] h-[200px] px-4 py-6 rounded-lg bg-white">
+            <div className="flex flex-col justify-center gap-2 w-[350px] sm:w-[400px] h-[200px] px-4 py-6 rounded-lg bg-white">
               <p className="text-lg font-semibold">Résultat final</p>
               <p className="text-[13px] text-gray-600">Découvrez des espaces transformés par notre savoir-faire. Propreté, fraîcheur et brillance : nous redonnons vie à vos locaux. Avec nous, chaque coin respire la perfection et votre satisfaction est toujours au rendez-vous.</p>
             </div>

@@ -36,7 +36,7 @@ const Card = ({ id, title, description, badge }) => {
                   {title}
                 </p>
               </div>
-              <p className="text-[13px] leading-1.5 mt-[5px] text-gray-300 text-pretty">
+              <p className="lg:text-[13px] text-base leading-1.5 mt-[5px] text-gray-300 text-pretty">
                 {description}
               </p>
             </div>
