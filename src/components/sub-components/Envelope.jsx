@@ -1,20 +1,21 @@
 
 const Envelope = () => {
+
   return (
     <div className="relative bg-black lg:flex hidden md:w-[550px] w-[350px] md:h-[350px] h-[250px] group transition-all duration-700 aspect-video items-center justify-center cursor-pointer translate-y-20 hover:translate-y-36">
       {/* Hint besides the envelope */}
       {/* <div className="absolute top-0 -left-32 transform rotate-[-20deg] text-base font-medium text-gray-500">Survolez-moi</div> */}
 
       <div className="transition-all flex flex-col p-5 duration-300 group-hover:duration-1000 bg-gray-100 w-full h-full absolute group-hover:-translate-y-56">
-        <p className="px-10 text-[12px] font-medium text-gray-800">Cher visiteur,</p>
-        <p className="px-10 text-[12px] leading-4 font-medium text-gray-700 mt-2">Nous espérons que vous avez apprécié la visite et que nous vous avons convaincu de votre choix de service de nettoyage. Laissez-nous un message.</p>
+        <p className="px-10 text-[12px] font-medium text-gray-500">Cher visiteur,</p>
+        <p className="px-10 text-[12px] leading-4 font-medium text-gray-500 mt-2">Nous espérons que vous avez apprécié la visite et que nous vous avons convaincu de votre choix de service de nettoyage. Laissez-nous un message.</p>
         <form className="flex flex-col gap-2 mt-5 px-10">
-          <input type="text" placeholder="Nom" className="p-1 text-xs font-medium focus:outline-none px-2 border-b border-gray-400" />
-          <input type="email" placeholder="Adresse mail" className="p-1 text-xs font-medium focus:outline-none px-2 border-b border-gray-400" />
-          <input type="phone" placeholder="Numéro de téléphone" className="p-1 text-xs font-medium focus:outline-none px-2 border-b border-gray-400" />
-          <textarea placeholder="Votre message..." rows="4" className="p-1 text-xs font-medium focus:outline-none px-2 border-b border-gray-400" />
+          <input type="text" name="user_name" placeholder="Nom" className="p-1 text-xs font-medium focus:outline-none px-2 border-b border-gray-400" />
+          <input type="email" name="user_email" placeholder="Adresse mail" className="p-1 text-xs font-medium focus:outline-none px-2 border-b border-gray-400" />
+          <input type="phone" name="user_phone" placeholder="Numéro de téléphone" className="p-1 text-xs font-medium focus:outline-none px-2 border-b border-gray-400" />
+          <textarea name="message" placeholder="Votre message..." rows="4" className="p-1 text-xs font-medium focus:outline-none px-2 border-b border-gray-400" />
           <div className="w-full flex justify-center items-center">
-            <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2 text-center">Envoyer</button>
+            <input type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2 text-center" value={"Envoyer"} />
           </div>
         </form>
       </div>
