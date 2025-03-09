@@ -8,7 +8,6 @@ const Services = () => {
       <div className="w-full flex justify-between items-center mt-4 mb-10">
         <div className="w-full flex flex-col justify-center items-center gap-2">
           <h1 className="text-3xl font-bold text-center capitalize">Nos Prestations, Pensées pour Vous</h1>
-          <p className="text-gray-700 text-base lg:text-sm max-w-2xl text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, facilis dolore nobis repellendus ratione mollitia perspiciatis delectus quibusdam consequuntur.</p>
         </div>
       </div>
 
@@ -43,12 +42,12 @@ const Services = () => {
         <div className="lg:w-1/2 w-full flex flex-col justify-center items-start gap-8">
           <p className="text-3xl text-gray-900 font-bold capitalize">Notre équipe rendra vos locaux propres et soignés</p>
           <p className="text-base text-gray-800 font-medium text-pretty">Que ce soit pour des bureaux, des espaces communs, ou des zones spécifiques, nous veillons à ce que chaque recoin soit soigné, chaque surface éclatante et chaque environnement sain. Faites confiance à notre équipe dynamique et fiable pour un service de nettoyage irréprochable, adapté à vos besoins et respectueux de votre espace.</p>
-          <button className="flex items-center gap-2 text-sm font-medium tracking-wide cursor-pointer transition-all bg-gray-700 text-white px-6 py-2 rounded-lg border-teal-400
+          <a href="#services" className="flex items-center gap-2 text-sm font-medium tracking-wide cursor-pointer transition-all bg-gray-700 text-white px-6 py-2 rounded-lg border-teal-400
           border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px]
           active:border-b-[2px] active:brightness-90 active:translate-y-[2px] hover:shadow-xl hover:shadow-teal-300 shadow-teal-300 active:shadow-none">
             Tous nos services
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M5.59 7.41L7 6l6 6l-6 6l-1.41-1.41L10.17 12zm6 0L13 6l6 6l-6 6l-1.41-1.41L16.17 12z"/></svg>
-          </button>
+          </a>
         </div>
         
         <img src="/services/cleaning service-pana.svg" alt="cleaning service" className="lg:w-1/2 w-full h-full object-cover" />

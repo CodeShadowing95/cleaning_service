@@ -30,8 +30,8 @@ const Banner = () => {
             <h1 className="font-semibold capitalize text-3xl leading-[1.4] sm:text-4xl sm:leading-[1.3] 2xl:leading-[1.3] max-w-[600px] text-balance z-10">Améliorez votre activité grâce à nos services de nettoyage professionnels</h1>
             <p className="text-base sm:text-lg max-w-[600px]">Des prestations de nettoyage de haute qualité, adaptées à vos besoins. Offrez-vous un environnement éclatant sans lever le petit doigt.</p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="min-w-fit px-6 py-2 text-base bg-white text-gray-900 hover:text-sky-900 font-semibold transition-all duration-500 rounded-full">En savoir plus</button>
-              <button className="min-w-fit group/button relative inline-flex items-center justify-center gap-1 overflow-hidden rounded-full bg-blue-500/30 backdrop-blur-lg px-6 py-2 z-10 text-base font-semibold text-white transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl hover:shadow-blue-600/50 border border-white/20">
+              <a href="#about-us" className="min-w-fit px-6 py-2 text-base text-center bg-white text-gray-900 hover:text-sky-900 font-semibold transition-all duration-500 rounded-full">En savoir plus</a>
+              <a href="#contact" className="min-w-fit group/button relative inline-flex items-center justify-center gap-1 overflow-hidden rounded-full bg-blue-500/30 backdrop-blur-lg px-6 py-2 z-10 text-base font-semibold text-white transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl hover:shadow-blue-600/50 border border-white/20">
                 <span className="text-base">Contactez-nous</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" d="M6.4 18L5 16.6L14.6 7H6V5h12v12h-2V8.4z"/></svg>
                 <div
@@ -39,7 +39,7 @@ const Banner = () => {
                 >
                   <div className="relative h-full w-10 bg-white/30"></div>
                 </div>
-              </button>
+              </a>
             </div>
           </div>
 

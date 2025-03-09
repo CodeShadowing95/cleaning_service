@@ -82,10 +82,10 @@ const HowItWorks = () => {
             <p className="text-sm md:max-w-[700px] lg:max-w-[400px] xl:max-w-[600px] 2xl:max-w-[700px]">Ne laissez plus la saleté et le désordre ternir votre environnement ! Nous sommes là pour redonner vie à vos locaux et leur offrir l’éclat qu’ils méritent. Laissez-nous vous montrer comment un espace parfaitement propre peut transformer votre quotidien.</p>
           </div>
           <div className="pl-4">
-            <button className="flex justify-center items-center gap-2 bg-white text-teal-900 px-4 py-2 font-semibold rounded-lg hover:bg-teal-900 hover:text-white hover:shadow-md hover:shadow-white transition-colors duration-300">
-              Je me lance !
+            <a href="#contact" className="flex justify-center items-center gap-2 max-w-[200px] bg-white text-teal-900 px-4 py-2 font-semibold rounded-lg hover:bg-teal-900 hover:text-white hover:shadow-md hover:shadow-white transition-colors duration-300">
+              Contactez-nous
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
-            </button>
+            </a>
           </div>
         </div>
         <img src="/how-it-works/extra2.png" alt="extra" className="lg:block hidden absolute bottom-0 right-0 h-[400px] z-10" />

@@ -4,7 +4,7 @@ const AboutUs = () => {
     <div id="about-us" className="w-full flex lg:flex-row flex-col justify-center items-center px-10 sm:px-[40px] md:px-[80px] lg:px-[100px] xl:px-[130px] gap-8 pt-24 pb-16 bg-blue-50">
       {/* Left side */}
       <div className="relative flex justify-center w-full items-center">
-          <img src="/pic.png" className="w-full h-full object-cover flex-shrink-0 align-middle" alt="left-img" />
+        <img src="/directeur.png" className="w-full h-full object-cover flex-shrink-0 align-middle" alt="left-img" />
       </div>
       {/* Right side */}
       <div className="flex flex-col w-full h-full">
@@ -50,7 +50,7 @@ const AboutUs = () => {
         </div>
         <div className="max-sm:flex-col flex gap-4 mt-8">
           <button className="px-6 py-2 bg-blue-900 text-white hover:shadow-lg hover:shadow-blue-950 font-semibold transition-all duration-500 rounded-lg">Contactez-nous</button>
-          <button className="px-6 py-2 bg-white text-gray-900 hover:shadow-lg font-semibold transition-all duration-500 rounded-lg">Nos services</button>
+          <a href="#services" className="px-6 py-2 bg-white text-center text-gray-900 hover:shadow-lg font-semibold transition-all duration-500 rounded-lg">Nos services</a>
         </div>
       </div>
     </div>
