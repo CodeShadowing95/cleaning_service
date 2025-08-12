@@ -245,15 +245,14 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 
 ## 👥 Équipe
 
-- **Développeur Principal** - [Votre Nom](https://github.com/votre-username)
-- **Designer UI/UX** - [Nom du Designer]
+- **Développeur Principal** - [Patrick NAMEGNI](https://github.com/CodeShadowing95)
+- **Designer UI/UX** - [Patrick NAMEGNI]
 
 ## 📞 Contact
 
-- **Email** : contact@votre-entreprise.com
-- **Téléphone** : +33 X XX XX XX XX
-- **Site Web** : [www.votre-site.com](https://www.votre-site.com)
-- **LinkedIn** : [Votre LinkedIn](https://linkedin.com/in/votre-profil)
+- **Email** : patrick.namegni@gmail.com
+- **Site Web** : [patricknamegni.vercel.app](https://patricknamegni.vercel.app)
+- **LinkedIn** : [Patrick NAMEGNI](https://linkedin.com/in/patrick-namegni)
 
 ## 🙏 Remerciements
 
