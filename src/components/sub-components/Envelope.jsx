@@ -1,48 +1,95 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Envelope = () => {
 
-  const [formData, setformData] = useState({ user_name: "", user_email: "", user_phone: "", message: "" });
+  const formRef = useRef(null);
+
+  const [formData, setFormData] = useState({ user_name: "", user_email: "", user_phone: "", message: "" });
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
-    setformData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // Show loading state
 
     try {
-      const response = await fetch("http://localhost:3001/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      await emailjs.sendForm(
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+      );
 
-      const data = await response.json();
-      console.log(data);
-
+      // Reset form and stop loading
+      setFormData({ user_name: "", user_email: "", user_phone: "", message: "" });
     } catch (error) {
-      console.log("Erreur lors de la récupération du formulaire: " + error);
+      console.error("EmailJS Error:", error); // Optional: show toast
+    } finally {
+      setLoading(false); // Always stop loading, even on error
     }
-  }
+  };
 
   return (
-    <div className="relative bg-black lg:flex hidden w-[350px] md:w-[550px] lg:w-[600px] md:h-[350px] h-[250px] group transition-all duration-700 aspect-video items-center justify-center cursor-pointer translate-y-28 hover:translate-y-36">
+    <div className="relative bg-black lg:flex hidden w-[350px] md:w-[550px] lg:w-[600px] h-[320px] md:h-[420px] lg:h-[450px] group transition-all duration-700 items-center justify-center cursor-pointer translate-y-28 hover:translate-y-36">
       {/* Hint besides the envelope */}
       {/* <div className="absolute top-0 -left-32 transform rotate-[-20deg] text-base font-medium text-gray-500">Survolez-moi</div> */}
 
-      <div className="transition-all flex flex-col p-5 duration-300 group-hover:duration-1000 bg-gray-100 w-full h-full absolute group-hover:-translate-y-56">
-        <p className="px-10 text-[12px] font-medium text-gray-500">Cher visiteur,</p>
-        <p className="px-10 text-[12px] leading-4 font-medium text-gray-500 mt-2">Nous espérons que vous avez apprécié la visite et que nous vous avons convaincu de votre choix de service de nettoyage. Laissez-nous un message.</p>
-        <form action="https://formspree.io/f/mzzbqryw" method="POST" className="flex flex-col gap-2 mt-5 px-10">
-          <input type="text" name="user_name" placeholder="Nom" className="p-1 text-xs font-medium focus:outline-none px-2 border-b border-gray-400" onChange={handleChange} />
-          <input type="email" name="user_email" placeholder="Adresse mail" className="p-1 text-xs font-medium focus:outline-none px-2 border-b border-gray-400" onChange={handleChange} />
-          <input type="phone" max={10} name="user_phone" placeholder="Numéro de téléphone" className="p-1 text-xs font-medium focus:outline-none px-2 border-b border-gray-400" onChange={handleChange} />
-          <textarea name="message" placeholder="Votre message..." rows="4" className="p-1 text-xs font-medium focus:outline-none px-2 border-b border-gray-400" onChange={handleChange} />
-          <div className="w-full flex justify-center items-center">
-            <input type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2 text-center" value={"Envoyer"} />
+      <div className="transition-all flex flex-col p-4 duration-300 group-hover:duration-1000 bg-gradient-to-br from-slate-50 to-gray-100 w-full h-full absolute group-hover:-translate-y-56 shadow-inner overflow-hidden">
+        <div className="mb-2">
+          <p className="px-8 text-[13px] font-semibold text-slate-700 tracking-wide">Cher visiteur,</p>
+          <p className="px-8 text-[11px] leading-4 font-medium text-slate-600 mt-1 italic">Nous espérons que vous avez apprécié la visite et que nous vous avons convaincu de votre choix de service de nettoyage. Laissez-nous un message.</p>
+        </div>
+        <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-2 mt-1 px-8 flex-1">
+          <div className="relative">
+            <input 
+              type="text" 
+              name="user_name" 
+              placeholder="Nom complet" 
+              className="w-full p-1.5 text-xs font-medium focus:outline-none px-2.5 bg-white/70 border border-slate-200 rounded-md focus:border-blue-400 focus:ring-1 focus:ring-blue-100 transition-all duration-200 placeholder:text-slate-400 shadow-sm" 
+              onChange={handleChange} 
+            />
+          </div>
+          <div className="relative">
+            <input 
+              type="email" 
+              name="user_email" 
+              placeholder="Adresse e-mail" 
+              className="w-full p-1.5 text-xs font-medium focus:outline-none px-2.5 bg-white/70 border border-slate-200 rounded-md focus:border-blue-400 focus:ring-1 focus:ring-blue-100 transition-all duration-200 placeholder:text-slate-400 shadow-sm" 
+              onChange={handleChange} 
+            />
+          </div>
+          <div className="relative">
+            <input 
+              type="tel" 
+              name="user_phone" 
+              placeholder="Numéro de téléphone" 
+              className="w-full p-1.5 text-xs font-medium focus:outline-none px-2.5 bg-white/70 border border-slate-200 rounded-md focus:border-blue-400 focus:ring-1 focus:ring-blue-100 transition-all duration-200 placeholder:text-slate-400 shadow-sm" 
+              onChange={handleChange} 
+            />
+          </div>
+          <div className="relative">
+            <textarea 
+              name="message" 
+              placeholder="Votre message..." 
+              rows="4" 
+              className="w-full h-full p-1.5 text-xs font-medium focus:outline-none px-2.5 bg-white/70 border border-slate-200 rounded-md focus:border-blue-400 focus:ring-1 focus:ring-blue-100 transition-all duration-200 placeholder:text-slate-400 shadow-sm resize-none min-h-[50px]" 
+              onChange={handleChange} 
+            />
+          </div>
+          <div className="w-full flex justify-center items-center mt-1">
+            {loading ? (
+              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+            ) : (
+              <input 
+                type="submit" 
+                className="text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 focus:ring-2 focus:outline-none focus:ring-blue-200 font-semibold rounded-lg text-xs px-5 py-2 text-center transition-all duration-200 shadow-md hover:shadow-lg transform hover:scale-105 cursor-pointer" 
+                value="Envoyer" 
+              />
+            )}
           </div>
         </form>
       </div>

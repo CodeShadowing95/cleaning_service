@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test EmailJS Configuration</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        button {
+            background: #2563eb;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        button:hover {
+            background: #1d4ed8;
+        }
+        button:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+        }
+        .status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .success {
+            background: #d1fae5;
+            color: #065f46;
+            border: 1px solid #10b981;
+        }
+        .error {
+            background: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #ef4444;
+        }
+        .info {
+            background: #dbeafe;
+            color: #1e40af;
+            border: 1px solid #3b82f6;
+        }
+        .config-info {
+            background: #f3f4f6;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 12px;
+            color: #374151;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Test EmailJS Configuration</h1>
+        
+        <div class="config-info">
+            <h3>Configuration Actuelle :</h3>
+            <p><strong>Service ID:</strong> service_a60781p</p>
+            <p><strong>Template ID:</strong> template_reho22d54</p>
+            <p><strong>Public Key:</strong> aV8rFAf8TsFbbKKU-</p>
+        </div>
+
+        <form id="test-form">
+            <div class="form-group">
+                <label for="user_name">Nom de test :</label>
+                <input type="text" id="user_name" name="user_name" value="Test User" required>
+            </div>
+
+            <div class="form-group">
+                <label for="user_email">Email de test :</label>
+                <input type="email" id="user_email" name="user_email" value="test@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="user_phone">Téléphone de test :</label>
+                <input type="tel" id="user_phone" name="user_phone" value="+33 1 23 45 67 89" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message de test :</label>
+                <textarea id="message" name="message" rows="4" required>Ceci est un message de test pour vérifier la configuration EmailJS.</textarea>
+            </div>
+
+            <button type="submit" id="submit-btn">🚀 Tester l'Envoi</button>
+        </form>
+
+        <div id="status"></div>
+
+        <div style="margin-top: 30px; padding: 20px; background: #fef3c7; border-radius: 5px;">
+            <h3>🔧 Solutions en cas d'erreur :</h3>
+            <ul>
+                <li><strong>Erreur 412 Yahoo :</strong> Attendez 15-30 minutes et réessayez</li>
+                <li><strong>Mot de passe incorrect :</strong> Utilisez un mot de passe d'application Yahoo</li>
+                <li><strong>Service non trouvé :</strong> Vérifiez les IDs dans EmailJS</li>
+                <li><strong>Template non trouvé :</strong> Vérifiez que le template existe</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Configuration EmailJS
+        const SERVICE_ID = 'service_a60781p';
+        const TEMPLATE_ID = 'template_reho22d54';
+        const PUBLIC_KEY = 'aV8rFAf8TsFbbKKU-';
+
+        // Initialiser EmailJS
+        emailjs.init(PUBLIC_KEY);
+
+        // Fonction pour afficher le statut
+        function showStatus(message, type) {
+            const statusDiv = document.getElementById('status');
+            statusDiv.innerHTML = `<div class="${type}">${message}</div>`;
+        }
+
+        // Gestionnaire de soumission du formulaire
+        document.getElementById('test-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submit-btn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = '⏳ Envoi en cours...';
+            
+            showStatus('📤 Envoi du message de test...', 'info');
+
+            try {
+                // Préparer les données du formulaire
+                const formData = new FormData(this);
+                const templateParams = {
+                    user_name: formData.get('user_name'),
+                    user_email: formData.get('user_email'),
+                    user_phone: formData.get('user_phone'),
+                    message: formData.get('message'),
+                    to_email: 'votre-email@domaine.com' // Remplacez par votre email
+                };
+
+                console.log('Envoi avec les paramètres:', templateParams);
+
+                // Envoyer l'email
+                const response = await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams);
+                
+                console.log('Réponse EmailJS:', response);
+                
+                showStatus(`✅ Email envoyé avec succès ! Status: ${response.status}`, 'success');
+                
+            } catch (error) {
+                console.error('Erreur EmailJS:', error);
+                
+                let errorMessage = '❌ Erreur lors de l\'envoi : ';
+                
+                if (error.status === 412) {
+                    errorMessage += 'Erreur d\'authentification Yahoo (412). Attendez 15-30 minutes et réessayez, ou utilisez un mot de passe d\'application.';
+                } else if (error.status === 400) {
+                    errorMessage += 'Paramètres invalides (400). Vérifiez la configuration du template.';
+                } else if (error.status === 401) {
+                    errorMessage += 'Clé publique invalide (401). Vérifiez votre clé publique EmailJS.';
+                } else if (error.status === 404) {
+                    errorMessage += 'Service ou template non trouvé (404). Vérifiez vos IDs EmailJS.';
+                } else {
+                    errorMessage += `${error.text || error.message || 'Erreur inconnue'}`;
+                }
+                
+                showStatus(errorMessage, 'error');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = '🚀 Tester l\'Envoi';
+            }
+        });
+
+        // Afficher les informations de configuration au chargement
+        console.log('Configuration EmailJS chargée:');
+        console.log('Service ID:', SERVICE_ID);
+        console.log('Template ID:', TEMPLATE_ID);
+        console.log('Public Key:', PUBLIC_KEY);
+    </script>
+</body>
+</html>

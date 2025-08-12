@@ -60,7 +60,7 @@ const Footer = () => {
             <p className="text-xl font-bold mb-2">Contact.</p>
             <a href="/" className="flex gap-2 text-sm text-gray-400 mb-2 hover:text-white transition-all duration-300">
               <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
-              +33 7 24 89 62 47
+              +33 7 59 22 15 08
             </a>
             <a href="/" className="flex gap-2 text-sm text-gray-400 mb-2 hover:text-white transition-all duration-300">
               <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m3 7l9 6l9-6"/></g></svg>
@@ -75,7 +75,8 @@ const Footer = () => {
       </div>
       
       <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4 bg-zinc-900/70 mt-10 p-8">
-        <p className="text-[14px] text-gray-400 font-semibold">© 2024 Rehonettoyage. Tous droits reservés.</p>
+        <p className="text-[14px] text-gray-400 font-semibold">© {new Date().getFullYear()} Rehoboth Nettoyage. Tous droits reservés.</p>
+
         <div className="flex items-center flex-col md:flex-row gap-4">
           <a href="/" className="text-[14px] text-gray-400 hover:underline underline-offset-4 transition-all duration-300">Mentions Légales</a>
           <span className="hidden md:block text-[14px] text-gray-400 hover:text-white transition-all duration-300">&#8226;</span>          

@@ -25,3 +25,6 @@ dist-ssr
 
 # git conf
 .gitexec
+
+# env
+.env
