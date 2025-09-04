@@ -220,7 +220,7 @@ const CGVModal = ({ isOpen, onClose }) => {
             </div>
 
             {/* Article 10 */}
-            <div className="mb-6 p-6 bg-gradient-to-r from-cyan-50 to-blue-50 rounded-2xl border border-cyan-200/50">
+            {/* <div className="mb-6 p-6 bg-gradient-to-r from-cyan-50 to-blue-50 rounded-2xl border border-cyan-200/50">
               <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center">
                 <div className="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
                 ARTICLE 10 – ACCEPTATION DES CGV
@@ -240,7 +240,7 @@ const CGVModal = ({ isOpen, onClose }) => {
                   <li><strong>Le Client :</strong> (Nom et signature)</li>
                 </ul>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 

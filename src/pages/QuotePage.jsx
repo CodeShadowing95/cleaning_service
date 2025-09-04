@@ -12,8 +12,15 @@ const QuotePage = () => {
     frequency: '',
     rooms: '',
     message: '',
-    date: '',
-    time: '',
+    date: new Date().toLocaleDateString('fr-FR', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit'
+    }),
+    time: new Date().toLocaleTimeString('fr-FR', {
+      hour: '2-digit',
+      minute: '2-digit'
+    }),
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
@@ -29,25 +36,6 @@ const QuotePage = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
-
-    // Ajout de la date et de l'heure au formulaire
-    const currentDate = new Date().toLocaleDateString('fr-FR', {
-      year: 'numeric',
-      month: '2-digit',
-      day: '2-digit'
-    });
-    const currentTime = new Date().toLocaleTimeString('fr-FR', {
-      hour: '2-digit',
-      minute: '2-digit'
-    });
-    
-    // Mise à jour des champs cachés
-    setFormData(prev => ({
-      ...prev,
-      date: currentDate,
-      time: currentTime
-    }));
-    
 
     try {
       // Configuration EmailJS avec variables d'environnement
@@ -68,7 +56,9 @@ const QuotePage = () => {
         serviceType: '',
         frequency: '',
         rooms: '',
-        message: ''
+        message: '',
+        date: '',
+        time: '',
       });
     } catch (error) {
       console.error('Erreur lors de l\'envoi:', error);
