@@ -98,54 +98,35 @@ const Services = () => {
         <div 
           data-animate="showcase" 
           data-delay="800"
-          className={`group relative max-sm:w-[300px] max-sm:h-[400px] w-[250px] h-[314px] rounded-2xl overflow-hidden shadow-2xl transform transition-all duration-700 hover:scale-105 hover:rotate-1 ${animatedElements.showcase ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
+          className={`group relative w-[280px] h-[350px] rounded-xl overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105 ${animatedElements.showcase ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
         >
-          {/* Image avec effet parallax */}
-          <div className="absolute inset-0 overflow-hidden">
+          {/* Image de fond */}
+          <div className="absolute inset-0">
             <img 
               src="/services/showcase.jpg" 
               alt="general" 
-              className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110" 
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-800/50 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
           </div>
           
-          {/* Overlay avec contenu */}
-          <div className="absolute inset-0 flex flex-col justify-center items-center p-8 text-center">
-            <h3 className="text-lg font-bold text-white mb-4 transform transition-transform duration-300 group-hover:scale-105 drop-shadow-lg">
+          {/* Contenu */}
+          <div className="absolute inset-0 flex flex-col justify-end p-6 text-center">
+            <h3 className="text-xl font-semibold text-white mb-3">
               Services Complets
             </h3>
-            <p className="text-sm text-cyan-100 font-medium text-center mb-6 leading-relaxed drop-shadow-md">
-              Découvrez toutes nos panoplies de services adaptés à vos besoins et à vos budgets.
+            <p className="text-sm text-gray-200 mb-4 leading-relaxed">
+              Découvrez toutes nos panoplies de services adaptés à vos besoins.
             </p>
             
-            {/* Bouton redessiné avec meilleure visibilité */}
-            <div className="relative group/btn">
-              {/* Glow effect background */}
-              <div className="absolute -inset-2 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 rounded-full blur-lg opacity-75 group-hover/btn:opacity-100 transition duration-300 animate-pulse"></div>
-              
-              <button className="relative inline-flex h-10 items-center justify-center px-6 py-2 overflow-hidden rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold text-sm shadow-2xl transform transition-all duration-300 hover:scale-110 hover:shadow-cyan-500/50 focus:outline-none focus:ring-4 focus:ring-cyan-300/50">
-                {/* Animated background */}
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
-                
-                {/* Shine effect */}
-                <div className="absolute inset-0 -top-2 -bottom-2 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700"></div>
-                
-                {/* Button content */}
-                <span className="relative flex items-center gap-2">
-                   <span>Découvrir</span>
-                   <svg className="w-4 h-4 transform transition-transform duration-300 group-hover/btn:translate-x-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </span>
-              </button>
-            </div>
+            {/* Bouton simple et élégant */}
+            <button className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white font-medium text-sm transition-all duration-300 hover:bg-white/20 hover:border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50">
+              <span>Découvrir</span>
+              <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
           </div>
-          
-          {/* Particules flottantes */}
-          <div className="absolute top-4 left-4 w-2 h-2 bg-white/30 rounded-full animate-pulse"></div>
-          <div className="absolute top-8 right-6 w-1 h-1 bg-cyan-300/50 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
-          <div className="absolute bottom-8 left-8 w-1.5 h-1.5 bg-blue-300/40 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
         </div>
       </div>
 

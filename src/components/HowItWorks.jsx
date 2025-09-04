@@ -1,100 +1,342 @@
 
+import { useState, useEffect } from 'react';
+
 const HowItWorks = () => {
+  const [activeTab, setActiveTab] = useState('process');
+  const [currentStep, setCurrentStep] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const steps = [
+    {
+      id: 1,
+      title: "Contactez notre service",
+      description: "Facile et rapide, contactez-nous dès maintenant pour une estimation personnalisée. Votre satisfaction est notre priorité, et nous sommes prêts à vous répondre en un instant.",
+      image: "/how-it-works/01.jpg",
+      icon: "📞",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      id: 2,
+      title: "L'équipe arrive",
+      description: "Une fois votre demande validée, notre équipe se rend rapidement sur place. Ponctuels, professionnels et équipés, nous sommes prêts à répondre à toutes vos attentes.",
+      image: "/how-it-works/02.jpg",
+      icon: "🚐",
+      color: "from-cyan-500 to-teal-500"
+    },
+    {
+      id: 3,
+      title: "Le travail commence",
+      description: "Un nettoyage minutieux et organisé pour chaque espace. Nous utilisons des méthodes modernes et des produits adaptés pour un résultat optimal.",
+      image: "/how-it-works/03.jpg",
+      icon: "🧽",
+      color: "from-teal-500 to-green-500"
+    },
+    {
+      id: 4,
+      title: "Résultat final",
+      description: "Découvrez des espaces transformés par notre savoir-faire. Propreté, fraîcheur et brillance : nous redonnons vie à vos locaux.",
+      image: "/how-it-works/04.jpg",
+      icon: "✨",
+      color: "from-green-500 to-emerald-500"
+    }
+  ];
+
+  // Auto-play demo
+  useEffect(() => {
+    let interval;
+    if (isPlaying && activeTab === 'demo') {
+      interval = setInterval(() => {
+        setCurrentStep((prev) => (prev + 1) % steps.length);
+      }, 3000);
+    }
+    return () => clearInterval(interval);
+  }, [isPlaying, activeTab, steps.length]);
+
   return (
-    <div id="demonstration" className="flex flex-col justify-center items-center mt-8 mb-4 px-10 sm:px-[40px] md:px-[80px] lg:px-[100px] xl:px-[130px] py-8 bg-blue-50">
-      <div className="flex items-center p-1 border gap-2 border-blue-600 rounded-xl bg-white">
-        <div className="flex justify-center items-center gap-2 px-4 py-2 text-xs font-semibold text-white bg-blue-600 rounded-xl transition-all cursor-pointer capitalize">
-          comment ça marche ?
-        </div>
-        <div className="flex justify-center items-center gap-2 px-4 py-2 text-xs font-semibold text-blue-600 hover:bg-blue-100 bg-white rounded-xl transition-all cursor-pointer">
-          Démo
-        </div>
-      </div>
+    <div id="demonstration" className="relative min-h-screen flex flex-col justify-center items-center mt-8 mb-4 px-10 sm:px-[40px] md:px-[80px] lg:px-[100px] xl:px-[130px] py-16 overflow-hidden">
+      {/* Arrière-plan animé */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50"></div>
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-blue-200/30 to-cyan-200/30 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gradient-to-br from-cyan-200/30 to-teal-200/30 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
       
-      <div className="w-full flex flex-col justify-center items-center mt-8">
-        <h1 className="text-3xl font-bold capitalize max-w-lg text-center">Notre approche méthodique, simple et efficace</h1>
-        <div className="w-full flex flex-col justify-center items-center lg:gap-6 gap-12 mt-10 relative">
-
-          {/* Vertical line */}
-          <div className="lg:block hidden absolute top-0 left-1/2 h-full transform -translate-x-1/2 border-t-transparent border-b-transparent border-l-transparent border-r-2 border-gray-400 border-dashed z-0" />
-          
-          <div className="w-full flex md:flex-row flex-col justify-center items-center lg:gap-16 gap-2 z-10">
-            <div className="flex flex-col justify-center gap-2 w-[350px] sm:w-[400px] h-[200px] px-4 py-6 rounded-lg bg-white">
-              <p className="text-lg font-semibold">Contactez notre service</p>
-              <p className="text-[13px] text-gray-600">Facile et rapide, contactez-nous dès maintenant pour une estimation personnalisée. Votre satisfaction est notre priorité, et nous sommes prêts à vous répondre en un instant.</p>
-            </div>
-            <div className="lg:block hidden p-2 h-fit bg-blue-50 rounded-full">
-              <p className="text-2xl font-extrabold text-teal-700">01</p>
-            </div>
-            <div className="flex justify-center items-center w-[350px] sm:w-[400px] h-[200px] rounded-lg overflow-hidden">
-              <img src="/how-it-works/01.jpg" alt="general" className="w-full h-full object-cover" />
-            </div>
-          </div>
-          
-          <div className="w-full flex md:flex-row flex-col justify-center items-center lg:gap-16 gap-2 z-10">
-            <div className="flex justify-center items-center w-[350px] sm:w-[400px] h-[200px] rounded-lg overflow-hidden">
-              <img src="/how-it-works/02.jpg" alt="general" className="w-full h-full object-cover" />
-            </div>
-            <div className="lg:block hidden p-2 h-fit bg-blue-50 rounded-full">
-              <p className="text-2xl font-extrabold text-teal-700">02</p>
-            </div>
-            <div className="flex flex-col justify-center gap-2 w-[350px] sm:w-[400px] h-[200px] px-4 py-6 rounded-lg bg-white">
-              <p className="text-lg font-semibold">L{'\''}équipe arrive</p>
-              <p className="text-[13px] text-gray-600">Une fois votre demande validée, notre équipe se rend rapidement sur place. Ponctuels, professionnels et équipés, nous sommes prêts à répondre à toutes vos attentes. Chaque intervention est soigneusement planifiée pour un service irréprochable.</p>
-            </div>
-          </div>
-          
-          <div className="w-full flex md:flex-row flex-col justify-center items-center lg:gap-16 gap-2 z-10">
-            <div className="flex flex-col justify-center gap-2 w-[350px] sm:w-[400px] h-[200px] px-4 py-6 rounded-lg bg-white">
-              <p className="text-lg font-semibold">Le travail commence</p>
-              <p className="text-[13px] text-gray-600">Un nettoyage minutieux et organisé pour chaque espace. Nous utilisons des méthodes modernes et des produits adaptés pour un résultat optimal. Notre priorité est de combiner efficacité et respect de vos locaux. Chaque détail compte pour nous !</p>
-            </div>
-            <div className="lg:block hidden p-2 h-fit bg-blue-50 rounded-full">
-              <p className="text-2xl font-extrabold text-teal-700">03</p>
-            </div>
-            <div className="flex justify-center items-center w-[350px] sm:w-[400px] h-[200px] rounded-lg overflow-hidden">
-              <img src="/how-it-works/03.jpg" alt="general" className="w-full h-full object-cover" />
-            </div>
-          </div>
-          
-          <div className="w-full flex md:flex-row flex-col justify-center items-center lg:gap-16 gap-2 z-10">
-            <div className="flex justify-center items-center w-[350px] sm:w-[400px] h-[200px] rounded-lg overflow-hidden">
-              <img src="/how-it-works/04.jpg" alt="general" className="w-full h-full object-cover" />
-            </div>
-            <div className="lg:block hidden p-2 h-fit bg-blue-50 rounded-full">
-              <p className="text-2xl font-extrabold text-teal-700">04</p>
-            </div>
-            <div className="flex flex-col justify-center gap-2 w-[350px] sm:w-[400px] h-[200px] px-4 py-6 rounded-lg bg-white">
-              <p className="text-lg font-semibold">Résultat final</p>
-              <p className="text-[13px] text-gray-600">Découvrez des espaces transformés par notre savoir-faire. Propreté, fraîcheur et brillance : nous redonnons vie à vos locaux. Avec nous, chaque coin respire la perfection et votre satisfaction est toujours au rendez-vous.</p>
-            </div>
-          </div>
-
-        </div>
+      {/* Onglets modernes */}
+      <div className="relative z-10 flex items-center p-2 bg-white/80 backdrop-blur-lg border border-white/60 rounded-2xl shadow-xl mb-12">
+        <button
+          onClick={() => setActiveTab('process')}
+          className={`flex justify-center items-center gap-3 px-6 py-3 text-sm font-semibold rounded-xl transition-all duration-300 ${
+            activeTab === 'process'
+              ? 'text-white bg-gradient-to-r from-blue-600 to-cyan-600 shadow-lg transform scale-105'
+              : 'text-blue-600 hover:bg-blue-50'
+          }`}
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+          </svg>
+          Comment ça marche ?
+        </button>
+        <button
+          onClick={() => {
+            setActiveTab('demo');
+            setCurrentStep(0);
+            setIsPlaying(false);
+          }}
+          className={`flex justify-center items-center gap-3 px-6 py-3 text-sm font-semibold rounded-xl transition-all duration-300 ${
+            activeTab === 'demo'
+              ? 'text-white bg-gradient-to-r from-cyan-600 to-teal-600 shadow-lg transform scale-105'
+              : 'text-cyan-600 hover:bg-cyan-50'
+          }`}
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.5a2.5 2.5 0 110 5H9V10z" />
+          </svg>
+          Démo Interactive
+        </button>
       </div>
 
-      <div className="relative w-full rounded-xl border flex justify-between mt-20 max-w-[1200px] px-8 py-12 text-white bg-gradient-to-b from-teal-800 to-black">
-        <div className="flex flex-col justify-center gap-8 z-10">
-          <div className="border-l-4 border-white pl-4">
-            <h1 className="text-xl font-bold md:max-w-[700px] lg:max-w-[400px] xl:max-w-[600px] 2xl:max-w-[700px]">Découvrez la Différence qu{'\''}un espace propre peut faire - Obtenez un Devis Gratuit maintenant</h1>
+      {/* Contenu principal */}
+      <div className="relative z-10 w-full max-w-7xl">
+        {activeTab === 'process' ? (
+          // Vue processus
+          <div className="space-y-12">
+            {/* En-tête */}
+            <div className="text-center space-y-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-100 to-cyan-100 rounded-full text-blue-700 font-medium text-sm">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                Processus Simplifié
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-900 via-cyan-800 to-teal-800 bg-clip-text text-transparent">
+                Comment ça marche ?
+              </h2>
+              <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                Découvrez notre processus simple et efficace en 4 étapes pour un service de nettoyage professionnel qui transforme vos espaces
+              </p>
+            </div>
+
+            {/* Étapes du processus */}
+            <div className="grid gap-8 relative">
+              {/* Ligne de connexion */}
+              <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-400 via-cyan-400 to-teal-400 transform -translate-x-1/2 opacity-30"></div>
+              
+              {steps.map((step, index) => (
+                <div key={step.id} className={`group relative flex items-center gap-8 lg:gap-16 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} flex-col`}>
+                  {/* Carte de contenu */}
+                  <div className="flex-1 max-w-lg">
+                    <div className="relative p-8 bg-white/80 backdrop-blur-lg rounded-3xl shadow-xl border border-white/60 hover:shadow-2xl transition-all duration-500 group-hover:scale-105">
+                      {/* Élément décoratif */}
+                      <div className={`absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br ${step.color} rounded-2xl flex items-center justify-center text-2xl shadow-lg transform rotate-12 group-hover:rotate-0 transition-transform duration-500`}>
+                        {step.icon}
+                      </div>
+                      
+                      {/* Badge numéro */}
+                      {/* <div className="absolute -top-3 -right-3 w-8 h-8 bg-gradient-to-br from-gray-800 to-gray-900 text-white rounded-full flex items-center justify-center text-sm font-bold shadow-lg">
+                        {step.id}
+                      </div> */}
+                      
+                      <div className="space-y-4 mt-4">
+                        <h3 className="text-2xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
+                          {step.title}
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed">
+                          {step.description}
+                        </p>
+                      </div>
+                      
+                      {/* Effet de brillance */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
+                    </div>
+                  </div>
+                  
+                  {/* Connecteur central */}
+                  <div className="hidden lg:flex relative z-20 w-20 h-20 bg-white rounded-full shadow-xl border-4 border-blue-100 items-center justify-center">
+                    <div className={`w-12 h-12 bg-gradient-to-br ${step.color} rounded-full flex items-center justify-center text-white text-xl font-bold shadow-inner`}>
+                      {step.id}
+                    </div>
+                  </div>
+                  
+                  {/* Image */}
+                  <div className="flex-1 max-w-lg">
+                    <div className="relative group/image">
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-cyan-400/20 rounded-3xl transform rotate-3 group-hover:rotate-0 transition-transform duration-500"></div>
+                      <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+                        <img 
+                          src={step.image} 
+                          alt={step.title}
+                          className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-700"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="pl-4">
-            <p className="text-sm md:max-w-[700px] lg:max-w-[400px] xl:max-w-[600px] 2xl:max-w-[700px]">Ne laissez plus la saleté et le désordre ternir votre environnement ! Nous sommes là pour redonner vie à vos locaux et leur offrir l’éclat qu’ils méritent. Laissez-nous vous montrer comment un espace parfaitement propre peut transformer votre quotidien.</p>
+        ) : (
+          // Vue démo interactive
+          <div className="space-y-8">
+            {/* En-tête démo */}
+            <div className="text-center space-y-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-100 to-teal-100 rounded-full text-cyan-700 font-medium text-sm">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.5a2.5 2.5 0 110 5H9V10z" />
+                </svg>
+                Démo Interactive
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-900 via-teal-800 to-green-800 bg-clip-text text-transparent">
+                Voyez le processus en action
+              </h2>
+              <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                Découvrez notre méthode de travail étape par étape avec cette démonstration interactive
+              </p>
+            </div>
+            
+            {/* Contrôles de démo */}
+            <div className="flex justify-center items-center gap-4 mb-8">
+              <button
+                onClick={() => setCurrentStep((prev) => (prev - 1 + steps.length) % steps.length)}
+                className="p-3 bg-white/80 backdrop-blur-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-white/60"
+              >
+                <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              
+              <button
+                onClick={() => {
+                  setIsPlaying(!isPlaying);
+                }}
+                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
+                  isPlaying 
+                    ? 'bg-gradient-to-r from-red-500 to-pink-500 text-white shadow-lg hover:shadow-xl' 
+                    : 'bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-lg hover:shadow-xl'
+                }`}
+              >
+                {isPlaying ? (
+                  <div className="flex items-center gap-2">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 9v6m4-6v6" />
+                    </svg>
+                    Pause
+                  </div>
+                ) : (
+                  <div className="flex items-center gap-2">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.5a2.5 2.5 0 110 5H9V10z" />
+                    </svg>
+                    Lancer la démo
+                  </div>
+                )}
+              </button>
+              
+              <button
+                onClick={() => setCurrentStep((prev) => (prev + 1) % steps.length)}
+                className="p-3 bg-white/80 backdrop-blur-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-white/60"
+              >
+                <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+            
+            {/* Indicateurs d'étapes */}
+            <div className="flex justify-center items-center gap-3 mb-8">
+              {steps.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentStep(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentStep 
+                      ? 'bg-gradient-to-r from-cyan-500 to-teal-500 scale-125 shadow-lg' 
+                      : 'bg-gray-300 hover:bg-gray-400'
+                  }`}
+                />
+              ))}
+            </div>
+            
+            {/* Contenu de la démo */}
+            <div className="relative max-w-4xl mx-auto">
+              <div className="relative bg-white/80 backdrop-blur-lg rounded-3xl shadow-2xl border border-white/60 overflow-hidden">
+                {/* Image principale */}
+                <div className="relative h-80 overflow-hidden">
+                  <img 
+                    src={steps[currentStep].image} 
+                    alt={steps[currentStep].title}
+                    className="w-full h-full object-cover transition-all duration-700 transform hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                  
+                  {/* Badge étape */}
+                  <div className={`absolute top-6 left-6 px-4 py-2 bg-gradient-to-r ${steps[currentStep].color} text-white rounded-full font-bold shadow-lg`}>
+                    Étape {steps[currentStep].id}
+                  </div>
+                  
+                  {/* Icône flottante */}
+                  <div className="absolute top-6 right-6 w-16 h-16 bg-white/90 backdrop-blur-lg rounded-full flex items-center justify-center text-3xl shadow-lg animate-bounce">
+                    {steps[currentStep].icon}
+                  </div>
+                </div>
+                
+                {/* Contenu textuel */}
+                <div className="p-8">
+                  <h3 className="text-3xl font-bold text-gray-800 mb-4">
+                    {steps[currentStep].title}
+                  </h3>
+                  <p className="text-gray-600 text-lg leading-relaxed">
+                    {steps[currentStep].description}
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="pl-4">
-            <a href="#contact" className="flex justify-center items-center gap-2 max-w-[200px] bg-white text-teal-900 px-4 py-2 font-semibold rounded-lg hover:bg-teal-900 hover:text-white hover:shadow-md hover:shadow-white transition-colors duration-300">
-              Contactez-nous
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
-            </a>
+        )}
+      </div>
+
+      {/* Section d'appel à l'action */}
+      <div className="relative z-10 w-full max-w-6xl mt-20">
+        <div className="relative rounded-3xl border border-white/60 bg-gradient-to-br from-slate-800 via-gray-900 to-black overflow-hidden shadow-2xl">
+          {/* Éléments décoratifs */}
+          <div className="absolute top-0 left-0 w-40 h-40 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-br from-teal-500/20 to-green-500/20 rounded-full blur-2xl"></div>
+          
+          <div className="relative z-10 flex flex-col lg:flex-row justify-between items-center px-8 py-12 gap-8">
+            <div className="flex flex-col justify-center gap-6">
+              <div className="border-l-4 border-cyan-400 pl-6">
+                <h3 className="text-3xl lg:text-4xl font-bold text-white mb-2">
+                  Prêt à transformer vos espaces ?
+                </h3>
+                <p className="text-gray-300 text-lg leading-relaxed max-w-2xl">
+                  Contactez-nous dès maintenant pour bénéficier de notre expertise en nettoyage professionnel. 
+                  Devis gratuit et intervention rapide garantis.
+                </p>
+              </div>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-teal-500 text-white font-semibold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 hover:from-cyan-400 hover:to-teal-400">
+                <div className="flex items-center gap-3">
+                  <svg className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  <span className="whitespace-nowrap">Contactez-nous</span>
+                </div>
+              </button>
+              
+              <button className="group px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+                <div className="flex items-center gap-3">
+                  <svg className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span className="whitespace-nowrap">En savoir plus</span>
+                </div>
+              </button>
+            </div>
           </div>
-        </div>
-        <img src="/how-it-works/extra2.png" alt="extra" className="lg:block hidden absolute bottom-0 right-0 h-[400px] z-10" />
-        <div className="absolute inset-0 text-white/10 -z-1 overflow-hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" className="absolute -top-32 left-1/2 -rotate-45 w-72 h-72" viewBox="0 0 24 24"><path fill="currentColor" d="M4 13h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1m0 8h6c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1m10 0h6c.55 0 1-.45 1-1v-8c0-.55-.45-1-1-1h-6c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1M13 4v4c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1h-6c-.55 0-1 .45-1 1"/></svg>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HowItWorks
+export default HowItWorks;

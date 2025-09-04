@@ -1,4 +1,64 @@
-# 🔧 Guide de Dépannage EmailJS - Erreur Yahoo 412
+# 🔧 Guide de Dépannage EmailJS
+
+## 📧 Problème : L'expéditeur apparaît comme "moi" au lieu du nom du client
+
+### 🔍 Cause du problème
+Par défaut, EmailJS utilise votre propre adresse email comme expéditeur pour des raisons de sécurité et de délivrabilité. C'est **normal et recommandé**.
+
+### ✅ Solutions
+
+#### Solution 1 : Modifier le nom d'affichage dans le template (Recommandée)
+
+Dans votre template EmailJS :
+
+1. **Allez dans EmailJS** → Email Templates
+2. **Éditez votre template**
+3. **Dans les paramètres du template**, modifiez le champ "From Name" :
+   ```
+   Demande de devis - {{name}}
+   ```
+   ou
+   ```
+   {{name}} via Service de Nettoyage
+   ```
+
+#### Solution 2 : Utiliser Reply-To
+
+Configurez le champ "Reply-To" pour que les réponses aillent au client :
+
+1. **Dans les paramètres du template EmailJS**
+2. **Ajoutez dans "Reply-To"** : `{{email}}`
+3. Permet de répondre directement au client
+
+#### Solution 3 : Personnaliser le sujet
+
+Modifiez le sujet pour inclure le nom du client :
+```
+🏠 Nouvelle demande de devis de {{name}}
+```
+
+### 🎯 Configuration recommandée
+
+- **From Name :** `Demande de devis - {{name}}`
+- **From Email :** Votre email (automatique)
+- **Reply-To :** `{{email}}`
+- **Subject :** `🏠 Nouvelle demande de devis de {{name}}`
+
+### ⚠️ Pourquoi cette limitation ?
+
+1. **Sécurité** : Empêche l'usurpation d'identité
+2. **Délivrabilité** : Évite que les emails soient marqués comme spam
+3. **Authentification** : Respecte les protocoles SPF/DKIM
+
+### 📝 Note importante
+
+Il n'est **pas possible** (et pas recommandé) de faire apparaître l'email du client comme expéditeur réel. Cette limitation est imposée par tous les services d'email pour des raisons de sécurité.
+
+La solution avec "From Name" personnalisé est la **meilleure pratique** utilisée par la plupart des sites web professionnels.
+
+---
+
+## 🚨 Erreur Yahoo 412
 
 ## 🚨 Problème Actuel
 ```

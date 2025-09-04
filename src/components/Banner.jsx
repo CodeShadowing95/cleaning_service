@@ -43,7 +43,7 @@ const Banner = () => {
 
           <div className={`w-full lg:w-1/2 flex h-full flex-col justify-center gap-8 relative pt-20 transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             {/* Titre avec effet de typing et gradient */}
-            <h1 className={`font-bold capitalize text-3xl leading-[1.4] sm:text-4xl lg:text-5xl xl:text-6xl sm:leading-[1.3] 2xl:leading-[1.2] max-w-[700px] text-balance z-10 bg-gradient-to-r from-white via-blue-100 to-cyan-200 bg-clip-text text-transparent transition-all duration-1000 delay-300 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}>
+            <h1 className={`font-bold capitalize text-3xl leading-[1.4] sm:text-4xl lg:text-5xl xl:text-6xl sm:leading-[1.3] 2xl:leading-[1.2] max-w-[800px] text-balance z-10 bg-gradient-to-r from-white via-blue-100 to-cyan-200 bg-clip-text text-transparent transition-all duration-1000 delay-300 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}>
               Améliorez votre activité grâce à nos services de nettoyage 
               <span className="relative inline-block">
                 <span className="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent font-extrabold">professionnels</span>
