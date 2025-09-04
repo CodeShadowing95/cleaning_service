@@ -168,15 +168,15 @@ const Footer = () => {
             <h3 className="text-gray-400 text-sm font-medium mb-4 uppercase tracking-wider">// Contact</h3>
             <ul className="space-y-3">
               <li className="flex items-center text-gray-300">
-                <Phone className="w-4 h-4 mr-2" />
+                <Phone className="w-4 h-4 mr-2 flex-shrink-0" />
                 <span>+33 7 59 22 15 08</span>
               </li>
               <li className="flex items-center text-gray-300">
-                <Mail className="w-4 h-4 mr-2" />
+                <Mail className="w-4 h-4 mr-2 flex-shrink-0" />
                 <span>rehoboth.nettoyage20@gmail.com</span>
               </li>
               <li className="flex items-start text-gray-300">
-                <MapPin className="w-4 h-4 mr-2 mt-1" />
+                <MapPin className="w-4 h-4 mr-2 mt-1 flex-shrink-0" />
                 <span>1 Rue Albert Schweitzer,<br />69600 Oullins</span>
               </li>
               <li>
