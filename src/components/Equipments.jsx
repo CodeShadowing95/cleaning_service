@@ -68,7 +68,7 @@ const Equipments = () => {
                 </div>
               </div>
               {/* Services avec animations */}
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col">
                 {expandedItems[service.id] ?
                   service.items.map((item, itemIndex) => (
                     <div key={item.id} className="group/item flex items-center gap-3 p-3 rounded-xl bg-white/50 backdrop-blur-sm border border-white/60 hover:bg-blue-50/50 hover:border-blue-200/50 transition-all duration-300" style={{animationDelay: `${itemIndex * 0.1}s`}}>

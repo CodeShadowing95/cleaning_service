@@ -1,6 +1,7 @@
 import { servicesDesc } from "../constants"
 import Card from "./sub-components/Card"
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 const Services = () => {
   const [animatedElements, setAnimatedElements] = useState({
@@ -97,7 +98,7 @@ const Services = () => {
         {/* Carte showcase améliorée */}
         <div 
           data-animate="showcase" 
-          data-delay="800"
+          data-delay="100"
           className={`group relative w-[280px] h-[350px] rounded-xl overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105 ${animatedElements.showcase ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
         >
           {/* Image de fond */}
@@ -120,12 +121,15 @@ const Services = () => {
             </p>
             
             {/* Bouton simple et élégant */}
-            <button className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white font-medium text-sm transition-all duration-300 hover:bg-white/20 hover:border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50">
+            <Link 
+              to="/services-details" 
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white font-medium text-sm transition-all duration-300 hover:bg-white/20 hover:border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50 group"
+            >
               <span>Découvrir</span>
               <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -176,14 +180,14 @@ const Services = () => {
           {/* Bouton CTA amélioré */}
           <div className="group relative">
             <div className="absolute -inset-1 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-            <a href="#services" className="relative flex items-center gap-3 text-sm font-semibold tracking-wide cursor-pointer transition-all bg-gradient-to-r from-gray-800 to-gray-700 text-white px-8 py-4 rounded-xl border-b-4 border-teal-400 hover:brightness-110 hover:-translate-y-1 hover:border-b-6 active:border-b-2 active:brightness-90 active:translate-y-1 hover:shadow-xl hover:shadow-teal-300/50 shadow-lg shadow-gray-400/20 active:shadow-none transform transition-all duration-200">
+            <Link to="/services-details" className="relative flex items-center gap-3 text-sm font-semibold tracking-wide cursor-pointer transition-all bg-gradient-to-r from-gray-800 to-gray-700 text-white px-8 py-4 rounded-xl border-b-4 border-teal-400 hover:brightness-110 hover:-translate-y-1 hover:border-b-6 active:border-b-2 active:brightness-90 active:translate-y-1 hover:shadow-xl hover:shadow-teal-300/50 shadow-lg shadow-gray-400/20 active:shadow-none transform transition-all duration-200">
               <span>Découvrir tous nos services</span>
               <div className="flex items-center gap-1">
                 <svg className="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M5.59 7.41L7 6l6 6l-6 6l-1.41-1.41L10.17 12zm6 0L13 6l6 6l-6 6l-1.41-1.41L16.17 12z"/>
                 </svg>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
         

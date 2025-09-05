@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import ComingSoonModal from './ComingSoonModal';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -41,13 +42,13 @@ const Footer = () => {
           </p>
 
           {/* CTA Button */}
-          <button
+          <Link
+            to="/devis"
             className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-3 rounded-lg font-medium inline-flex items-center transition-all duration-300"
-            onClick={() => window.location.href = '/devis'}
           >
             <Mail className="w-4 h-4 mr-2" />
             Demander un devis gratuit
-          </button>
+          </Link>
         </div>
 
         {/* Footer Links Grid */}
@@ -207,7 +208,7 @@ const Footer = () => {
               <div className="flex gap-3 mb-3">
                 <input
                   type="email"
-                  placeholder="exemple@gmail.com"
+                  placeholder="Saisir votre adresse mail"
                   className="bg-gray-800 border border-gray-600 text-white placeholder:text-gray-400 flex-1 md:w-64 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 <button className="bg-white text-black hover:bg-gray-100 px-6 py-2 rounded-lg font-medium transition-colors">

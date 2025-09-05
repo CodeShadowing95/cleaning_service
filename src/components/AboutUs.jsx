@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 // Styles CSS personnalisés pour les animations
 const customStyles = `
@@ -183,7 +184,7 @@ const AboutUs = () => {
         </div>
         
         <div className={`max-sm:flex-col flex gap-6 mt-8 transition-all duration-700 delay-800 ${animatedElements.buttons ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-          <button className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 via-blue-700 to-cyan-600 text-white font-bold rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 overflow-hidden">
+          <Link to="/devis" className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 via-blue-700 to-cyan-600 text-white font-bold rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <div className="absolute inset-0 bg-white/10 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
             <span className="relative flex items-center gap-2">
@@ -192,7 +193,7 @@ const AboutUs = () => {
               </svg>
               Contactez-nous
             </span>
-          </button>
+          </Link>
           
           <a href="#services" className="group relative px-8 py-4 bg-white/80 backdrop-blur-sm text-gray-800 font-bold rounded-2xl border-2 border-blue-200 hover:border-cyan-300 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
