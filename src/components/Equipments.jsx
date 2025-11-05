@@ -16,11 +16,11 @@ const Equipments = () => {
   };
 
   return (
-    <div id="equipments" className="w-full my-20 bg-gradient-to-br from-slate-50 via-blue-50/30 to-cyan-50/20 py-20 relative overflow-hidden">
+    <div id="equipments" className="w-full my-12 bg-gradient-to-br from-slate-50 via-blue-50/30 to-cyan-50/20 py-12 relative overflow-hidden">
       {/* Arrière-plan avec effet de parallaxe */}
       <div className="absolute w-full h-full top-0 left-0 z-0">
         <Marquee pauseOnHover={false} speed={30} gradient={false}>
-            <img src="/equipments/wallpaper3.jpg" alt="wallpaper" className="opacity-20" />
+            <img src="/equipments/wallpaper3.jpg" alt="Équipements de nettoyage — fond défilant" loading="lazy" className="opacity-20" />
         </Marquee>
       </div>
 
@@ -34,36 +34,36 @@ const Equipments = () => {
       <div className="absolute w-full h-full top-0 left-0 bg-gradient-to-b from-white/80 via-transparent to-transparent z-10"></div>
 
       {/* En-tête avec design moderne */}
-      <div className="relative z-20 text-center mb-16">
+      <div className="relative z-20 text-center mb-10">
         <div className="inline-flex items-center px-6 py-3 mb-6 bg-gradient-to-r from-blue-100/80 to-cyan-100/80 border border-blue-200/50 rounded-full backdrop-blur-sm">
           <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mr-3 animate-pulse"></div>
           <span className="text-sm font-semibold text-blue-700 uppercase tracking-wide">Nos Équipements</span>
         </div>
-        <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-800 via-blue-700 to-cyan-700 bg-clip-text text-transparent mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-gray-800 via-blue-700 to-cyan-700 bg-clip-text text-transparent mb-3">
           Découvrez les secrets de notre efficacité
         </h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
           Des équipements de pointe et des techniques innovantes pour un nettoyage professionnel irréprochable
         </p>
       </div>
-      <div className="relative z-20 px-10 sm:px-[40px] md:px-[80px] lg:px-[100px] xl:px-[130px] 2xl:px-[160px] py-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 overflow-hidden">
+      <div className="relative z-20 px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 2xl:px-28 py-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-hidden">
         {generalCleaningServices.map((service, index) => (
-          <div key={index} className="group relative flex flex-col p-8 bg-white/80 backdrop-blur-lg border border-white/40 rounded-3xl shadow-xl hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 overflow-hidden">
+          <div key={index} className="group relative flex flex-col p-5 bg-white/80 backdrop-blur-lg border border-white/40 rounded-3xl shadow-xl hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 overflow-hidden">
             {/* Arrière-plan décoratif */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-white/30 to-cyan-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-400/10 to-cyan-400/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700"></div>
             
             <div className="relative flex flex-col">
               {/* En-tête avec icône */}
-              <div className="flex justify-between items-start mb-6">
+              <div className="flex justify-between items-start mb-3">
                 <div className="flex-1">
-                  <div className="inline-flex items-center px-3 py-1 mb-3 bg-gradient-to-r from-blue-100/80 to-cyan-100/80 border border-blue-200/50 rounded-full">
+                  <div className="inline-flex items-center px-2.5 py-1 mb-2 bg-gradient-to-r from-blue-100/80 to-cyan-100/80 border border-blue-200/50 rounded-full">
                     <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mr-2 animate-pulse"></div>
                     <span className="text-xs font-medium text-blue-700 uppercase tracking-wide">Catégorie</span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 group-hover:text-blue-700 transition-colors duration-300">{service.label}</h3>
+                  <h3 className="text-lg md:text-xl font-bold text-gray-800 group-hover:text-blue-700 transition-colors duration-300">{service.label}</h3>
                 </div>
-                <div className="w-10 h-10 flex justify-center items-center rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white cursor-pointer transition-all duration-300 shadow-lg">
+                <div className="w-9 h-9 text-sm flex justify-center items-center rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white cursor-pointer transition-all duration-300 shadow-lg">
                   {service.id}
                 </div>
               </div>
@@ -71,18 +71,18 @@ const Equipments = () => {
               <div className="flex flex-col">
                 {expandedItems[service.id] ?
                   service.items.map((item, itemIndex) => (
-                    <div key={item.id} className="group/item flex items-center gap-3 p-3 rounded-xl bg-white/50 backdrop-blur-sm border border-white/60 hover:bg-blue-50/50 hover:border-blue-200/50 transition-all duration-300" style={{animationDelay: `${itemIndex * 0.1}s`}}>
-                      <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg group-hover/item:scale-110 transition-transform duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" className="text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg>
+                    <div key={item.id} className="group/item flex items-center gap-2.5 p-2.5 rounded-xl bg-white/50 backdrop-blur-sm border border-white/60 hover:bg-blue-50/50 hover:border-blue-200/50 transition-all duration-300 leading-snug" style={{animationDelay: `${itemIndex * 0.1}s`}}>
+                      <div className="flex-shrink-0 w-5 h-5 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg group-hover/item:scale-110 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" className="text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg>
                       </div>
                       <span className="text-sm font-medium text-gray-700 group-hover/item:text-blue-700 transition-colors duration-300">{item.name}</span>
                     </div>
                   ))
                 :
                   service.items.slice(0, 4).map((item, itemIndex) => (
-                    <div key={item.id} className="group/item flex items-center gap-3 p-3 rounded-xl bg-white/50 backdrop-blur-sm border border-white/60 hover:bg-blue-50/50 hover:border-blue-200/50 transition-all duration-300" style={{animationDelay: `${itemIndex * 0.1}s`}}>
-                      <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg group-hover/item:scale-110 transition-transform duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" className="text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg>
+                    <div key={item.id} className="group/item flex items-center gap-2.5 p-2.5 rounded-xl bg-white/50 backdrop-blur-sm border border-white/60 hover:bg-blue-50/50 hover:border-blue-200/50 transition-all duration-300 leading-snug" style={{animationDelay: `${itemIndex * 0.1}s`}}>
+                      <div className="flex-shrink-0 w-5 h-5 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg group-hover/item:scale-110 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" className="text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg>
                       </div>
                       <span className="text-sm font-medium text-gray-700 group-hover/item:text-blue-700 transition-colors duration-300">{item.name}</span>
                     </div>
@@ -90,21 +90,23 @@ const Equipments = () => {
               </div>
               
               {/* Bouton moderne */}
-              <div className="mt-8">
-                <button 
-                  className="group/btn relative w-full py-3 px-6 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-1 overflow-hidden"
-                  onClick={() => expandedItems[service.id] ? showLessServices(service.id) : showMoreServices(service.id)}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700"></div>
-                  <span className="relative flex items-center justify-center gap-2">
-                    <svg className={`w-4 h-4 transition-transform duration-300 ${expandedItems[service.id] ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                    {expandedItems[service.id] ? "Voir moins" : "Voir plus"}
-                  </span>
-                </button>
-              </div>
+              {service.items.length >= 5 && (
+                <div className="mt-5">
+                  <button 
+                    className="group/btn relative w-full py-2.5 px-5 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-1 overflow-hidden"
+                    onClick={() => expandedItems[service.id] ? showLessServices(service.id) : showMoreServices(service.id)}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700"></div>
+                    <span className="relative flex items-center justify-center gap-2">
+                      <svg className={`w-4 h-4 transition-transform duration-300 ${expandedItems[service.id] ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                      {expandedItems[service.id] ? "Voir moins" : "Voir plus"}
+                    </span>
+                  </button>
+                </div>
+              )}
             </div>
 
             {/* Absolute icon */}

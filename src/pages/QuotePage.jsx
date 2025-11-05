@@ -1,7 +1,16 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
+import { setPageMeta } from '../seo';
+import Footer from '../components/Footer';
 
 const QuotePage = () => {
+  useEffect(() => {
+    setPageMeta({
+      title: 'Devis nettoyage — REHOBOTH Nettoyage',
+      description: "Demandez un devis gratuit pour vos besoins de nettoyage: rapide et personnalisé.",
+      canonical: 'https://rehobothnettoyage.com/devis'
+    })
+  }, [])
   const form = useRef();
   const [formData, setFormData] = useState({
     name: '',
@@ -69,23 +78,24 @@ const QuotePage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50">      
-      {/* Hero Section */}
-      <div className="relative pt-32 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-cyan-500/10 to-purple-600/10"></div>
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 mb-6">
-            <span className="block">Obtenez votre</span>
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-500 to-purple-600">
-              devis gratuitement
-            </span>
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Remplissez ce formulaire et recevez une estimation personnalisée pour vos besoins de nettoyage. 
-            Notre équipe vous contactera dans les plus brefs délais.
-          </p>
+    <div className="min-h-screen bg-white">      
+      {/* Header avec image wave et overlays */}
+      <section className="relative w-full">
+        <div className="relative h-48 sm:h-56 md:h-64 lg:h-72 overflow-hidden">
+          <img src="/wave.png" alt="wave background" className="absolute inset-0 w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-b from-blue-900/60 via-blue-800/50 to-transparent pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-transparent to-black/10 pointer-events-none"></div>
+          <div className="relative z-10 h-full flex items-center justify-center">
+            <div className="text-center px-4">
+              <div className="inline-flex items-center px-3 py-1.5 mb-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white">
+                <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full mr-2"></div>
+                <span className="text-xs sm:text-sm font-semibold">Devis gratuit — Réponse rapide</span>
+              </div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white drop-shadow-sm">Demande de devis</h1>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* Form Section */}
       <div className="pb-20 px-4 sm:px-6 lg:px-8">
@@ -294,9 +304,9 @@ const QuotePage = () => {
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
                       </svg>
-                      <span className="font-semibold">Erreur lors de l'envoi</span>
+                      <span className="font-semibold">Erreur lors de l&apos;envoi</span>
                     </div>
-                    <p className="mt-2 text-sm">Une erreur s'est produite. Veuillez réessayer ou nous contacter directement.</p>
+                    <p className="mt-2 text-sm">Une erreur s&apos;est produite. Veuillez réessayer ou nous contacter directement.</p>
                   </div>
                 )}
               </form>
@@ -304,6 +314,8 @@ const QuotePage = () => {
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };

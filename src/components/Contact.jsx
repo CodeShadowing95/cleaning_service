@@ -3,13 +3,13 @@ import Envelope from "./sub-components/Envelope"
 const Contact = () => {
 
   return (
-    <div id="contact" className="w-full relative mb-40 pb-8 overflow-hidden">
+    <div id="contact" className="w-full relative mb-24 pb-6 overflow-hidden">
       {/* Arrière-plan décoratif avec dégradé */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50/30 to-cyan-50/20"></div>
       
       {/* Éléments décoratifs d'arrière-plan */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-400/10 to-cyan-400/10 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-purple-400/10 to-pink-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <div className="absolute top-20 left-10 w-60 h-60 bg-gradient-to-r from-blue-400/10 to-cyan-400/10 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-20 right-10 w-80 h-80 bg-gradient-to-r from-purple-400/10 to-pink-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
 
       {/* Bulles d'eau flottantes */}
       <div className="absolute inset-0 overflow-hidden rounded-3xl">
@@ -71,19 +71,19 @@ const Contact = () => {
         }}></div>
       </div>
 
-      <div className="relative z-10 flex xl:flex-row flex-col justify-center xl:gap-16 pt-20 md:pt-24 px-10 sm:px-[40px] md:px-[80px] lg:px-[100px] xl:px-[130px]">
+      <div className="relative z-10 flex xl:flex-row flex-col justify-center xl:gap-12 pt-16 md:pt-20 px-6 sm:px-8 md:px-12 lg:px-14 xl:px-16">
 
         {/* Section informations de contact */}
         <div className="flex flex-col items-start relative xl:w-1/2">
           {/* Badge décoratif */}
-          <div className="inline-flex items-center px-4 py-2 mb-6 bg-gradient-to-r from-blue-100 to-cyan-100 border border-blue-200/50 rounded-full">
+          <div className="inline-flex items-center px-3 py-1.5 mb-4 bg-gradient-to-r from-blue-100 to-cyan-100 border border-blue-200/50 rounded-full">
             <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mr-2 animate-pulse"></div>
             <span className="text-sm font-semibold text-blue-700">Contactez-nous</span>
           </div>
 
           {/* Titre principal */}
-          <div className="relative mb-6">
-            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-cyan-700 bg-clip-text text-transparent leading-tight">
+          <div className="relative mb-5">
+            <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-cyan-700 bg-clip-text text-transparent leading-tight">
               Parlons de votre
               <span className="block text-transparent bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text">
                 projet de nettoyage
@@ -94,55 +94,55 @@ const Contact = () => {
           </div>
 
           {/* Description */}
-          <p className="text-lg text-gray-600 leading-relaxed mb-8 max-w-lg">
+          <p className="text-base text-gray-600 leading-relaxed mb-6 max-w-lg">
             Nous sommes là pour vous accompagner dans tous vos besoins de nettoyage. 
             Contactez-nous dès maintenant pour un devis personnalisé et gratuit.
           </p>
 
           {/* Informations de contact stylisées */}
-          <div className="flex flex-col gap-6 mb-8">
+          <div className="flex flex-col gap-4 mb-6">
             {/* Téléphone */}
-            <div className="group flex items-center gap-4 p-4 bg-white/70 backdrop-blur-sm border border-gray-200/50 rounded-2xl hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 hover:scale-105">
-              <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <div className="group flex items-center gap-3 p-3 bg-white/70 backdrop-blur-sm border border-gray-200/50 rounded-2xl hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 hover:scale-105">
+              <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/>
                 </svg>
               </div>
               <div className="flex-1">
                 <p className="text-sm font-semibold text-gray-500 mb-1">Téléphone</p>
-                <a href="tel:+33759221508" className="text-lg font-bold text-gray-800 hover:text-blue-600 transition-colors duration-300">
+                <a href="tel:+33759221508" className="text-base font-bold text-gray-800 hover:text-blue-600 transition-colors duration-300">
                   +33 7 59 22 15 08
                 </a>
               </div>
             </div>
 
             {/* Email */}
-            <div className="group flex items-center gap-4 p-4 bg-white/70 backdrop-blur-sm border border-gray-200/50 rounded-2xl hover:shadow-lg hover:shadow-cyan-500/10 transition-all duration-300 hover:scale-105">
-              <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <div className="group flex items-center gap-3 p-3 bg-white/70 backdrop-blur-sm border border-gray-200/50 rounded-2xl hover:shadow-lg hover:shadow-cyan-500/10 transition-all duration-300 hover:scale-105">
+              <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
                   <path d="m3 7l9 6l9-6"/>
                 </svg>
               </div>
               <div className="flex-1">
                 <p className="text-sm font-semibold text-gray-500 mb-1">Email</p>
-                <a href="mailto:rehoboth.nettoyage20@gmail.com" className="text-lg font-bold text-gray-800 hover:text-cyan-600 transition-colors duration-300 break-all">
+                <a href="mailto:rehoboth.nettoyage20@gmail.com" className="text-base font-bold text-gray-800 hover:text-cyan-600 transition-colors duration-300 break-all">
                   rehoboth.nettoyage20@gmail.com
                 </a>
               </div>
             </div>
 
             {/* Adresse */}
-            <div className="group flex items-center gap-4 p-4 bg-white/70 backdrop-blur-sm border border-gray-200/50 rounded-2xl hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300 hover:scale-105">
-              <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <div className="group flex items-center gap-3 p-3 bg-white/70 backdrop-blur-sm border border-gray-200/50 rounded-2xl hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300 hover:scale-105">
+              <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0-6 0"/>
                   <path d="M17.657 16.657L13.414 20.9a2 2 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0"/>
                 </svg>
               </div>
               <div className="flex-1">
                 <p className="text-sm font-semibold text-gray-500 mb-1">Adresse</p>
-                <p className="text-lg font-bold text-gray-800">
+                <p className="text-base font-bold text-gray-800">
                   1 Rue Albert Schweitzer<br/>
                   69600 Oullins-Pierre-Bénite
                 </p>
@@ -151,15 +151,15 @@ const Contact = () => {
           </div>
 
           {/* Carte Google Maps stylisée */}
-          <div className="w-full max-w-2xl">
+          <div className="w-full max-w-xl">
             <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-purple-500 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
-              <div className="relative bg-white rounded-2xl p-2 overflow-hidden">
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-purple-500 rounded-2xl blur opacity-20 group-hover:opacity-35 transition duration-1000 group-hover:duration-200"></div>
+              <div className="relative bg-white rounded-2xl p-1.5 overflow-hidden">
                 <iframe 
                   title="REHOBOTH NETTOYAGE Localisation" 
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2786.1172136714795!2d4.811204276750525!3d45.70868531709217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4e9733ebaf505%3A0x993a21a5c0748a08!2s1%20Rue%20Albert%20Schweitzer%2C%2069600%20Oullins-Pierre-B%C3%A9nite!5e0!3m2!1sfr!2sfr!4v1733155087851!5m2!1sfr!2sfr" 
                   width="100%" 
-                  height="300" 
+                  height="240" 
                   style={{border:0, borderRadius: '12px'}} 
                   allowFullScreen="" 
                   loading="lazy" 
@@ -172,7 +172,7 @@ const Contact = () => {
         </div>
 
         {/* Section formulaire */}
-        <div className="xl:w-1/2 flex justify-center xl:justify-end mt-12 xl:mt-0">
+        <div className="xl:w-1/2 flex justify-center xl:justify-end mt-8 xl:mt-0">
           <Envelope />
         </div>
 

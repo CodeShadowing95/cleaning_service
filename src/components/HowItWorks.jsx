@@ -1,5 +1,5 @@
 
-import { Clipboard, Play } from 'lucide-react';
+import { Clipboard, Play, PlayCircleIcon } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -55,14 +55,14 @@ const HowItWorks = () => {
   }, [isPlaying, activeTab, steps.length]);
 
   return (
-    <div id="demonstration" className="relative min-h-screen flex flex-col justify-center items-center mt-8 mb-4 px-10 sm:px-[40px] md:px-[80px] lg:px-[100px] xl:px-[130px] py-16 overflow-hidden">
+    <div id="demonstration" className="relative flex flex-col justify-center items-center mt-8 mb-4 px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 py-12 overflow-hidden">
       {/* Arrière-plan animé */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50"></div>
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-blue-200/30 to-cyan-200/30 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gradient-to-br from-cyan-200/30 to-teal-200/30 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
       
       {/* Onglets modernes */}
-      <div className="relative z-10 flex items-center p-2 bg-white/80 backdrop-blur-lg border border-white/60 rounded-2xl shadow-xl mb-12">
+      <div className="relative z-10 flex items-center p-2 bg-white/80 backdrop-blur-lg border border-white/60 rounded-2xl shadow-xl mb-8">
         <button
           onClick={() => setActiveTab('process')}
           className={`flex justify-center items-center gap-3 px-6 py-3 text-sm font-semibold rounded-xl transition-all duration-300 ${
@@ -95,7 +95,7 @@ const HowItWorks = () => {
       <div className="relative z-10 w-full max-w-7xl">
         {activeTab === 'process' ? (
           // Vue processus
-          <div className="space-y-12">
+          <div className="space-y-10">
             {/* En-tête */}
             <div className="text-center space-y-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-100 to-cyan-100 rounded-full text-blue-700 font-medium text-sm">
@@ -104,10 +104,10 @@ const HowItWorks = () => {
                 </svg>
                 Processus Simplifié
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-900 via-cyan-800 to-teal-800 bg-clip-text text-transparent">
+              <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-900 via-cyan-800 to-teal-800 bg-clip-text text-transparent">
                 Comment ça marche ?
               </h2>
-              <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+              <p className="text-gray-600 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
                 Découvrez notre processus simple et efficace en 4 étapes pour un service de nettoyage professionnel qui transforme vos espaces
               </p>
             </div>
@@ -118,10 +118,10 @@ const HowItWorks = () => {
               <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-400 via-cyan-400 to-teal-400 transform -translate-x-1/2 opacity-30"></div>
               
               {steps.map((step, index) => (
-                <div key={step.id} className={`group relative flex items-center gap-8 lg:gap-16 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} flex-col`}>
+                <div key={step.id} className={`group relative flex justify-center items-center gap-8 lg:gap-16 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} flex-col`}>
                   {/* Carte de contenu */}
-                  <div className="flex-1 max-w-lg">
-                    <div className="relative p-8 bg-white/80 backdrop-blur-lg rounded-3xl shadow-xl border border-white/60 hover:shadow-2xl transition-all duration-500 group-hover:scale-105">
+                  <div className="w-full lg:w-[28rem]">
+                    <div className="relative p-6 bg-white/80 backdrop-blur-lg rounded-3xl shadow-xl border border-white/60 hover:shadow-2xl transition-all duration-500 group-hover:scale-105">
                       {/* Élément décoratif */}
                       <div className={`absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br ${step.color} rounded-2xl flex items-center justify-center text-2xl shadow-lg transform rotate-12 group-hover:rotate-0 transition-transform duration-500`}>
                         {step.icon}
@@ -133,7 +133,7 @@ const HowItWorks = () => {
                       </div> */}
                       
                       <div className="space-y-4 mt-4">
-                        <h3 className="text-2xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
+                        <h3 className="text-xl md:text-2xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
                           {step.title}
                         </h3>
                         <p className="text-gray-600 leading-relaxed">
@@ -154,14 +154,15 @@ const HowItWorks = () => {
                   </div>
                   
                   {/* Image */}
-                  <div className="flex-1 max-w-lg">
+                  <div className="w-full lg:w-[28rem]">
                     <div className="relative group/image">
                       <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-cyan-400/20 rounded-3xl transform rotate-3 group-hover:rotate-0 transition-transform duration-500"></div>
                       <div className="relative overflow-hidden rounded-3xl shadow-2xl">
                         <img 
                           src={step.image} 
                           alt={step.title}
-                          className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-700"
+                          loading="lazy"
+                          className="w-full h-56 object-cover transform group-hover:scale-110 transition-transform duration-700"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                       </div>
@@ -177,15 +178,13 @@ const HowItWorks = () => {
             {/* En-tête démo */}
             <div className="text-center space-y-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-100 to-teal-100 rounded-full text-cyan-700 font-medium text-sm">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.5a2.5 2.5 0 110 5H9V10z" />
-                </svg>
+                <PlayCircleIcon className="w-4 h-4" />
                 Démo Interactive
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-900 via-teal-800 to-green-800 bg-clip-text text-transparent">
+              <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-900 via-teal-800 to-green-800 bg-clip-text text-transparent">
                 Voyez le processus en action
               </h2>
-              <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+              <p className="text-gray-600 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
                 Découvrez notre méthode de travail étape par étape avec cette démonstration interactive
               </p>
             </div>
@@ -220,9 +219,7 @@ const HowItWorks = () => {
                   </div>
                 ) : (
                   <div className="flex items-center gap-2">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.5a2.5 2.5 0 110 5H9V10z" />
-                    </svg>
+                    <PlayCircleIcon className="w-4 h-4" />
                     Lancer la démo
                   </div>
                 )}
@@ -239,12 +236,12 @@ const HowItWorks = () => {
             </div>
             
             {/* Indicateurs d'étapes */}
-            <div className="flex justify-center items-center gap-3 mb-8">
+            <div className="flex justify-center items-center gap-2.5 mb-6">
               {steps.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentStep(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
                     index === currentStep 
                       ? 'bg-gradient-to-r from-cyan-500 to-teal-500 scale-125 shadow-lg' 
                       : 'bg-gray-300 hover:bg-gray-400'
@@ -254,36 +251,36 @@ const HowItWorks = () => {
             </div>
             
             {/* Contenu de la démo */}
-            <div className="relative max-w-4xl mx-auto">
-              <div className="relative bg-white/80 backdrop-blur-lg rounded-3xl shadow-2xl border border-white/60 overflow-hidden">
+            <div className="relative max-w-3xl mx-auto">
+              <div className="relative bg-white/80 backdrop-blur-lg rounded-2xl shadow-xl border border-white/60 overflow-hidden">
                 {/* Image principale */}
-                <div className="relative h-80 overflow-hidden">
+                <div className="relative h-56 overflow-hidden">
                   <img 
                     src={steps[currentStep].image} 
                     alt={steps[currentStep].title}
+                    decoding="async"
+                    loading="lazy"
                     className="w-full h-full object-cover transition-all duration-700 transform hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
                   
                   {/* Badge étape */}
-                  <div className={`absolute top-6 left-6 px-4 py-2 bg-gradient-to-r ${steps[currentStep].color} text-white rounded-full font-bold shadow-lg`}>
+                  <div className={`absolute top-4 left-4 px-3 py-1.5 bg-gradient-to-r ${steps[currentStep].color} text-white rounded-full font-semibold shadow-lg`}>
                     Étape {steps[currentStep].id}
                   </div>
                   
                   {/* Icône flottante */}
-                  <div className="absolute top-6 right-6 w-16 h-16 bg-white/90 backdrop-blur-lg rounded-full flex items-center justify-center text-3xl shadow-lg animate-bounce">
+                  <div className="absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-lg rounded-full flex items-center justify-center text-2xl shadow-lg animate-bounce">
                     {steps[currentStep].icon}
                   </div>
                 </div>
                 
                 {/* Contenu textuel */}
-                <div className="p-8">
-                  <h3 className="text-3xl font-bold text-gray-800 mb-4">
+                <div className="p-5">
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-2">
                     {steps[currentStep].title}
                   </h3>
-                  <p className="text-gray-600 text-lg leading-relaxed">
-                    {steps[currentStep].description}
-                  </p>
+                  <p className="text-gray-600 text-sm md:text-base leading-relaxed">{steps[currentStep].description}</p>
                 </div>
               </div>
             </div>
@@ -292,27 +289,27 @@ const HowItWorks = () => {
       </div>
 
       {/* Section d'appel à l'action */}
-      <div className="relative z-10 w-full max-w-6xl mt-20">
+      <div className="relative z-10 w-full max-w-6xl mt-16">
         <div className="relative rounded-3xl border border-white/60 bg-gradient-to-br from-slate-800 via-gray-900 to-black overflow-hidden shadow-2xl">
           {/* Éléments décoratifs */}
-          <div className="absolute top-0 left-0 w-40 h-40 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-2xl"></div>
-          <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-br from-teal-500/20 to-green-500/20 rounded-full blur-2xl"></div>
+          <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-0 right-0 w-28 h-28 bg-gradient-to-br from-teal-500/20 to-green-500/20 rounded-full blur-2xl"></div>
           
-          <div className="relative z-10 flex flex-col lg:flex-row justify-between items-center px-8 py-12 gap-8">
-            <div className="flex flex-col justify-center gap-6">
-              <div className="border-l-4 border-cyan-400 pl-6">
-                <h3 className="text-3xl lg:text-4xl font-bold text-white mb-2">
+          <div className="relative z-10 flex flex-col lg:flex-row justify-between items-center px-6 py-8 gap-6">
+            <div className="flex flex-col justify-center gap-4">
+              <div className="border-l-4 border-cyan-400 pl-5">
+                <h3 className="text-2xl lg:text-3xl font-bold text-white mb-2">
                   Prêt à transformer vos espaces ?
                 </h3>
-                <p className="text-gray-300 text-lg leading-relaxed max-w-2xl">
+                <p className="text-gray-300 text-base leading-relaxed max-w-2xl">
                   Contactez-nous dès maintenant pour bénéficier de notre expertise en nettoyage professionnel. 
                   Devis gratuit et intervention rapide garantis.
                 </p>
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/devis" className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-teal-500 text-white font-semibold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 hover:from-cyan-400 hover:to-teal-400">
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link to="/devis" className="group px-6 py-3 bg-gradient-to-r from-cyan-500 to-teal-500 text-white font-semibold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 hover:from-cyan-400 hover:to-teal-400">
                 <div className="flex items-center gap-3">
                   <svg className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -321,7 +318,7 @@ const HowItWorks = () => {
                 </div>
               </Link>
               
-              <button className="group px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+              <button className="group px-6 py-3 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
                 <div className="flex items-center gap-3">
                   <svg className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />

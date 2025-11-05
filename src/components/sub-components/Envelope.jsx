@@ -52,7 +52,7 @@ const Envelope = () => {
               <span className="text-sm font-semibold text-blue-700">Contactez-nous</span>
             </div>
             <h3 className="text-xl font-bold bg-gradient-to-r from-gray-800 to-blue-700 bg-clip-text text-transparent mb-2">
-              Parlons de votre projet
+              Discutons de votre besoin
             </h3>
             <p className="text-sm leading-relaxed font-medium text-gray-600">
               Décrivez-nous vos besoins et recevez un devis personnalisé sous 24h.

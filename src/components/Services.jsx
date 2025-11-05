@@ -37,7 +37,7 @@ const Services = () => {
   }, [])
 
   return (
-    <div id="services" className="relative w-full flex flex-col justify-center items-center px-10 sm:px-[40px] md:px-[80px] lg:px-[100px] xl:px-[130px] 2xl:px-[160px] pt-32 pb-10 overflow-hidden">
+    <div id="services" className="relative w-full flex flex-col justify-center items-center px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 pt-24 pb-8 overflow-hidden">
       {/* Arrière-plan animé avec dégradés */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-100/50">
         <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl animate-pulse"></div>
@@ -67,11 +67,11 @@ const Services = () => {
         className="w-full flex justify-between items-center mt-8 mb-12"
       >
         <div className="w-full flex flex-col justify-center items-center gap-4">
-          <h1 className={`text-4xl lg:text-5xl font-bold text-center bg-gradient-to-r from-gray-800 via-blue-800 to-gray-800 bg-clip-text text-transparent transition-all duration-700 ${animatedElements.title ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+          <h1 className={`text-3xl lg:text-4xl font-bold text-center bg-gradient-to-r from-gray-800 via-blue-800 to-gray-800 bg-clip-text text-transparent transition-all duration-700 ${animatedElements.title ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
             Nos Prestations Pensées pour Vous
           </h1>
           <div className={`w-24 h-1 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full transition-all duration-700 ${animatedElements.title ? 'scale-x-100 opacity-100' : 'scale-x-0 opacity-0'}`}></div>
-          <p className={`text-gray-600 text-center max-w-2xl transition-all duration-700 ${animatedElements.title ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`} style={{transitionDelay: '300ms'}}>
+          <p className={`text-gray-700 text-center max-w-2xl transition-all duration-700 ${animatedElements.title ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`} style={{transitionDelay: '300ms'}}>
             Découvrez notre gamme complète de services de nettoyage professionnel, adaptés à tous vos besoins
           </p>
         </div>
@@ -99,7 +99,7 @@ const Services = () => {
         <div 
           data-animate="showcase" 
           data-delay="100"
-          className={`group relative w-[280px] h-[350px] rounded-xl overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105 ${animatedElements.showcase ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
+          className={`group relative w-[260px] h-[320px] rounded-xl overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-105 ${animatedElements.showcase ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
         >
           {/* Image de fond */}
           <div className="absolute inset-0">
@@ -138,12 +138,12 @@ const Services = () => {
       <div 
         data-animate="bottom" 
         data-delay="1000"
-        className={`relative z-10 w-full flex lg:flex-row flex-col justify-between items-center gap-12 mt-16 transition-all duration-700 ${animatedElements.bottom ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}
+        className={`relative z-10 w-full flex lg:flex-row flex-col justify-between items-center gap-8 mt-12 transition-all duration-700 ${animatedElements.bottom ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}
       >
         {/* Contenu textuel */}
         <div className="lg:w-1/2 w-full flex flex-col justify-center items-start gap-8">
           {/* Titre avec dégradé */}
-          <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-gray-800 via-blue-800 to-gray-800 bg-clip-text text-transparent leading-tight">
+          <h2 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-gray-800 via-blue-800 to-gray-800 bg-clip-text text-transparent leading-tight">
             Notre équipe rendra vos locaux 
             <span className="relative inline-block">
               <span className="relative z-10">propres et soignés</span>
@@ -153,11 +153,11 @@ const Services = () => {
           
           {/* Description avec meilleure typographie */}
           <div className="space-y-4">
-            <p className="text-lg text-gray-700 font-medium leading-relaxed">
-              Que ce soit pour des bureaux, des espaces communs, ou des zones spécifiques, nous veillons à ce que chaque recoin soit soigné.
+            <p className="text-base text-gray-700 font-medium leading-relaxed">
+              Des bureaux qui brillent, des espaces communs qui respirent la propreté, des zones que vos visiteurs n’oublieront pas : nous transformons chaque recoin en carte de visite irrésistible pour votre image.
             </p>
-            <p className="text-base text-gray-600 leading-relaxed">
-              Faites confiance à notre équipe dynamique et fiable pour un service de nettoyage irréprochable, adapté à vos besoins et respectueux de votre espace.
+            <p className="text-sm text-gray-700 leading-relaxed">
+              Confiez-nous vos espaces : notre équipe attentionnée transforme chaque intervention en moment de soin, pour une propreté éclatante qui vous accompagne au quotidien.
             </p>
           </div>
           
@@ -180,7 +180,7 @@ const Services = () => {
           {/* Bouton CTA amélioré */}
           <div className="group relative">
             <div className="absolute -inset-1 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-            <Link to="/services-details" className="relative flex items-center gap-3 text-sm font-semibold tracking-wide cursor-pointer transition-all bg-gradient-to-r from-gray-800 to-gray-700 text-white px-8 py-4 rounded-xl border-b-4 border-teal-400 hover:brightness-110 hover:-translate-y-1 hover:border-b-6 active:border-b-2 active:brightness-90 active:translate-y-1 hover:shadow-xl hover:shadow-teal-300/50 shadow-lg shadow-gray-400/20 active:shadow-none transform transition-all duration-200">
+            <Link to="/services-details" className="relative flex items-center gap-3 text-sm font-semibold tracking-wide cursor-pointer transition-all bg-gradient-to-r from-gray-800 to-gray-700 text-white px-6 py-3 rounded-xl border-b-4 border-teal-400 hover:brightness-110 hover:-translate-y-1 hover:border-b-6 active:border-b-2 active:brightness-90 active:translate-y-1 hover:shadow-xl hover:shadow-teal-300/50 shadow-lg shadow-gray-400/20 active:shadow-none transform transition-all duration-200">
               <span>Découvrir tous nos services</span>
               <div className="flex items-center gap-1">
                 <svg className="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" fill="currentColor" viewBox="0 0 24 24">

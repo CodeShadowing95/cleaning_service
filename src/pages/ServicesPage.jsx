@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
+import { setPageMeta } from '../seo';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, CheckCircle, Star, Clock, Shield, Users, Sparkles, Home, Building, Car, Sofa, Monitor, Trash2, MessageSquareHeart } from 'lucide-react';
-import Navbar from '../components/Navbar';
+import { ArrowLeft, CheckCircle, Star, Clock, Shield, Users, Sparkles, Home, Building, Car, Sofa, Monitor, MessageSquareHeart } from 'lucide-react';
 import Footer from '../components/Footer';
 
 const ServicesPage = () => {
@@ -9,6 +9,45 @@ const ServicesPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    setPageMeta({
+      title: 'Nos services — REHOBOTH Nettoyage',
+      description: "Découvrez nos services de nettoyage: résidentiel, commercial, vitres, après travaux. Qualité garantie.",
+      canonical: 'https://rehobothnettoyage.com/services-details'
+    })
+  }, [])
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': [
+      {
+        '@type': 'Question',
+        'name': 'Quels types de services de nettoyage proposez-vous ?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Nous proposons du nettoyage résidentiel et commercial, nettoyage de vitres, après travaux, entretien régulier et nettoyage en profondeur.'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': 'Comment obtenir un devis ?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Vous pouvez demander un devis gratuit via notre page Devis. Nous vous répondons rapidement avec une estimation personnalisée.'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': 'Intervenez-vous rapidement ?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Oui, nous proposons des interventions rapides selon vos disponibilités, avec une qualité garantie.'
+        }
+      }
+    ]
+  };
 
   const services = [
     {
@@ -136,42 +175,48 @@ const ServicesPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">      
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="absolute inset-0">
-          <div className="absolute top-10 left-10 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-purple-400/10 rounded-full blur-3xl"></div>
+      {/* Hero Section avec wave.png */}
+      <section 
+        className="relative text-white py-20 md:py-24 overflow-hidden bg-center bg-cover"
+        style={{ backgroundImage: "url('/wave.png')" }}
+      >
+        {/* Overlay dégradé pour lisibilité */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-blue-900/40 to-blue-900/80"></div>
+        {/* Accents lumineux discrets */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute -top-10 -left-10 w-72 h-72 bg-cyan-400/15 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-10 -right-10 w-96 h-96 bg-indigo-400/15 rounded-full blur-3xl"></div>
         </div>
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <Link 
               to="/" 
-              className="inline-flex items-center gap-2 text-blue-200 hover:text-white transition-colors duration-300 mb-8"
+              className="inline-flex items-center gap-2 text-blue-100 hover:text-white transition-colors duration-300 mb-6"
             >
               <ArrowLeft className="w-5 h-5" />
-              Retour à l'accueil
+              Retour à l&apos;accueil
             </Link>
-            
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+
+            <h1 className="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight drop-shadow-md">
               Nos Services de Nettoyage
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Découvrez notre gamme complète de services professionnels adaptés à tous vos besoins de nettoyage
+            <p className="text-lg md:text-xl text-blue-100/90 mb-6 max-w-3xl mx-auto leading-relaxed">
+              Découvrez notre gamme complète de services professionnels adaptés à tous vos besoins
             </p>
-            
-            <div className="flex flex-wrap justify-center gap-8 text-sm">
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-green-400" />
+
+            {/* Badges d’attributs */}
+            <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-sm">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full">
+                <CheckCircle className="w-4 h-4 text-green-300" />
                 <span>Service 7j/7</span>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-green-400" />
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full">
+                <CheckCircle className="w-4 h-4 text-green-300" />
                 <span>Devis gratuit</span>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-green-400" />
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full">
+                <CheckCircle className="w-4 h-4 text-green-300" />
                 <span>Satisfaction garantie</span>
               </div>
             </div>
@@ -256,7 +301,7 @@ const ServicesPage = () => {
               Pourquoi Nous Choisir ?
             </h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Notre engagement envers l'excellence nous distingue de la concurrence
+              Notre engagement envers l&apos;excellence nous distingue de la concurrence
             </p>
           </div>
 
@@ -293,7 +338,7 @@ const ServicesPage = () => {
               </h2>
               
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Nous sommes une entreprise en pleine croissance, passionnée par l'excellence du service. 
+                Nous sommes une entreprise en pleine croissance, passionnée par l&apos;excellence du service. 
                 Vos futurs témoignages seront notre plus belle récompense et guideront notre amélioration continue.
               </p>
               
@@ -325,10 +370,10 @@ const ServicesPage = () => {
               
               <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6 mb-8">
                 <p className="text-lg font-medium text-gray-800 mb-2">
-                  "Soyez parmi nos premiers clients satisfaits !"
+                  &ldquo;Soyez parmi nos premiers clients satisfaits !&rdquo;
                 </p>
                 <p className="text-gray-600">
-                  Chaque nouveau client est une opportunité pour nous de prouver notre engagement envers l'excellence.
+                  Chaque nouveau client est une opportunité pour nous de prouver notre engagement envers l&apos;excellence.
                 </p>
               </div>
               
@@ -351,7 +396,7 @@ const ServicesPage = () => {
             Prêt à Transformer Votre Espace ?
           </h2>
           <p className="text-xl mb-8 text-blue-100">
-            Contactez-nous dès aujourd'hui pour un devis gratuit et personnalisé
+            Contactez-nous dès aujourd&apos;hui pour un devis gratuit et personnalisé
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -374,6 +419,8 @@ const ServicesPage = () => {
       </section>
 
       <Footer />
+      {/* FAQ Schema for SEO */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
     </div>
   );
 };

@@ -70,7 +70,7 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <div id="about-us" className="relative w-full flex lg:flex-row flex-col justify-center items-center px-10 sm:px-[40px] md:px-[80px] lg:px-[100px] xl:px-[130px] gap-8 pt-24 pb-16 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50 overflow-hidden">
+    <div id="about-us" className="relative w-full flex lg:flex-row flex-col justify-center items-center px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 gap-6 pt-16 pb-12 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50 overflow-hidden">
       {/* Éléments décoratifs d'arrière-plan */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-200/30 to-cyan-200/30 rounded-full blur-3xl animate-pulse"></div>
@@ -84,7 +84,9 @@ const AboutUs = () => {
           <img 
             src="/directeur.png" 
             className={`w-full h-full object-cover flex-shrink-0 align-middle transition-all duration-1000 ${isVisible ? 'scale-100 opacity-100' : 'scale-110 opacity-0'}`} 
-            alt="left-img" 
+            alt="Directeur de REHOBOTH Nettoyage" 
+            loading="lazy"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         </div>
@@ -112,7 +114,7 @@ const AboutUs = () => {
           </div>
         </div>
         
-        <h1 className={`text-4xl lg:text-5xl font-bold leading-tight mb-4 transition-all duration-700 delay-200 ${animatedElements.title ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+        <h1 className={`text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4 transition-all duration-700 delay-200 ${animatedElements.title ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           Une qualité de nettoyage à découvrir, bienvenue chez{' '}
           <span className="bg-gradient-to-r from-blue-600 via-blue-700 to-cyan-600 bg-clip-text text-transparent font-extrabold relative">
             REHOBOTH Nettoyage
@@ -121,7 +123,7 @@ const AboutUs = () => {
           !
         </h1>
         
-        <p className={`text-lg leading-relaxed text-gray-700 mb-6 transition-all duration-700 delay-400 ${animatedElements.description ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+        <p className={`text-base md:text-lg leading-relaxed text-gray-700 mb-5 transition-all duration-700 delay-400 ${animatedElements.description ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           Nous sommes une entreprise qui mettons notre{' '}
           <span className="font-semibold text-blue-700">expertise</span> et notre{' '}
           <span className="font-semibold text-cyan-700">passion</span> pour la propreté au service de votre bien-être. 
@@ -129,7 +131,7 @@ const AboutUs = () => {
           réalisées avec soin et attention aux moindres détails. Avec des produits respectueux de l'environnement et des techniques efficaces, 
           nous vous offrons un espace sain, frais et accueillant, où il fait bon vivre et travailler.
         </p>
-        <div className={`w-full max-sm:flex-col flex max-sm:gap-4 gap-8 mt-6 transition-all duration-700 delay-600 ${animatedElements.features ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+        <div className={`w-full max-sm:flex-col flex max-sm:gap-4 gap-6 mt-6 transition-all duration-700 delay-600 ${animatedElements.features ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           <div className="flex flex-col gap-6">
             {/* Feature 1 */}
             <div className="group flex items-center gap-4 p-3 rounded-2xl hover:bg-white/50 hover:shadow-lg transition-all duration-300">
@@ -183,8 +185,8 @@ const AboutUs = () => {
           </div>
         </div>
         
-        <div className={`max-sm:flex-col flex gap-6 mt-8 transition-all duration-700 delay-800 ${animatedElements.buttons ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-          <Link to="/devis" className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 via-blue-700 to-cyan-600 text-white font-bold rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 overflow-hidden">
+        <div className={`max-sm:flex-col flex gap-5 mt-6 transition-all duration-700 delay-800 ${animatedElements.buttons ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+          <Link to="/devis" className="group relative px-6 py-3 bg-gradient-to-r from-blue-600 via-blue-700 to-cyan-600 text-white font-bold rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <div className="absolute inset-0 bg-white/10 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
             <span className="relative flex items-center gap-2">
@@ -195,7 +197,7 @@ const AboutUs = () => {
             </span>
           </Link>
           
-          <a href="#services" className="group relative px-8 py-4 bg-white/80 backdrop-blur-sm text-gray-800 font-bold rounded-2xl border-2 border-blue-200 hover:border-cyan-300 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 overflow-hidden">
+          <a href="#services" className="group relative px-6 py-3 bg-white/80 backdrop-blur-sm text-gray-800 font-bold rounded-2xl border-2 border-blue-200 hover:border-cyan-300 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <div className="absolute inset-0 bg-gradient-to-r from-blue-100/20 to-cyan-100/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
             <span className="relative flex items-center gap-2 group-hover:text-blue-700 transition-colors duration-300">

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Bloquer des chemins si nécessaire
+# Disallow: /admin
+
+Sitemap: https://rehobothnettoyage.com/sitemap.xml

@@ -14,9 +14,9 @@ const Footer = () => {
 
    return (
     <footer className="relative bg-gradient-to-br from-black via-gray-900 to-blue-900/90 text-white">
-      <div className="max-w-6xl mx-auto px-6 py-16">
+      <div className="max-w-6xl mx-auto px-6 py-12">
         {/* Logo and Main Content */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           {/* Logo */}
           <div className="flex justify-center mb-8">
             <div className="w-16 h-16 bg-gray-800 rounded-xl flex items-center justify-center">
@@ -34,10 +34,10 @@ const Footer = () => {
           </div>
 
           {/* Main Heading */}
-          <h2 className="text-4xl md:text-5xl font-light mb-4 text-balance">Découvrez une nouvelle approche du nettoyage</h2>
+          <h2 className="text-3xl md:text-4xl font-light mb-3 text-balance">Découvrez une nouvelle approche du nettoyage</h2>
 
           {/* Subtitle */}
-          <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-gray-300 text-base mb-6 max-w-2xl mx-auto">
             Rejoignez REHOBOTH NETTOYAGE dès maintenant et faites partie d'une communauté qui fait confiance à nos services de nettoyage professionnels
           </p>
 
@@ -52,40 +52,40 @@ const Footer = () => {
         </div>
 
         {/* Footer Links Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
           {/* Services */}
           <div>
             <h3 className="text-gray-400 text-sm font-medium mb-4 uppercase tracking-wider">// Services</h3>
             <ul className="space-y-3">
               <li>
-                <button onClick={handleLinkClick} className="text-gray-300 hover:text-white transition-colors cursor-pointer">
+                <Link to="/services-details" className="text-gray-300 hover:text-white transition-colors">
                   Nettoyage Résidentiel
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={handleLinkClick} className="text-gray-300 hover:text-white transition-colors cursor-pointer">
+                <Link to="/services-details" className="text-gray-300 hover:text-white transition-colors">
                   Nettoyage Commercial
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={handleLinkClick} className="text-gray-300 hover:text-white transition-colors cursor-pointer">
+                <Link to="/services-details" className="text-gray-300 hover:text-white transition-colors">
                   Nettoyage Post-Construction
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={handleLinkClick} className="text-gray-300 hover:text-white transition-colors cursor-pointer">
+                <Link to="/services-details" className="text-gray-300 hover:text-white transition-colors">
                   Nettoyage de Vitres
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={handleLinkClick} className="text-gray-300 hover:text-white transition-colors cursor-pointer">
+                <Link to="/services-details" className="text-gray-300 hover:text-white transition-colors">
                   Désinfection
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={handleLinkClick} className="text-gray-300 hover:text-white transition-colors cursor-pointer">
+                <Link to="/services-details" className="text-gray-300 hover:text-white transition-colors">
                   Tous nos Services
-                </button>
+                </Link>
               </li>
             </ul>
           </div>
@@ -142,9 +142,9 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <Link to="/services-details" className="text-gray-300 hover:text-white transition-colors">
                   Services
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">
@@ -195,10 +195,10 @@ const Footer = () => {
         </div>
 
         {/* Newsletter Section */}
-        <div className="border-t border-gray-700 pt-12 mb-8">
+        <div className="border-t border-gray-700 pt-8 mb-6">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div className="flex-1">
-              <h3 className="text-xl font-medium mb-2">Ne manquez aucune actualité</h3>
+              <h3 className="text-lg font-medium mb-2">Ne manquez aucune actualité</h3>
               <p className="text-gray-300 text-sm">
                 Recevez toutes les dernières nouvelles, conseils de nettoyage et offres spéciales de <span className="font-medium">REHOBOTH NETTOYAGE</span>
                 . Livré directement dans votre boîte mail. Nous envoyons rarement plus d'un email par mois.
@@ -209,7 +209,7 @@ const Footer = () => {
                 <input
                   type="email"
                   placeholder="Saisir votre adresse mail"
-                  className="bg-gray-800 border border-gray-600 text-white placeholder:text-gray-400 flex-1 md:w-64 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="bg-gray-800 border border-gray-600 text-white placeholder:text-gray-400 flex-1 md:w-64 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 <button className="bg-white text-black hover:bg-gray-100 px-6 py-2 rounded-lg font-medium transition-colors">
                   S'inscrire
@@ -217,16 +217,16 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <input type="checkbox" id="marketing" className="border-gray-600" />
-                <label htmlFor="marketing" className="text-xs text-gray-400">
-                  J'accepte de recevoir les emails marketing de REHOBOTH NETTOYAGE
-                </label>
+                  <label htmlFor="marketing" className="text-xs text-gray-400">
+                    J'accepte de recevoir les emails marketing de REHOBOTH NETTOYAGE
+                  </label>
               </div>
             </div>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between text-sm text-gray-400 border-t border-gray-700 pt-8">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between text-sm text-gray-400 border-t border-gray-700 pt-6">
           <p>© 2025 REHOBOTH NETTOYAGE. Tous droits réservés.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <button onClick={handleLinkClick} className="hover:text-white transition-colors cursor-pointer">

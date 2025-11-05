@@ -40,21 +40,21 @@ const Banner = () => {
         <Navbar />
 
         {/* Banner content avec animations */}
-        <div className="relative w-full h-full flex justify-between items-center px-10 sm:px-[40px] md:px-[80px] lg:px-[100px] xl:px-[130px] 2xl:px-[160px] gap-10 text-white">
+        <div className="relative w-full h-full flex justify-between items-center px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 gap-6 text-white">
 
-          <div className={`w-full lg:w-1/2 flex h-full flex-col justify-center gap-8 relative pt-20 transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <div className={`w-full lg:w-1/2 flex h-full flex-col justify-center gap-6 relative pt-16 transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             {/* Titre avec effet de typing et gradient */}
-            <h1 className={`font-bold capitalize text-3xl leading-[1.4] sm:text-4xl lg:text-5xl xl:text-6xl sm:leading-[1.3] 2xl:leading-[1.2] max-w-[800px] text-balance z-10 bg-gradient-to-r from-white via-blue-100 to-cyan-200 bg-clip-text text-transparent transition-all duration-1000 delay-300 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}>
-              Améliorez votre activité grâce à nos services de nettoyage
+            <h1 className={`font-bold capitalize text-2xl leading-[1.35] sm:text-3xl lg:text-4xl xl:text-5xl sm:leading-[1.3] 2xl:leading-[1.25] max-w-[800px] text-balance z-10 bg-gradient-to-r from-white via-blue-100 to-cyan-200 bg-clip-text text-transparent transition-all duration-1000 delay-300 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}>
+              Améliorez votre activité grâce à nos services de nettoyage&nbsp;
               <span className="relative inline-block">
                 <span className="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent font-extrabold">professionnels</span>
                 <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-cyan-300 rounded-full transform scale-x-0 animate-[scaleX_1s_ease-out_1.5s_forwards]"></div>
               </span>
             </h1>
-            <p className={`text-lg sm:text-xl max-w-[650px] text-gray-100 leading-relaxed transition-all duration-1000 delay-500 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}>
+            <p className={`text-base sm:text-lg max-w-[650px] text-gray-100 leading-relaxed transition-all duration-1000 delay-500 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}>
               Des prestations de nettoyage de <span className="text-cyan-300 font-semibold">haute qualité</span>, adaptées à vos besoins. Offrez-vous un environnement éclatant sans lever le petit doigt.
             </p>
-            <div className={`flex flex-col sm:flex-row gap-4 transition-all duration-1000 delay-700 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}>
+            <div className={`flex flex-col sm:flex-row gap-3 transition-all duration-1000 delay-700 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}>
               {/* Bouton "En savoir plus" amélioré */}
               <div className="group relative min-w-fit px-6 py-3 text-base sm:text-lg text-center font-bold transition-all duration-700 rounded-full transform hover:scale-105 hover:-translate-y-1 active:scale-95 overflow-hidden">
                 {/* Background principal avec dégradé animé */}
@@ -87,7 +87,7 @@ const Banner = () => {
               </div>
 
               {/* Bouton "Contactez-nous" amélioré */}
-              <div className="group/button relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full px-6 py-3 text-base sm:text-lg font-bold text-white transition-all duration-700 ease-out hover:scale-105 hover:-translate-y-1 active:scale-95">
+              <div className="group/button relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full px-5 py-3 text-base sm:text-lg font-bold text-white transition-all duration-700 ease-out hover:scale-105 hover:-translate-y-1 active:scale-95">
                 {/* Background principal avec dégradé animé */}
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-700 rounded-full transition-all duration-500 group-hover/button:from-cyan-600 group-hover/button:via-blue-500 group-hover/button:to-cyan-700"></div>
 
@@ -156,7 +156,7 @@ const Banner = () => {
               </div>
             </div>
 
-            <div className="absolute bottom-12 -right-20 w-64 h-12 py-0.5 bg-gradient-to-r from-emerald-600 via-green-500 to-teal-600 rounded-full flex justify-center items-center z-10 shadow-2xl shadow-emerald-500/50 hover:animate-none transition-all duration-500 hover:scale-105">
+            <div className="absolute bottom-12 -right-20 w-60 h-11 py-0.5 bg-gradient-to-r from-emerald-600 via-green-500 to-teal-600 rounded-full flex justify-center items-center z-10 shadow-2xl shadow-emerald-500/50 hover:animate-none transition-all duration-500 hover:scale-105">
               <div className="relative w-full h-full bg-gradient-to-r from-emerald-800 via-green-700 to-teal-800 rounded-full flex justify-center items-center gap-3 text-sm font-bold capitalize backdrop-blur-sm">
                 <img src="/positive-review.png" alt="positive review" className="w-6 h-6" style={{ animationDuration: '3s' }} />
                 <span className="text-white">Satisfaction cliente</span>

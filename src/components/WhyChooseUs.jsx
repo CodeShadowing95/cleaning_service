@@ -1,5 +1,5 @@
 
-import PanelCard from './sub-components/PanelCard';
+// Design compact spécifique à la section WhyChooseUs
 
 const WhyChooseUs = () => {
   const panelsData = [
@@ -118,36 +118,66 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <div id="why-choose-us" className="relative w-full px-4 px-10 sm:px-[40px] md:px-[80px] lg:px-[100px] xl:px-[130px] 2xl:px-[160px] pt-20 sm:pt-24 md:pt-32 flex flex-col justify-center items-center">
+    <div id="why-choose-us" className="relative w-full px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 2xl:px-28 pt-16 sm:pt-20 md:pt-24 flex flex-col justify-center items-center">
       <div className="relative w-full flex flex-col justify-center items-center mb-6 sm:mb-8 md:mb-12">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-center text-gray-900 tracking-tight leading-tight max-w-4xl">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-center text-gray-900 tracking-tight leading-tight max-w-4xl">
           <span className="block sm:inline">Notre</span>
           <span className="block sm:inline text-blue-600 ml-0 sm:ml-3 sm:mr-3">Engagement</span>
           <span className="block sm:inline">envers vous</span>
         </h1>
         <div className="absolute sm:block hidden bottom-0 lg:right-10 right-0">
-          <img src="/img-wcu.png" alt="aspirateur-rouge" className="w-16 h-16 sm:w-20 sm:h-20 lg:w-32 lg:h-32" />
+          <img src="/img-wcu.png" alt="aspirateur-rouge" className="w-16 h-16 sm:w-20 sm:h-20 lg:w-32 lg:h-32" loading="lazy" decoding="async" />
         </div>
       </div>
       
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-12 md:mb-16">
-        <p className="text-gray-500 text-base sm:text-lg md:text-xl leading-relaxed sm:leading-relaxed md:leading-loose text-center font-medium">
+        <p className="text-gray-500 text-base md:text-lg leading-relaxed md:leading-relaxed text-center font-medium">
           Motivés par l'excellence et l'attention aux détails, nous mettons un point d'honneur à offrir des services modernes, efficaces et respectueux de l'environnement. 
           <span className="block mt-3 sm:inline sm:mt-0 sm:ml-1">Avec une équipe dynamique et passionnée, nous répondons aux besoins de nos clients en leur garantissant des espaces impeccables et un service personnalisé.</span>
         </p>
       </div>
 
-      <div className="mt-8 sm:mt-12 md:mt-16 pb-8 relative grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 w-full">
+      <div className="mt-8 md:mt-12 pb-8 relative grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 w-full">
         {panelsData.map((panel, index) => (
-          <PanelCard
+          <div
             key={index}
-            title={panel.title}
-            description={panel.description}
-            icon={panel.icon}
-            image={panel.image}
-            imagePosition={panel.imagePosition}
-            colorScheme={panel.colorScheme}
-          />
+            className={`group relative flex flex-col justify-between gap-4 p-4 bg-white/80 backdrop-blur-sm border border-white/60 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden`}
+          >
+            <div>
+              {/* En-tête compact avec icône et titre */}
+              <div className="flex items-start gap-3 mb-3">
+                <div className={`w-10 h-10 p-2 bg-gradient-to-br ${panel.colorScheme.iconGradientFrom} ${panel.colorScheme.iconGradientTo} rounded-xl shadow-md`}> 
+                  <img 
+                    src={panel.icon} 
+                    alt={panel.title} 
+                    className="w-full h-full object-contain filter brightness-0 invert" 
+                    loading="lazy" 
+                    decoding="async" 
+                  />
+                </div>
+                <h3 className={`text-base md:text-lg font-semibold bg-gradient-to-r ${panel.colorScheme.titleGradientFrom} ${panel.colorScheme.titleGradientTo} bg-clip-text text-transparent`}>
+                  {panel.title}
+                </h3>
+              </div>
+
+              {/* Description compacte et lisible */}
+              <p className="text-sm text-gray-600 leading-snug mb-3">
+                {panel.description}
+              </p>
+            </div>
+
+            {/* Image compacte en pied de card */}
+            <div className="relative overflow-hidden rounded-xl">
+              <img 
+                src={panel.image} 
+                alt={panel.title} 
+                className="w-full h-56 object-cover group-hover:scale-[1.03] transition-transform duration-500" 
+                loading="lazy" 
+                decoding="async" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+          </div>
         ))}
 
         {/* Éléments décoratifs */}
